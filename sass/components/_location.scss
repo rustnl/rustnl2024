@@ -45,12 +45,51 @@
     aspect-ratio: 16 / 9;
     background-color: var(--color-yellow-400);
     grid-area: c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &::after {
       background-color: var(--color-yellow-500);
       content: '';
       inset: 0 50% 0 0;
       position: absolute;
+    }
+
+    &:has(:hover) .ferris {
+      translate: -24px;
+    }
+
+    &:has(:hover) .ferris-arms {
+      opacity: 0;
+      translate: 32px;
+    }
+
+    .ferris,
+    .ferris-arms {
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 240px;
+      position: absolute;
+      rotate: 90deg;
+      width: 288px;
+    }
+
+    .ferris {
+      background-image: url('./images/ferris.png');
+      transition-duration: 750ms;
+      transition-property: translate;
+      transition-timing-function: ease-out;
+    }
+
+    .ferris-arms {
+      background-image: url('./images/ferris-arms.png');
+      background-position: center -12px;
+      z-index: 1;
+      transition-property: opacity, translate;
+      transition-duration: 500ms;
+      transition-delay: 250ms;
+      transition-timing-function: ease-in-out;
     }
   }
 

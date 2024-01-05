@@ -12,4 +12,8 @@
   .px-#{$i} {
     padding-inline: var(--space-#{$i});
   }
+
+  .py-#{$i} {
+    padding-block: var(--space-#{$i});
+  }
 }

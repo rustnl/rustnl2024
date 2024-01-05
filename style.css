@@ -1756,12 +1756,20 @@ b {
   padding-inline: var(--space-1);
 }
 
+.py-1 {
+  padding-block: var(--space-1);
+}
+
 .p-2 {
   padding: var(--space-2);
 }
 
 .px-2 {
   padding-inline: var(--space-2);
+}
+
+.py-2 {
+  padding-block: var(--space-2);
 }
 
 .p-3 {
@@ -1772,12 +1780,20 @@ b {
   padding-inline: var(--space-3);
 }
 
+.py-3 {
+  padding-block: var(--space-3);
+}
+
 .p-4 {
   padding: var(--space-4);
 }
 
 .px-4 {
   padding-inline: var(--space-4);
+}
+
+.py-4 {
+  padding-block: var(--space-4);
 }
 
 .p-5 {
@@ -1788,12 +1804,20 @@ b {
   padding-inline: var(--space-5);
 }
 
+.py-5 {
+  padding-block: var(--space-5);
+}
+
 .p-6 {
   padding: var(--space-6);
 }
 
 .px-6 {
   padding-inline: var(--space-6);
+}
+
+.py-6 {
+  padding-block: var(--space-6);
 }
 
 .p-7 {
@@ -1804,12 +1828,20 @@ b {
   padding-inline: var(--space-7);
 }
 
+.py-7 {
+  padding-block: var(--space-7);
+}
+
 .p-8 {
   padding: var(--space-8);
 }
 
 .px-8 {
   padding-inline: var(--space-8);
+}
+
+.py-8 {
+  padding-block: var(--space-8);
 }
 
 .p-9 {
@@ -1820,12 +1852,20 @@ b {
   padding-inline: var(--space-9);
 }
 
+.py-9 {
+  padding-block: var(--space-9);
+}
+
 .p-10 {
   padding: var(--space-10);
 }
 
 .px-10 {
   padding-inline: var(--space-10);
+}
+
+.py-10 {
+  padding-block: var(--space-10);
 }
 
 .p-11 {
@@ -1836,12 +1876,20 @@ b {
   padding-inline: var(--space-11);
 }
 
+.py-11 {
+  padding-block: var(--space-11);
+}
+
 .p-12 {
   padding: var(--space-12);
 }
 
 .px-12 {
   padding-inline: var(--space-12);
+}
+
+.py-12 {
+  padding-block: var(--space-12);
 }
 
 .p-13 {
@@ -1852,12 +1900,20 @@ b {
   padding-inline: var(--space-13);
 }
 
+.py-13 {
+  padding-block: var(--space-13);
+}
+
 .p-14 {
   padding: var(--space-14);
 }
 
 .px-14 {
   padding-inline: var(--space-14);
+}
+
+.py-14 {
+  padding-block: var(--space-14);
 }
 
 .p-15 {
@@ -1868,12 +1924,20 @@ b {
   padding-inline: var(--space-15);
 }
 
+.py-15 {
+  padding-block: var(--space-15);
+}
+
 .p-16 {
   padding: var(--space-16);
 }
 
 .px-16 {
   padding-inline: var(--space-16);
+}
+
+.py-16 {
+  padding-block: var(--space-16);
 }
 
 .p-17 {
@@ -1884,12 +1948,20 @@ b {
   padding-inline: var(--space-17);
 }
 
+.py-17 {
+  padding-block: var(--space-17);
+}
+
 .p-18 {
   padding: var(--space-18);
 }
 
 .px-18 {
   padding-inline: var(--space-18);
+}
+
+.py-18 {
+  padding-block: var(--space-18);
 }
 
 .p-19 {
@@ -1900,12 +1972,20 @@ b {
   padding-inline: var(--space-19);
 }
 
+.py-19 {
+  padding-block: var(--space-19);
+}
+
 .p-20 {
   padding: var(--space-20);
 }
 
 .px-20 {
   padding-inline: var(--space-20);
+}
+
+.py-20 {
+  padding-block: var(--space-20);
 }
 
 .p-21 {
@@ -1916,12 +1996,20 @@ b {
   padding-inline: var(--space-21);
 }
 
+.py-21 {
+  padding-block: var(--space-21);
+}
+
 .p-22 {
   padding: var(--space-22);
 }
 
 .px-22 {
   padding-inline: var(--space-22);
+}
+
+.py-22 {
+  padding-block: var(--space-22);
 }
 
 .p-23 {
@@ -1932,6 +2020,10 @@ b {
   padding-inline: var(--space-23);
 }
 
+.py-23 {
+  padding-block: var(--space-23);
+}
+
 .p-24 {
   padding: var(--space-24);
 }
@@ -1940,10 +2032,18 @@ b {
   padding-inline: var(--space-24);
 }
 
+.py-24 {
+  padding-block: var(--space-24);
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+
+.button-group-center {
+  justify-content: center;
 }
 
 .button {
@@ -2000,6 +2100,30 @@ b {
   position: absolute;
   z-index: -1;
 }
+.hero .stripes {
+  position: absolute;
+  bottom: 0;
+  max-width: 41.25rem;
+}
+
+.stripes {
+  display: flex;
+  flex: 1;
+  height: var(--space-6);
+  width: 100%;
+}
+.stripes .stripe {
+  width: 100%;
+}
+.stripes .stripe:nth-child(1) {
+  background-color: var(--color-blue-400);
+}
+.stripes .stripe:nth-child(2) {
+  background-color: var(--color-yellow-500);
+}
+.stripes .stripe:nth-child(3) {
+  background-color: var(--color-red-400);
+}
 
 .location {
   display: grid;
@@ -2038,12 +2162,46 @@ b {
   aspect-ratio: 16/9;
   background-color: var(--color-yellow-400);
   grid-area: c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .location > div:nth-child(3)::after {
   background-color: var(--color-yellow-500);
   content: "";
   inset: 0 50% 0 0;
   position: absolute;
+}
+.location > div:nth-child(3):has(:hover) .ferris {
+  translate: -24px;
+}
+.location > div:nth-child(3):has(:hover) .ferris-arms {
+  opacity: 0;
+  translate: 32px;
+}
+.location > div:nth-child(3) .ferris,
+.location > div:nth-child(3) .ferris-arms {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 240px;
+  position: absolute;
+  rotate: 90deg;
+  width: 288px;
+}
+.location > div:nth-child(3) .ferris {
+  background-image: url("./images/ferris.png");
+  transition-duration: 750ms;
+  transition-property: translate;
+  transition-timing-function: ease-out;
+}
+.location > div:nth-child(3) .ferris-arms {
+  background-image: url("./images/ferris-arms.png");
+  background-position: center -12px;
+  z-index: 1;
+  transition-property: opacity, translate;
+  transition-duration: 500ms;
+  transition-delay: 250ms;
+  transition-timing-function: ease-in-out;
 }
 .location::before, .location::after {
   aspect-ratio: 16/9;
@@ -2086,6 +2244,21 @@ b {
 .timetable .speaker {
   font-size: var(--font-size-md);
   font-weight: 700;
+}
+
+.sponsors {
+  text-align: center;
+}
+.sponsors .row {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+}
+.sponsors .sponsor {
+  aspect-ratio: 16/9;
+  border: 1px solid var(--color-red-400);
+  max-width: 320px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

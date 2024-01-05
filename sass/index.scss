@@ -13,5 +13,19 @@
 @use 'components/location';
 @use 'components/timetable';
 
+.sponsors {
+  text-align: center;
+ 
+  .row {
+    display: flex;
+    gap: var(--space-6);
+    justify-content: center;
+  }
 
-
+  .sponsor {
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--color-red-400);
+    max-width: 320px;
+    width: 100%;
+  }
+}

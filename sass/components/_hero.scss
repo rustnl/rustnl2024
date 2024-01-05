@@ -27,4 +27,33 @@
     position: absolute;
     z-index: -1;
   }
+
+  .stripes {
+    position: absolute;
+    bottom: 0;
+    max-width: 41.25rem;
+  }
+}
+
+.stripes {
+  display: flex;
+  flex: 1;
+  height: var(--space-6);
+  width: 100%;
+
+  .stripe {
+    width: 100%;
+
+    &:nth-child(1) {
+      background-color: var(--color-blue-400);
+    }
+    
+    &:nth-child(2) {
+      background-color: var(--color-yellow-500);
+    }
+
+    &:nth-child(3) {
+      background-color: var(--color-red-400);
+    }
+  }
 }

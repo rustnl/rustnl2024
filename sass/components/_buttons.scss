@@ -4,6 +4,10 @@
   gap: var(--space-3);
 }
 
+.button-group-center {
+  justify-content: center;
+}
+
 .button {
   align-items: center; 
   border-radius: var(--space-1);
