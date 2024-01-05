@@ -1,0 +1,13 @@
+body {
+  background-color: var(--color-neutral-400);
+  color: var(--color-red-500);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  line-height: var(--line-height-heading);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
