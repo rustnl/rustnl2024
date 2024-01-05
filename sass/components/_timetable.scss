@@ -1,0 +1,25 @@
+.timetable {
+  border-block: 1px solid var(--color-yellow-400);
+
+  li {
+    align-items: center;
+    display: flex;
+    font-size: var(--font-size-lg);
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+
+    &:not(:first-child) {
+      border-block-start: 1px solid var(--color-yellow-400);
+    }
+  }
+
+  .time {
+    font-weight: 700;
+    font-family: monospace;
+  }
+
+  .speaker {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+  }
+}

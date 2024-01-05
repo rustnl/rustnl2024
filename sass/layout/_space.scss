@@ -1,0 +1,15 @@
+@for $i from 1 through 24 {
+  .space-y-#{$i} > * + * {
+    margin-block-start: var(--space-#{$i});
+  }
+}
+
+@for $i from 1 through 24 {
+  .p-#{$i} {
+    padding: var(--space-#{$i});
+  }
+
+  .px-#{$i} {
+    padding-inline: var(--space-#{$i});
+  }
+}

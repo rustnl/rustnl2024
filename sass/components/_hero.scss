@@ -11,18 +11,13 @@
   font-size: var(--font-size-2xl);
   gap: var(--space-9);
   justify-content: center;
+  line-height: var(--line-height-tight);
   min-height: 100svh;
   padding-block: var(--space-24);
   padding-inline: var(--space-12);
   position: relative;
   text-align: center;
   z-index: 0;
-
-  > img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
 
   &::after {
     background-color: var(--color-yellow-500);

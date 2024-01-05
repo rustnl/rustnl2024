@@ -1,0 +1,80 @@
+.location {
+  display: grid;
+  grid-template-areas: 
+  "a b"
+  "a c";
+  position: relative;
+
+  > div {
+    background-color: var(--color-neutral-500);
+    position: relative;
+  }
+
+  > div:nth-child(1),
+  > div:nth-child(2) {
+    &::after {
+      aspect-ratio: 16 / 9;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  
+  > div:nth-child(1) {
+    grid-area: a;
+    
+    &::after {
+      background-color: var(--color-red-400);
+      left: 0;
+    }
+  }
+  
+  > div:nth-child(2) {
+    aspect-ratio: 16 / 9;
+    grid-area: b;
+
+    &::after {
+      background-color: var(--color-blue-400);
+      right: 0;
+    }
+  }
+
+  > div:nth-child(3) {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-yellow-400);
+    grid-area: c;
+
+    &::after {
+      background-color: var(--color-yellow-500);
+      content: '';
+      inset: 0 50% 0 0;
+      position: absolute;
+    }
+  }
+
+  &::before, 
+  &::after {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-neutral-500);
+    content: '';
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    left: 0;
+    translate: 0 100%;
+  }
+
+  &::before {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    right: 0;
+    top: 0;
+    translate: 0 -100%;
+  }
+}

@@ -18,8 +18,8 @@
   --font-size-xl: calc(var(--font-size-lg) * var(--font-size-scale));
   --font-size-2xl: calc(var(--font-size-xl) * var(--font-size-scale));
 
-  --line-height: 1.5;
-  --line-height-heading: 1.125;
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.125;
 
   @for $i from 1 through 24 {
     --space-#{$i}: calc(0.25rem * #{$i});
