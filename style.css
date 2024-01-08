@@ -2034,6 +2034,29 @@ h6 {
   padding-block: var(--space-24);
 }
 
+.benefit {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-xl);
+  gap: var(--space-6);
+  line-height: var(--line-height-tight);
+  padding: var(--space-24) var(--space-12);
+  text-align: center;
+}
+.benefit:nth-child(odd) {
+  background-color: var(--color-neutral-500);
+}
+.benefit .icon {
+  aspect-ratio: 1;
+  background-image: url("./images/icon/ticket.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: contain;
+  width: var(--space-24);
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -2090,7 +2113,7 @@ h6 {
   text-align: center;
   z-index: 0;
 }
-.hero::after {
+.hero::before {
   background-color: var(--color-yellow-500);
   clip-path: polygon(0 0, 100% 0, 100% 100%);
   content: "";
@@ -2098,29 +2121,17 @@ h6 {
   position: absolute;
   z-index: -1;
 }
-.hero .stripes {
-  position: absolute;
+.hero::after {
+  background-image: url("./images/stripes.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   bottom: 0;
-  max-width: 41.25rem;
-}
-
-.stripes {
-  display: flex;
-  flex: 1;
+  content: "";
   height: var(--space-6);
+  max-width: 41.5rem;
+  position: absolute;
   width: 100%;
-}
-.stripes .stripe {
-  width: 100%;
-}
-.stripes .stripe:nth-child(1) {
-  background-color: var(--color-blue-400);
-}
-.stripes .stripe:nth-child(2) {
-  background-color: var(--color-yellow-500);
-}
-.stripes .stripe:nth-child(3) {
-  background-color: var(--color-red-400);
 }
 
 .location {
@@ -2222,6 +2233,34 @@ h6 {
   translate: 0 -100%;
 }
 
+.sponsors {
+  text-align: center;
+}
+.sponsors::before, .sponsors::after {
+  background-image: url("./images/stripes.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: "";
+  display: block;
+  height: var(--space-6);
+  position: relative;
+}
+.sponsors .row {
+  border-block-end: 1px solid var(--color-neutral-500);
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  padding-block-end: var(--space-12);
+}
+.sponsors .sponsor {
+  aspect-ratio: 16/9;
+  border-radius: var(--space-1);
+  border: 1px solid var(--color-red-400);
+  max-width: 320px;
+  width: 100%;
+}
+
 .timetable {
   border-block: 1px solid var(--color-yellow-400);
 }
@@ -2241,24 +2280,6 @@ h6 {
 .timetable .speaker {
   font-size: var(--font-size-md);
   font-weight: 700;
-}
-
-.sponsors {
-  text-align: center;
-}
-.sponsors .row {
-  border-bottom: 1px solid var(--color-neutral-500);
-  display: flex;
-  gap: var(--space-6);
-  justify-content: center;
-  padding-block-end: var(--space-12);
-}
-.sponsors .sponsor {
-  aspect-ratio: 16/9;
-  border-radius: var(--space-1);
-  border: 1px solid var(--color-red-400);
-  max-width: 320px;
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
