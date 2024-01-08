@@ -72,7 +72,13 @@ body {
 }
 
 strong,
-b {
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -145,14 +151,6 @@ b {
 
 .markdown > * + * {
   margin-block-start: calc(var(--font-size-md) * var(--line-height-normal));
-}
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  font-weight: 700;
 }
 .markdown h1 {
   font-size: var(--font-size-2xl);
@@ -2239,7 +2237,6 @@ b {
 }
 .timetable .time {
   font-weight: 700;
-  font-family: monospace;
 }
 .timetable .speaker {
   font-size: var(--font-size-md);
@@ -2250,12 +2247,15 @@ b {
   text-align: center;
 }
 .sponsors .row {
+  border-bottom: 1px solid var(--color-neutral-500);
   display: flex;
   gap: var(--space-6);
   justify-content: center;
+  padding-block-end: var(--space-12);
 }
 .sponsors .sponsor {
   aspect-ratio: 16/9;
+  border-radius: var(--space-1);
   border: 1px solid var(--color-red-400);
   max-width: 320px;
   width: 100%;
