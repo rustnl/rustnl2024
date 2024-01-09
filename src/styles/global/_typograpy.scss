@@ -30,6 +30,11 @@
     margin-block-start: calc(var(--font-size-md) * var(--line-height-normal));
   }
 
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+
   h1 {
     font-size: var(--font-size-2xl);
   }
