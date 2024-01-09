@@ -5,14 +5,14 @@ import Head from "../components/head.astro";
 <!doctype html>
 <html lang="en">
   <Head />
-  <style lang="scss">
+  <style lang="scss" is:global>
     @import "../styles/index.scss";
   </style>
 
   <body>
     <div class="space-y-24">
       <section class="hero">
-        <img src="./images/logo.svg" alt="Logo RustNL 2024" />
+        <img src="/images/logo.svg" alt="Logo RustNL 2024" />
         <p>10 May 2024 <br /> <strong>TU Delft</strong>, Nederland</p>
         <div class="button-group">
           <a href="#" class="button button-primary">Schedule</a>
@@ -21,30 +21,7 @@ import Head from "../components/head.astro";
       </section>
       <section class="container grid cols-12">
         <div class="col-start-4 col-end-10 markdown text-lg">
-          <h1>Rust what?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
-            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
-            consectetur officiis commodi libero quos corrupti officia nemo esse
-            iusto, magnam quae.
-          </p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-          </ul>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
-            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
-            consectetur officiis commodi libero quos corrupti officia nemo esse
-            iusto, magnam quae.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
-            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
-            consectetur officiis commodi libero quos corrupti officia nemo esse
-            iusto, magnam quae.
-          </p>
+          <slot name="explainer" />
         </div>
       </section>
       <section class="container">
@@ -61,85 +38,11 @@ import Head from "../components/head.astro";
         <div class="grid cols-2">
           <div class="space-y-12 px-12">
             <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
-            <ul class="timetable">
-              <li>
-                <div class="time">10:00</div>
-                <div>Registration</div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>Registration</div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-            </ul>
+            <slot name="timetable-day1" />
           </div>
           <div class="space-y-12 px-12">
             <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
-            <ul class="timetable">
-              <li>
-                <div class="time">10:00</div>
-                <div>Registration</div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>Registration</div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-              <li>
-                <div class="time">23:59</div>
-                <div>
-                  <div class="speaker">Rik arends</div>
-                  Makepad: Designing modern UIs with Rust
-                </div>
-              </li>
-            </ul>
+            <slot name="timetable-day2" />
           </div>
         </div>
         <div class="button-group button-group-center">

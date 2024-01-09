@@ -1,6 +1,74 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
-import Head from "../components/head.astro";
+import TimetableItem from "../components/timetable-item.astro";
 ---
 
-<HomeLayout />
+<HomeLayout>
+    <div slot="explainer">
+        <h1>Rust what?</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+        </p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+        </p>
+    </div>
+
+    <ul class="timetable" slot="timetable-day1">
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem
+            time="23:59"
+            title="Makepad: Designing modern UIs with Rust"
+            speaker="Rik arends"
+        />
+
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem
+            time="23:59"
+            title="Makepad: Designing modern UIs with Rust"
+            speaker="Rik arends"
+        />
+        <TimetableItem
+            time="23:59"
+            title="Makepad: Designing modern UIs with Rust"
+            speaker="Rik arends"
+        />
+    </ul>
+
+    <ul class="timetable" slot="timetable-day2">
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem
+            time="23:59"
+            title="Makepad: Designing modern UIs with Rust"
+            speaker="Rik arends"
+        />
+
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem
+            time="23:59"
+            title="Makepad: Designing modern UIs with Rust"
+            speaker="Rik arends"
+        />
+        <TimetableItem time="10:00" title="Registration" />
+    </ul>
+</HomeLayout>
