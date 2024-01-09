@@ -3,7 +3,7 @@
 .container {
   margin-inline: auto;
   padding-inline: var(--space-4);
-  width: min(100%, 90rem);
+  width: min(100%, 96rem);
 
   @include mixins.breakpoint(md) {
     padding-inline: var(--space-6);

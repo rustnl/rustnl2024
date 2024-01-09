@@ -5,12 +5,13 @@
 
   li {
     display: flex;
-    gap: var(--space-6);
+    gap: var(--space-3);
     padding-block: var(--space-6);
     
-    @include mixins.breakpoint(lg) {
+    @include mixins.breakpoint(xl) {
       align-items: center;
       font-size: var(--font-size-lg);
+      gap: var(--space-6);
     }
 
     &:not(:first-child) {
