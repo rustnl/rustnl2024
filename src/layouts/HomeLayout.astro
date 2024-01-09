@@ -1,34 +1,18 @@
-<!DOCTYPE html>
+---
+import Head from "../components/head.astro";
+---
+
+<!doctype html>
 <html lang="en">
+  <Head />
+  <style lang="scss">
+    @import "../styles/index.scss";
+  </style>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RustNL 2024</title>
-  <meta name="description" content="RustNL 2024, The Netherlands - May 2024" />
-  <link rel="icon" href="./svg/rustnl.svg" type="image/svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-
-  <meta property="twitter:site" content="@Rust_NL" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="https://2024.rustnl.org/" />
-  <meta property="og:title" content="RustNL 2024" />
-  <meta property="og:description" content="RustNL 2024, The Netherlands - May 2024" />
-  <meta property="og:image" content="https://2024.rustnl.org/images/logo-1000px.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-</body>
-    <div class="space-y-12 xl:space-y-24">
+  <body>
+    <div class="space-y-24">
       <section class="hero">
-        <img src="./images/logo.svg" alt="Logo RustNL 2024">
+        <img src="./images/logo.svg" alt="Logo RustNL 2024" />
         <p>10 May 2024 <br /> <strong>TU Delft</strong>, Nederland</p>
         <div class="button-group">
           <a href="#" class="button button-primary">Schedule</a>
@@ -38,14 +22,29 @@
       <section class="container md:grid md:cols-12">
         <div class="markdown text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
           <h1>Rust what?</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis consectetur officiis commodi libero quos corrupti officia nemo esse iusto, magnam quae.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+          </p>
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
           </ul>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis consectetur officiis commodi libero quos corrupti officia nemo esse iusto, magnam quae.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis consectetur officiis commodi libero quos corrupti officia nemo esse iusto, magnam quae.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
+            cupiditate possimus. Facere exercitationem optio ipsa dolorem nobis
+            consectetur officiis commodi libero quos corrupti officia nemo esse
+            iusto, magnam quae.
+          </p>
         </div>
       </section>
       <section class="container">
@@ -203,4 +202,5 @@
         </div>
       </section>
     </div>
+  </body>
 </html>
