@@ -5,43 +5,86 @@
   "a c";
   position: relative;
 
-  > div {
+  &::before, 
+  &::after {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-neutral-500);
+    content: '';
+    position: absolute;
+    width: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    left: 0;
+    translate: 0 100%;
+  }
+
+  &::before {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    right: 0;
+    top: 0;
+    translate: 0 -100%;
+  }
+
+  > .ferris {
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    translate: 0 -100%;
+    width: 50%;
+    z-index: -2;
+    
+    img {
+      rotate: -30deg;
+      translate: -20px -20px;
+      width: 288px;
+    }
+  }
+
+  .image {
     background-color: var(--color-neutral-500);
     position: relative;
   }
-
-  > div:nth-child(1),
-  > div:nth-child(2) {
-    &::after {
-      aspect-ratio: 16 / 9;
-      clip-path: polygon(0 0, 100% 0, 0 100%);
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
   
-  > div:nth-child(1) {
+  .image:nth-of-type(1) {
     grid-area: a;
     
     &::after {
+      aspect-ratio: 16 / 9;
       background-color: var(--color-red-400);
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      content: '';
       left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;  
     }
   }
   
-  > div:nth-child(2) {
+  .image:nth-of-type(2) {
     aspect-ratio: 16 / 9;
     grid-area: b;
 
     &::after {
+      aspect-ratio: 16 / 9;
       background-color: var(--color-blue-400);
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      content: '';
+      position: absolute;
       right: 0;
+      top: 0;
+      width: 100%;  
     }
   }
 
-  > div:nth-child(3) {
+  .image:nth-of-type(3) {
     aspect-ratio: 16 / 9;
     background-color: var(--color-yellow-400);
     grid-area: c;
@@ -65,8 +108,8 @@
       translate: 32px;
     }
 
-    .ferris,
-    .ferris-arms {
+    > .ferris,
+    > .ferris-arms {
       background-repeat: no-repeat;
       background-size: contain;
       height: 240px;
@@ -75,45 +118,21 @@
       width: 288px;
     }
 
-    .ferris {
+    > .ferris {
       background-image: url('./images/ferris.png');
       transition-duration: 750ms;
       transition-property: translate;
       transition-timing-function: ease-out;
     }
 
-    .ferris-arms {
+    > .ferris-arms {
       background-image: url('./images/ferris-arms.png');
       background-position: center -12px;
-      z-index: 1;
-      transition-property: opacity, translate;
-      transition-duration: 500ms;
       transition-delay: 250ms;
+      transition-duration: 500ms;
+      transition-property: opacity, translate;
       transition-timing-function: ease-in-out;
+      z-index: 1;
     }
-  }
-
-  &::before, 
-  &::after {
-    aspect-ratio: 16 / 9;
-    background-color: var(--color-neutral-500);
-    content: '';
-    position: absolute;
-    width: 50%;
-    z-index: -1;
-  }
-
-  &::after {
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    left: 0;
-    translate: 0 100%;
-  }
-
-  &::before {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    right: 0;
-    top: 0;
-    translate: 0 -100%;
   }
 }

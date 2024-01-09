@@ -1,11 +1,18 @@
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+}
+
 .benefit {
   align-items: center;
+  background-color: var(--color-neutral-400);
+  border: 1px solid var(--color-neutral-400);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-xl);
   gap: var(--space-6);
   line-height: var(--line-height-tight);
-  padding: var(--space-24) var(--space-12);
+  padding: var(--space-24) var(--space-6);
   text-align: center;
 
   &:nth-child(odd) {

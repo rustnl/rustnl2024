@@ -2034,14 +2034,21 @@ h6 {
   padding-block: var(--space-24);
 }
 
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+}
+
 .benefit {
   align-items: center;
+  background-color: var(--color-neutral-400);
+  border: 1px solid var(--color-neutral-400);
   display: flex;
   flex-direction: column;
   font-size: var(--font-size-xl);
   gap: var(--space-6);
   line-height: var(--line-height-tight);
-  padding: var(--space-24) var(--space-12);
+  padding: var(--space-24) var(--space-6);
   text-align: center;
 }
 .benefit:nth-child(odd) {
@@ -2139,79 +2146,6 @@ h6 {
   grid-template-areas: "a b" "a c";
   position: relative;
 }
-.location > div {
-  background-color: var(--color-neutral-500);
-  position: relative;
-}
-.location > div:nth-child(1)::after,
-.location > div:nth-child(2)::after {
-  aspect-ratio: 16/9;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.location > div:nth-child(1) {
-  grid-area: a;
-}
-.location > div:nth-child(1)::after {
-  background-color: var(--color-red-400);
-  left: 0;
-}
-.location > div:nth-child(2) {
-  aspect-ratio: 16/9;
-  grid-area: b;
-}
-.location > div:nth-child(2)::after {
-  background-color: var(--color-blue-400);
-  right: 0;
-}
-.location > div:nth-child(3) {
-  aspect-ratio: 16/9;
-  background-color: var(--color-yellow-400);
-  grid-area: c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.location > div:nth-child(3)::after {
-  background-color: var(--color-yellow-500);
-  content: "";
-  inset: 0 50% 0 0;
-  position: absolute;
-}
-.location > div:nth-child(3):has(:hover) .ferris {
-  translate: -24px;
-}
-.location > div:nth-child(3):has(:hover) .ferris-arms {
-  opacity: 0;
-  translate: 32px;
-}
-.location > div:nth-child(3) .ferris,
-.location > div:nth-child(3) .ferris-arms {
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 240px;
-  position: absolute;
-  rotate: 90deg;
-  width: 288px;
-}
-.location > div:nth-child(3) .ferris {
-  background-image: url("./images/ferris.png");
-  transition-duration: 750ms;
-  transition-property: translate;
-  transition-timing-function: ease-out;
-}
-.location > div:nth-child(3) .ferris-arms {
-  background-image: url("./images/ferris-arms.png");
-  background-position: center -12px;
-  z-index: 1;
-  transition-property: opacity, translate;
-  transition-duration: 500ms;
-  transition-delay: 250ms;
-  transition-timing-function: ease-in-out;
-}
 .location::before, .location::after {
   aspect-ratio: 16/9;
   background-color: var(--color-neutral-500);
@@ -2232,6 +2166,99 @@ h6 {
   top: 0;
   translate: 0 -100%;
 }
+.location > .ferris {
+  align-items: center;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  translate: 0 -100%;
+  width: 50%;
+  z-index: -2;
+}
+.location > .ferris img {
+  rotate: -30deg;
+  translate: -20px -20px;
+  width: 288px;
+}
+.location .image {
+  background-color: var(--color-neutral-500);
+  position: relative;
+}
+.location .image:nth-of-type(1) {
+  grid-area: a;
+}
+.location .image:nth-of-type(1)::after {
+  aspect-ratio: 16/9;
+  background-color: var(--color-red-400);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.location .image:nth-of-type(2) {
+  aspect-ratio: 16/9;
+  grid-area: b;
+}
+.location .image:nth-of-type(2)::after {
+  aspect-ratio: 16/9;
+  background-color: var(--color-blue-400);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.location .image:nth-of-type(3) {
+  aspect-ratio: 16/9;
+  background-color: var(--color-yellow-400);
+  grid-area: c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location .image:nth-of-type(3)::after {
+  background-color: var(--color-yellow-500);
+  content: "";
+  inset: 0 50% 0 0;
+  position: absolute;
+}
+.location .image:nth-of-type(3):has(:hover) .ferris {
+  translate: -24px;
+}
+.location .image:nth-of-type(3):has(:hover) .ferris-arms {
+  opacity: 0;
+  translate: 32px;
+}
+.location .image:nth-of-type(3) > .ferris,
+.location .image:nth-of-type(3) > .ferris-arms {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 240px;
+  position: absolute;
+  rotate: 90deg;
+  width: 288px;
+}
+.location .image:nth-of-type(3) > .ferris {
+  background-image: url("./images/ferris.png");
+  transition-duration: 750ms;
+  transition-property: translate;
+  transition-timing-function: ease-out;
+}
+.location .image:nth-of-type(3) > .ferris-arms {
+  background-image: url("./images/ferris-arms.png");
+  background-position: center -12px;
+  transition-delay: 250ms;
+  transition-duration: 500ms;
+  transition-property: opacity, translate;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+}
 
 .sponsors {
   text-align: center;
@@ -2246,12 +2273,16 @@ h6 {
   height: var(--space-6);
   position: relative;
 }
-.sponsors .row {
+.sponsors .sponsors-tiers {
+  padding-block: var(--space-12);
+}
+.sponsors .sponsors-tiers:not(:last-child) {
   border-block-end: 1px solid var(--color-neutral-500);
+}
+.sponsors .sponsors-row {
   display: flex;
   gap: var(--space-6);
   justify-content: center;
-  padding-block-end: var(--space-12);
 }
 .sponsors .sponsor {
   aspect-ratio: 16/9;

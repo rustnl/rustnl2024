@@ -12,13 +12,19 @@
     height: var(--space-6);
     position: relative;
   }
+
+  .sponsors-tiers {
+    padding-block: var(--space-12);
+
+    &:not(:last-child) {
+      border-block-end: 1px solid var(--color-neutral-500);      
+    }
+  }
  
-  .row {
-    border-block-end: 1px solid var(--color-neutral-500);
+  .sponsors-row {
     display: flex;
     gap: var(--space-6);
     justify-content: center;
-    padding-block-end: var(--space-12);
   }
 
   .sponsor {
@@ -29,3 +35,4 @@
     width: 100%;
   }
 }
+
