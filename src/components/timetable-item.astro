@@ -1,0 +1,17 @@
+---
+interface Props {
+    title: string;
+    time: string;
+    speaker?: string;
+}
+
+const { title, time, speaker } = Astro.props;
+---
+
+<li>
+    <div class="time">{time}</div>
+    <div>
+        {speaker&&<div class="speaker">{speaker}</div>}
+        {title}
+    </div>
+</li>
