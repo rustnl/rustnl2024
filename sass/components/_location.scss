@@ -1,9 +1,14 @@
+@use '../mixins';
+
 .location {
-  display: grid;
-  grid-template-areas: 
-  "a b"
-  "a c";
   position: relative;
+  
+  @include mixins.breakpoint(md) {
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "a c";
+  }
 
   &::before, 
   &::after {
@@ -30,21 +35,30 @@
   }
 
   > .ferris {
-    align-items: center;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    translate: 0 -100%;
-    width: 50%;
-    z-index: -2;
+    display: none;
+    
+    @include mixins.breakpoint(md) {
+      align-items: center;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      translate: 0 -100%;
+      width: 50%;
+      z-index: -2;
+    }
     
     img {
-      rotate: -30deg;
-      translate: -20px -20px;
-      width: 288px;
+      @include mixins.breakpoint(md) {
+        rotate: -30deg;
+        width: 144px;
+      }
+
+      @include mixins.breakpoint(xl) {
+        width: 288px;
+      }
     }
   }
 
@@ -54,7 +68,12 @@
   }
   
   .image:nth-of-type(1) {
-    grid-area: a;
+    aspect-ratio: 16 / 18;
+    
+    @include mixins.breakpoint(md) {
+      aspect-ratio: auto;
+      grid-area: a;
+    }
     
     &::after {
       aspect-ratio: 16 / 9;
@@ -70,7 +89,10 @@
   
   .image:nth-of-type(2) {
     aspect-ratio: 16 / 9;
-    grid-area: b;
+
+    @include mixins.breakpoint(md) {
+      grid-area: b;
+    }
 
     &::after {
       aspect-ratio: 16 / 9;
@@ -85,54 +107,75 @@
   }
 
   .image:nth-of-type(3) {
-    aspect-ratio: 16 / 9;
-    background-color: var(--color-yellow-400);
-    grid-area: c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
+
+    @include mixins.breakpoint(md) {
+      aspect-ratio: 16 / 9;
+      background-color: var(--color-yellow-400);
+      grid-area: c;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+    }
 
     &::after {
-      background-color: var(--color-yellow-500);
-      content: '';
-      inset: 0 50% 0 0;
-      position: absolute;
+      @include mixins.breakpoint(md) {
+        background-color: var(--color-yellow-500);
+        content: '';
+        inset: 0 50% 0 0;
+        position: absolute;
+      }
     }
 
     &:has(:hover) .ferris {
-      translate: -24px;
+      @include mixins.breakpoint(md) {
+        translate: -24px;
+      }
     }
 
     &:has(:hover) .ferris-arms {
-      opacity: 0;
-      translate: 32px;
+      @include mixins.breakpoint(md) {
+        opacity: 0;
+        translate: 32px;
+      }
     }
 
     > .ferris,
     > .ferris-arms {
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 240px;
-      position: absolute;
-      rotate: 90deg;
-      width: 288px;
-    }
+      @include mixins.breakpoint(md) {
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 120px;
+        position: absolute;
+        rotate: 90deg;
+        width: 144px;
+      }
+
+      @include mixins.breakpoint(xl) {
+        height: 240px;
+        width: 288px;
+      }
+    } 
 
     > .ferris {
-      background-image: url('./images/ferris.png');
-      transition-duration: 750ms;
-      transition-property: translate;
-      transition-timing-function: ease-out;
+      @include mixins.breakpoint(md) {
+        background-image: url('./images/ferris.png');
+        transition-duration: 750ms;
+        transition-property: translate;
+        transition-timing-function: ease-out;
+      }
     }
 
     > .ferris-arms {
-      background-image: url('./images/ferris-arms.png');
-      background-position: center -12px;
-      transition-delay: 250ms;
-      transition-duration: 500ms;
-      transition-property: opacity, translate;
-      transition-timing-function: ease-in-out;
-      z-index: 1;
+      @include mixins.breakpoint(md) {
+        background-image: url('./images/ferris-arms.png');
+        background-position: center -12px;
+        transition-delay: 250ms;
+        transition-duration: 500ms;
+        transition-property: opacity, translate;
+        transition-timing-function: ease-in-out;
+        z-index: 1;
+      }
     }
   }
 }

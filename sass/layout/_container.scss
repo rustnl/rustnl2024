@@ -5,7 +5,11 @@
   padding-inline: var(--space-4);
   width: min(100%, 90rem);
 
-  @include mixins.breakpoint(lg) {
+  @include mixins.breakpoint(md) {
+    padding-inline: var(--space-6);
+  }
+
+  @include mixins.breakpoint(xl) {
     padding-inline: var(--space-12);
   }
 }

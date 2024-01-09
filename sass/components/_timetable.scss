@@ -1,12 +1,17 @@
+@use '../mixins';
+
 .timetable {
   border-block: 1px solid var(--color-yellow-400);
 
   li {
-    align-items: center;
     display: flex;
-    font-size: var(--font-size-lg);
     gap: var(--space-6);
     padding-block: var(--space-6);
+    
+    @include mixins.breakpoint(lg) {
+      align-items: center;
+      font-size: var(--font-size-lg);
+    }
 
     &:not(:first-child) {
       border-block-start: 1px solid var(--color-yellow-400);

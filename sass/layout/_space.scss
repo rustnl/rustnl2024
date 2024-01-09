@@ -1,3 +1,7 @@
+@use '../mixins';
+@use '../maps';
+@use 'sass:map';
+
 @for $i from 1 through 24 {
   .space-y-#{$i} > * + * {
     margin-block-start: var(--space-#{$i});
@@ -15,5 +19,39 @@
 
   .py-#{$i} {
     padding-block: var(--space-#{$i});
+  }
+}
+
+@each $breakpoint in map.keys(maps.$breakpoints) {
+  @include mixins.breakpoint($breakpoint) {
+    .#{$breakpoint}\:space-y-0 > * + * {
+      margin-block-start: 0;
+    }
+  }
+
+  @for $i from 1 through 24 {
+    @include mixins.breakpoint($breakpoint) {
+      .#{$breakpoint}\:space-y-#{$i} > * + * {
+        margin-block-start: var(--space-#{$i});
+      }    
+    }
+
+    @include mixins.breakpoint($breakpoint) {
+      .#{$breakpoint}\:p-#{$i} {
+        padding: var(--space-#{$i});
+      }    
+    }
+
+    @include mixins.breakpoint($breakpoint) {
+      .#{$breakpoint}\:px-#{$i} {
+        padding-inline: var(--space-#{$i});
+      }    
+    }
+
+    @include mixins.breakpoint($breakpoint) {
+      .#{$breakpoint}\:py-#{$i} {
+        padding-block: var(--space-#{$i});
+      }    
+    }
   }
 }
