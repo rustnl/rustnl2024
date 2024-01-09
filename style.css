@@ -91,7 +91,7 @@ h6 {
   --color-yellow-400: #FFA700;
   --color-yellow-500: #E69601;
   --font-family: "Work Sans", sans-serif;
-  --font-size-scale: 1.414;
+  --font-size-scale: 1.250;
   --font-size-base: 1rem;
   --font-size-md: var(--font-size-base);
   --font-size-lg: calc(var(--font-size-md) * var(--font-size-scale));
@@ -123,6 +123,11 @@ h6 {
   --space-22: calc(0.25rem * 22);
   --space-23: calc(0.25rem * 23);
   --space-24: calc(0.25rem * 24);
+}
+@media (min-width: 64rem) {
+  :root {
+    --font-size-scale: 1.414;
+  }
 }
 
 .text-md {
@@ -162,8 +167,13 @@ h6 {
 
 .container {
   margin-inline: auto;
-  padding-inline: var(--space-12);
+  padding-inline: var(--space-4);
   width: min(100%, 90rem);
+}
+@media (min-width: 64rem) {
+  .container {
+    padding-inline: var(--space-12);
+  }
 }
 
 .grid {
@@ -2068,6 +2078,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+  justify-content: center;
 }
 
 .button-group-center {
@@ -2104,7 +2115,7 @@ h6 {
   background-color: var(--color-yellow-400);
   border-color: var(--color-neutral-400);
   border-style: solid;
-  border-width: var(--space-12) var(--space-12) 0 var(--space-12);
+  border-width: var(--space-4) var(--space-4) 0 var(--space-4);
   box-sizing: border-box;
   color: var(--color-neutral-400);
   display: flex;
@@ -2114,11 +2125,18 @@ h6 {
   justify-content: center;
   line-height: var(--line-height-tight);
   min-height: 100svh;
-  padding-block: var(--space-24);
-  padding-inline: var(--space-12);
+  padding-block: var(--space-12);
+  padding-inline: var(--space-6);
   position: relative;
   text-align: center;
   z-index: 0;
+}
+@media (min-width: 64rem) {
+  .hero {
+    border-width: var(--space-12) var(--space-12) 0 var(--space-12);
+    padding-block: var(--space-24);
+    padding-inline: var(--space-12);
+  }
 }
 .hero::before {
   background-color: var(--color-yellow-500);
@@ -2139,6 +2157,10 @@ h6 {
   max-width: 41.5rem;
   position: absolute;
   width: 100%;
+}
+.hero img {
+  height: auto;
+  max-width: 100%;
 }
 
 .location {
