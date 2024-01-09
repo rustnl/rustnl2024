@@ -19,8 +19,8 @@ import Head from "../components/head.astro";
           <a href="/speakers" class="button button-secondary">Our speakers</a>
         </div>
       </section>
-      <section class="container grid cols-12">
-        <div class="col-start-4 col-end-10 markdown text-lg">
+      <section class="container md:grid md:cols-12">
+        <div class="markdown text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
           <slot name="explainer" />
         </div>
       </section>
@@ -38,12 +38,12 @@ import Head from "../components/head.astro";
         </div>
       </section>
       <section class="container space-y-12" id="schedule">
-        <div class="grid cols-2">
-          <div class="space-y-12 px-12">
+        <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
+          <div class="space-y-6 md:space-y-12 sm:px-6 xl:px-12">
             <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
             <slot name="timetable-day1" />
           </div>
-          <div class="space-y-6 xl:space-y-12 sm:px-6 xl:px-12">
+          <div class="space-y-6 md:space-y-12 sm:px-6 xl:px-12">
             <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
             <slot name="timetable-day2" />
           </div>
