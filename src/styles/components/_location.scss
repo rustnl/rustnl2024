@@ -10,28 +10,17 @@
     "a c";
   }
 
-  &::before, 
-  &::after {
+  &::before {
     aspect-ratio: 16 / 9;
     background-color: var(--color-neutral-500);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
     content: '';
     position: absolute;
-    width: 50%;
-    z-index: -1;
-  }
-
-  &::after {
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    left: 0;
-    translate: 0 100%;
-  }
-
-  &::before {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
     right: 0;
     top: 0;
     translate: 0 -100%;
+    width: 50%;
+    z-index: -1;
   }
 
   > .ferris {

@@ -1,5 +1,6 @@
 ---
 import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <!doctype html>
@@ -40,7 +41,7 @@ import Head from "../components/head.astro";
       <section class="last-year space-y-24">
         <section class="container space-y-6" id="last-year">
           <h3 class="text-xl text-center">Title 2023</h3>
-          <div class="grid cols-4">
+          <div class="grid md:cols-2 xl:cols-4">
             <div class="benefit">
               <div class="icon"></div>
               <div>
@@ -69,7 +70,7 @@ import Head from "../components/head.astro";
         </section>
         <section class="container space-y-6">
           <h3 class="text-xl text-center">Last year speakers</h3>
-          <div class="grid cols-4">
+          <div class="grid md:cols-2 xl:cols-4">
             <div class="speaker">
               <div class="space-y-6">
                 <img src="./images/speakers/nicholas.png" alt="">
@@ -114,8 +115,8 @@ import Head from "../components/head.astro";
         </section>
         <div class="section container space-y-6">
           <h3 class="text-center text-xl">Playlist of last year</h3>
-          <div class="grid cols-12">
-            <div class="col-start-2 col-end-12">
+          <div class="lg:grid lg:cols-12">
+            <div class="lg:col-start-2 lg:col-end-12">
               <div class="youtube">
                 <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/rC4FCS-oMpg?si=4kjeYRPt39fp7YVB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
@@ -147,6 +148,12 @@ import Head from "../components/head.astro";
           </div>
         </div>
       </section>
+      <section class="container md:grid md:cols-12">
+        <div class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
+          <slot name="explainer" />
+        </div>
+      </section>
     </div>
+    <Footer />
   </body>
 </html>
