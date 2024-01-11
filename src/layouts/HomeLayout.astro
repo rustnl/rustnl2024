@@ -15,7 +15,7 @@ import Head from "../components/head.astro";
         <img src="/images/logo.svg" alt="Logo RustNL 2024" />
         <p>10 May 2024 <br /> <strong>TU Delft</strong>, Nederland</p>
         <div class="button-group">
-          <a href="#schedule" class="button button-primary">Schedule</a>
+          <a href="/schedule" class="button button-primary">Schedule</a>
           <a href="/speakers" class="button button-secondary">Our speakers</a>
         </div>
       </section>
@@ -35,21 +35,6 @@ import Head from "../components/head.astro";
           <div class="ferris">
             <img src="./images/ferris.png" alt="">
           </div>
-        </div>
-      </section>
-      <section class="container space-y-12" id="schedule">
-        <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
-          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
-            <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
-            <slot name="timetable-day1" />
-          </div>
-          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
-            <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
-            <slot name="timetable-day2" />
-          </div>
-        </div>
-        <div class="button-group button-group-center">
-          <button class="button button-primary">Our speakers</button>
         </div>
       </section>
       <section class="last-year space-y-24">
