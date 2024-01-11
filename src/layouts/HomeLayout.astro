@@ -39,11 +39,11 @@ import Head from "../components/head.astro";
       </section>
       <section class="container space-y-12" id="schedule">
         <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
-          <div class="space-y-6 md:space-y-12 sm:px-6 xl:px-12">
+          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
             <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
             <slot name="timetable-day1" />
           </div>
-          <div class="space-y-6 md:space-y-12 sm:px-6 xl:px-12">
+          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
             <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
             <slot name="timetable-day2" />
           </div>
@@ -52,30 +52,88 @@ import Head from "../components/head.astro";
           <button class="button button-primary">Our speakers</button>
         </div>
       </section>
-      <section class="container" id="last-year">
-        <div class="grid cols-4 gap-0 benefits">
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>First edition</strong> in Amsterdam in 2023
+      <section class="last-year space-y-24">
+        <section class="container space-y-6" id="last-year">
+          <h3 class="text-xl text-center">Title 2023</h3>
+          <div class="grid cols-4">
+            <div class="benefit">
+              <div class="icon"></div>
+              <div>
+                <strong>First edition</strong> in Amsterdam in 2023
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon"></div>
+              <div>
+                <strong>Sold out</strong> 300 attendees
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon"></div>
+              <div>
+                <strong>100k</strong> Youtube views
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon"></div>
+              <div>
+                <strong>Cool</strong> talks
+              </div>
             </div>
           </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>Sold out</strong> 300 attendees
+        </section>
+        <section class="container space-y-6">
+          <h3 class="text-xl text-center">Last year speakers</h3>
+          <div class="grid cols-4">
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="./images/speakers/nicholas.png" alt="">
+                <div>
+                  <h3>Nicholas Nethercote</h3>
+                  <h4 class="font-light text-lg leading-tight">The status of parallel rustc</h4>
+                </div>
+              </div>
+              <a href="">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="./images/speakers/rik.png" alt="">
+                <div>
+                  <h3>Rik Arends</h3>
+                  <h4 class="font-light text-lg leading-tight">Makepad: Designing modern UIs with Rust</h>
+                </div>
+              </div>
+              <a href="">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="./images/speakers/jonathan.jpg" alt="">
+                <div>
+                  <h3>Jonathan Kelley</h3>
+                  <h4 class="font-light text-lg leading-tight">Write once, run everywhere: building apps with Dioxus</h4>
+                </div>
+              </div>
+              <a href="">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="./images/speakers/ed.jpg" alt="">
+                <div>
+                  <h3>Ed Page</h3>
+                  <h4 class="font-light text-lg leading-tight">Testing My Patience: An Exploration of Testing in Rust</h4>
+                </div>
+              </div>
+              <a href="">View on youtube</a>
             </div>
           </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>100k</strong> Youtube views
-            </div>
-          </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>Cool</strong> talks
+        </section>
+        <div class="section container space-y-6">
+          <h3 class="text-center text-xl">Playlist of last year</h3>
+          <div class="grid cols-12">
+            <div class="col-start-2 col-end-12">
+              <div class="youtube">
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/rC4FCS-oMpg?si=4kjeYRPt39fp7YVB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>

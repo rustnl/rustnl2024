@@ -17,12 +17,20 @@
   font-size: var(--font-size-2xl);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .leading-normal {
   line-height: var(--line-height-normal);
 }
 
 .leading-tight {
   line-height: var(--line-height-tight);
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .markdown {

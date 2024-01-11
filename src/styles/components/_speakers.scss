@@ -1,0 +1,30 @@
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  border: 1px solid var(--color-yellow-500);
+  background-color: var(--color-yellow-400);
+
+  > * + * {
+    margin-block-start: var(--space-6);
+  }
+
+  img {
+    align-self: center;
+    border-radius: 100%;
+    height: auto;
+    max-width: 192px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
