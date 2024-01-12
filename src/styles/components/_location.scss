@@ -59,6 +59,7 @@
   .image:nth-of-type(1) {
     aspect-ratio: 16 / 18;
     background-image: url('./images/delft.jpg');
+    background-position: -192px center;
     background-size: auto 100%;
 
     @include mixins.breakpoint(sm) {
@@ -81,6 +82,7 @@
       background-image: url('./images/delft-kerk.png');
       background-repeat: no-repeat;
       background-size: auto 100%;
+      background-position: -192px center;
       content: '';
       inset: 0;
       position: absolute;
