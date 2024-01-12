@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 *, 
 *:before, 
 *:after {
@@ -28,3 +30,6 @@ b {
 }
 
 
+.anchor {
+  scroll-margin-top: var(--space-24);
+}
