@@ -33,3 +33,21 @@
   border: 1px solid var(--color-red-400);
   color: var(--color-red-400);
 }
+
+.down-arrow {
+  border: solid var(--color-red-400);
+  border-width: 0 .5em .5em 0;
+  display: inline-block;
+  padding: .5em;
+  animation: MoveUpDown 2s ease-in-out infinite;
+}
+
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate(0, 0.4em) rotate(45deg);
+  }
+}

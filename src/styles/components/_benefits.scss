@@ -18,11 +18,28 @@
 
   .icon {
     aspect-ratio: 1;
-    background-image: url('./images/icon/rocket.png');
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: contain;
     width: var(--space-24);
+
+    &.ticket {
+      background-image: url('./images/icon/ticket.png');
+    }
+
+    &.rocket {
+      background-image: url('./images/icon/rocket.png');
+    }
+    
+    &.eye {
+      background-image: url('./images/icon/eye.png');
+    }
+    
+    &.message {
+      background-image: url('./images/icon/message.png');
+    }
   }
+  
 }
