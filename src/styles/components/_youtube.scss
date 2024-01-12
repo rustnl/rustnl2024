@@ -10,11 +10,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: calc(100% + 2px) auto;
-    display: block;
     content: '';
+    display: block;
     height: var(--space-6);
-    width: 100%;
     left: 0;
+    width: 100%;
   }
 
   &::after {
@@ -27,8 +27,8 @@
   display: flex;
   gap: var(--space-6);
   justify-content: center;
-  padding: var(--space-6);
   margin-block-start: var(--space-24);
+  padding: var(--space-6);
 
   a {
     color: var(--color-neutral-400);
