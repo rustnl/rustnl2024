@@ -26,19 +26,19 @@
     width: var(--space-24);
 
     &.ticket {
-      background-image: url('./images/icon/ticket.png');
+      background-image: url('/images/icon/ticket.png');
     }
 
     &.rocket {
-      background-image: url('./images/icon/rocket.png');
+      background-image: url('/images/icon/rocket.png');
     }
     
     &.eye {
-      background-image: url('./images/icon/eye.png');
+      background-image: url('/images/icon/eye.png');
     }
     
     &.message {
-      background-image: url('./images/icon/message.png');
+      background-image: url('/images/icon/message.png');
     }
   }
   
