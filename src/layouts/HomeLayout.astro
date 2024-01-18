@@ -1,15 +1,12 @@
 ---
 import Head from "../components/head.astro";
 import Footer from "../components/footer.astro";
+import '../styles/index.scss';
 ---
 
 <!doctype html>
 <html lang="en">
   <Head />
-  <style lang="scss" is:global>
-    @import "../styles/index.scss";
-  </style>
-
   <body>
     <div class="space-y-24">
       <section class="hero">
@@ -34,7 +31,7 @@ import Footer from "../components/footer.astro";
             <div class="ferris-arms"></div>
           </div>
           <div class="ferris">
-            <img src="./images/ferris.png" alt="">
+            <img src="/images/ferris.png" alt="">
           </div>
         </div>
       </section>
@@ -73,7 +70,7 @@ import Footer from "../components/footer.astro";
           <div class="grid md:cols-2 xl:cols-4">
             <div class="speaker">
               <div class="space-y-6">
-                <img src="./images/speakers/nicholas.png" alt="">
+                <img src="/images/speakers/nicholas.png" alt="">
                 <div>
                   <h3>Nicholas Nethercote</h3>
                   <h4 class="font-light text-lg leading-tight">The status of parallel rustc</h4>
@@ -83,7 +80,7 @@ import Footer from "../components/footer.astro";
             </div>
             <div class="speaker">
               <div class="space-y-6">
-                <img src="./images/speakers/rik.png" alt="">
+                <img src="/images/speakers/rik.png" alt="">
                 <div>
                   <h3>Rik Arends</h3>
                   <h4 class="font-light text-lg leading-tight">Makepad: Designing modern UIs with Rust</h>
@@ -93,7 +90,7 @@ import Footer from "../components/footer.astro";
             </div>
             <div class="speaker">
               <div class="space-y-6">
-                <img src="./images/speakers/jonathan.jpg" alt="">
+                <img src="/images/speakers/jonathan.jpg" alt="">
                 <div>
                   <h3>Jonathan Kelley</h3>
                   <h4 class="font-light text-lg leading-tight">Write once, run everywhere: building apps with Dioxus</h4>
@@ -103,7 +100,7 @@ import Footer from "../components/footer.astro";
             </div>
             <div class="speaker">
               <div class="space-y-6">
-                <img src="./images/speakers/ed.jpg" alt="">
+                <img src="/images/speakers/ed.jpg" alt="">
                 <div>
                   <h3>Ed Page</h3>
                   <h4 class="font-light text-lg leading-tight">Testing My Patience: An Exploration of Testing in Rust</h4>
