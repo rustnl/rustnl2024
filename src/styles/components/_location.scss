@@ -127,17 +127,21 @@
       }
     }
 
-    &:has(:hover) .ferris {
+    &:hover .ferris {
       @include mixins.breakpoint(sm) {
-        translate: -24px;
+        translate: 0;
       }
+      /* This timing is for the entering animation */
+      transition: translate 300ms 200ms ease-out;
     }
 
-    &:has(:hover) .ferris-arms {
+    &:hover .ferris-arms {
       @include mixins.breakpoint(sm) {
-        opacity: 0;
-        translate: 32px;
+        opacity: 1;
+        translate: 0px;
       }
+      /* This timing is for the entering animation */
+      transition: opacity 200ms ease-in, translate 200ms ease-out;
     }
 
     > .ferris,
@@ -160,9 +164,9 @@
     > .ferris {
       @include mixins.breakpoint(sm) {
         background-image: url('/images/ferris.png');
-        transition-duration: 750ms;
-        transition-property: translate;
-        transition-timing-function: ease-out;
+        /* This timing is for the leaving animation */
+        transition: translate 300ms ease-out;
+        translate: -24px;
       }
     }
 
@@ -170,11 +174,12 @@
       @include mixins.breakpoint(sm) {
         background-image: url('/images/ferris-arms.png');
         background-position: center -12px;
-        transition-delay: 250ms;
-        transition-duration: 500ms;
-        transition-property: opacity, translate;
-        transition-timing-function: ease-in-out;
+        /* This timing is for the leaving animation */
+        transition: opacity 200ms 300ms ease-out, translate 200ms 200ms ease-out;
+        translate: 10px;
+        opacity: 0;
         z-index: 1;
+        clip-path: circle(34%);
       }
     }
   }
