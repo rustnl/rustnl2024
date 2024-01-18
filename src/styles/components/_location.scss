@@ -27,16 +27,20 @@
     display: none;
     
     @include mixins.breakpoint(sm) {
-      align-items: center;
+      align-items: flex-start;
       aspect-ratio: 16 / 9;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       position: absolute;
-      right: 0;
-      top: 0;
+      top: -12px;
+      right: 24px;
       translate: 0 -100%;
       width: 50%;
       z-index: -2;
+    }
+
+    @include mixins.breakpoint(xl) {
+      top: -24px;
     }
     
     img {
@@ -46,7 +50,7 @@
       }
 
       @include mixins.breakpoint(xl) {
-        width: 288px;
+        width: 288px;       
       }
     }
   }
