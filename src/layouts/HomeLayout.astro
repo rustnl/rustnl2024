@@ -1,85 +1,156 @@
 ---
 import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+import '../styles/index.scss';
 ---
 
 <!doctype html>
 <html lang="en">
   <Head />
-  <style lang="scss" is:global>
-    @import "../styles/index.scss";
-  </style>
-
   <body>
     <div class="space-y-24">
       <section class="hero">
         <img src="/images/logo.svg" alt="Logo RustNL 2024" />
-        <p>10 May 2024 <br /> <strong>TU Delft</strong>, Nederland</p>
+        <p>May 7 & 8, 2024<br /><strong>Delft</strong>, The Netherlands</p>
         <div class="button-group">
-          <a href="#schedule" class="button button-primary">Schedule</a>
-          <a href="/speakers" class="button button-secondary">Our speakers</a>
+          <a href="https://www.eventbrite.nl/e/rustnl-2024-tickets-790061233417?aff=oddtdtcreator" class="button button-primary">Tickets</a>
         </div>
+        <a class="down-arrow" href="#explainer"></a>
       </section>
-      <section class="container grid cols-12">
-        <div class="col-start-4 col-end-10 markdown text-lg">
+      <section class="container md:grid md:cols-12">
+        <div class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
           <slot name="explainer" />
         </div>
       </section>
       <section class="container">
         <div class="location">
-          <div>1</div>
-          <div>2</div>
-          <div>
+          <div class="image"></div>
+          <div class="image"></div>
+          <div class="image">
             <div class="ferris"></div>
             <div class="ferris-arms"></div>
           </div>
-        </div>
-      </section>
-      <section class="container space-y-12" id="schedule">
-        <div class="grid cols-2">
-          <div class="space-y-12 px-12">
-            <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
-            <slot name="timetable-day1" />
-          </div>
-          <div class="space-y-12 px-12">
-            <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
-            <slot name="timetable-day2" />
-          </div>
-        </div>
-        <div class="button-group button-group-center">
-          <button class="button button-primary">Our speakers</button>
-        </div>
-      </section>
-      <section class="container" id="last-year">
-        <div class="grid cols-4 gap-0 benefits">
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>First edition</strong>in Amsterdam in 2023
-            </div>
-          </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>Sold out</strong> 300 attendees
-            </div>
-          </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>100k</strong> Youtube views
-            </div>
-          </div>
-          <div class="benefit">
-            <div class="icon"></div>
-            <div>
-              <strong>Cool</strong> talks
-            </div>
+          <div class="ferris">
+            <img src="/images/ferris.png" alt="">
           </div>
         </div>
       </section>
-      <section class="container">
-        <div class="sponsors">1</div>
+      <section class="last-year space-y-24">
+        <section class="container space-y-6" id="last-year">
+          <h3 class="text-xl text-center">RustNL 2023</h3>
+          <div class="grid md:cols-2 xl:cols-4">
+            <div class="benefit">
+              <div class="icon rocket"></div>
+              <div>
+                <strong>First edition</strong> in Amsterdam in 2023
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon ticket"></div>
+              <div>
+                <strong>Sold out</strong><br /> 300 attendees
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon eye"></div>
+              <div>
+                <strong>100k</strong><br />Youtube views
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon message"></div>
+              <div>
+                <strong>10 talks</strong> covering rustc, UIs, Servo, cargo, sudo,  and Escher
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container space-y-6">
+          <h3 class="text-xl text-center">Last year's speakers</h3>
+          <div class="grid md:cols-2 xl:cols-4">
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="/images/speakers/nicholas.png" alt="">
+                <div>
+                  <h3>Nicholas Nethercote</h3>
+                  <h4 class="font-light text-lg leading-tight">The status of parallel rustc</h4>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=q2vJ8Faundw&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=9">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="/images/speakers/rik.png" alt="">
+                <div>
+                  <h3>Rik Arends</h3>
+                  <h4 class="font-light text-lg leading-tight">Makepad: Designing modern UIs with Rust</h>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="/images/speakers/jonathan.jpg" alt="">
+                <div>
+                  <h3>Jonathan Kelley</h3>
+                  <h4 class="font-light text-lg leading-tight">Write once, run everywhere: building apps with Dioxus</h4>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=aSxdmXjZutI&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=6">View on youtube</a>
+            </div>
+            <div class="speaker">
+              <div class="space-y-6">
+                <img src="/images/speakers/ed.jpg" alt="">
+                <div>
+                  <h3>Ed Page</h3>
+                  <h4 class="font-light text-lg leading-tight">Testing My Patience: An Exploration of Testing in Rust</h4>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=3aLPewRSiK8&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=4">View on youtube</a>
+            </div>
+          </div>
+        </section>
+        <div class="section container space-y-6">
+          <h3 class="text-center text-xl">2023 playlist</h3>
+          <div class="lg:grid lg:cols-12">
+            <div class="lg:col-start-2 lg:col-end-12">
+              <div class="youtube">
+                <iframe height="100%" width="100%" src="https://www.youtube-nocookie.com/embed/rC4FCS-oMpg?si=4kjeYRPt39fp7YVB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container sponsors">
+        <!--div class="sponsors-tiers space-y-6">
+          <h3 class="text-xl">Headline sponsors</h3>
+          <div class="sponsors-row">
+            <div class="sponsor"></div>
+          </div>
+        </div-->
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-xl">2023 sponsors</h3>
+          <div class="sponsors-row">
+            <div class="sponsor" style="--image: url(/images/sponsors/futurewei.png);"></div>
+            <div class="sponsor" style="--image: url(/images/sponsors/tweede-golf-v2.png);"></div>
+            <div class="sponsor" style="--image: url(/images/sponsors/technolution.png);"></div>
+          </div>
+        </div>
+        <!--div class="sponsors-tiers space-y-6">
+          <h3 class="text-xl">Silver sponsors</h3>
+          <div class="sponsors-row">
+            <div class="sponsor"></div>
+            <div class="sponsor"></div>
+            <div class="sponsor"></div>
+          </div>
+        </div-->
+      </section>
+      <section class="container md:grid md:cols-12">
+        <div class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
+          <slot name="about" />
+        </div>
       </section>
     </div>
+    <Footer />
   </body>
 </html>

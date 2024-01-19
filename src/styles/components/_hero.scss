@@ -1,9 +1,8 @@
+@use '../mixins';
+
 .hero {
   align-items: center;
   background-color: var(--color-yellow-400);
-  border-color: var(--color-neutral-400);
-  border-style: solid;
-  border-width: var(--space-12) var(--space-12) 0 var(--space-12);
   box-sizing: border-box;
   color: var(--color-neutral-400);
   display: flex;
@@ -13,11 +12,23 @@
   justify-content: center;
   line-height: var(--line-height-tight);
   min-height: 100svh;
-  padding-block: var(--space-24);
-  padding-inline: var(--space-12);
+  padding-block: var(--space-12);
+  padding-inline: var(--space-6);
   position: relative;
   text-align: center;
   z-index: 0;
+
+  @include mixins.breakpoint(md) {
+    border-width: var(--space-6) var(--space-6) 0 var(--space-6);
+    padding-block: var(--space-12);
+    padding-inline: var(--space-6);  
+  }
+
+  @include mixins.breakpoint(xl) {
+    border-width: var(--space-12) var(--space-12) 0 var(--space-12);
+    padding-block: var(--space-24);
+    padding-inline: var(--space-12);  
+  }
 
   &::before {
     background-color: var(--color-yellow-500);
@@ -29,15 +40,20 @@
   }
 
   &::after {
-    background-image: url('./images/stripes.svg');
+    background-image: url('/images/stripes.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
     bottom: 0;
     content: '';
     height: var(--space-6);
-    max-width: 41.5rem;
+    max-width: 44.25rem;
     position: absolute;
     width: 100%;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
   }
 }

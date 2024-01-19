@@ -1,0 +1,27 @@
+---
+import Head from "../components/head.astro";
+import '../styles/index.scss';
+---
+
+<!doctype html>
+<html lang="en">
+  <Head />
+
+  <body>
+    <section class="container py-24 space-y-12" id="schedule">
+      <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
+        <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
+          <h3 class="text-2xl">Schedule <strong>day 1</strong></h3>
+          <slot name="timetable-day1" />
+        </div>
+        <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
+          <h3 class="text-2xl">Schedule <strong>day 2</strong></h3>
+          <slot name="timetable-day2" />
+        </div>
+      </div>
+      <div class="button-group button-group-center">
+        <button class="button button-primary">Our speakers</button>
+      </div>
+    </section>
+  </body>
+</html>

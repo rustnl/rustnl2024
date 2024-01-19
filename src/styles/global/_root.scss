@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use '../mixins';
 
 :root {
   --color-neutral-400: #FFF0E6;
@@ -11,7 +12,7 @@
   --color-yellow-500: #E69601;
 
   --font-family: 'Work Sans', sans-serif;
-  --font-size-scale: 1.414;
+  --font-size-scale: 1.333;
   --font-size-base: 1rem;
   --font-size-md: var(--font-size-base);
   --font-size-lg: calc(var(--font-size-md) * var(--font-size-scale));
@@ -23,5 +24,9 @@
 
   @for $i from 1 through 24 {
     --space-#{$i}: calc(0.25rem * #{$i});
+  }
+
+  @include mixins.breakpoint(xl) {
+    --font-size-scale: 1.414;
   }
 }

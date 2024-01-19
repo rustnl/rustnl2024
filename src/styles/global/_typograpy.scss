@@ -1,3 +1,6 @@
+@use '../mixins';
+@use '../maps';
+
 .text-md {
   font-size: var(--font-size-md);
 }
@@ -14,6 +17,10 @@
   font-size: var(--font-size-2xl);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .leading-normal {
   line-height: var(--line-height-normal);
 }
@@ -22,9 +29,18 @@
   line-height: var(--line-height-tight);
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .markdown {
   > * + * {
     margin-block-start: calc(var(--font-size-md) * var(--line-height-normal));
+  }
+
+  a {
+    text-decoration: underline;
+    color: inherit;
   }
 
   h1 {

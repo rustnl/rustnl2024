@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 *, 
 *:before, 
 *:after {
@@ -16,15 +18,18 @@ body {
   line-height: var(--line-height-normal);
 }
 
-strong,
-b,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+strong,
+b {
   font-weight: 700;
 }
 
 
+.anchor {
+  scroll-margin-top: var(--space-24);
+}
