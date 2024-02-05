@@ -7,7 +7,9 @@ import TimetableItem from "../components/timetable-item.astro";
     <div class="markdown" slot="explainer">
         <h1 id="explainer">RustNL 2024</h1>
         <p>
-            After our first edition in <a href="#last-year">Amsterdam last year</a>, we wanted more!
+            After our first edition in <a href="#last-year"
+                >Amsterdam last year</a
+            >, we wanted more!
             <br />It's time for RustNL 2024, in Delft!
         </p>
         <ul>
@@ -17,17 +19,39 @@ import TimetableItem from "../components/timetable-item.astro";
         </ul>
         <p>
             <strong>Support our conference and the Rust ecosystem</strong><br />
-            Following the conference RustNL will facilitate a multi day unconference for Rust maintainers in the mobile and embedded space.
-            Contact us at <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested in sponsoring the conference or unconference.
+            Following the conference RustNL will facilitate a multi day unconference
+            for Rust maintainers in the mobile and embedded space. Contact us at
+            <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested
+            in sponsoring the conference or unconference.
         </p>
     </div>
     <div class="markdown" slot="about">
-        <h1 id="explainer">About RustNL</h1>
+        <h2 class="text-2xl" id="about">About RustNL</h2>
         <p>
-            Stichting Rust Nederland, RustNL for short, a non-profit that strives to promote the implementation of the Rust programming language in the Netherlands and Europe.
+            Stichting Rust Nederland, RustNL for short, a non-profit that
+            strives to promote the implementation of the Rust programming
+            language in the Netherlands and Europe.
         </p>
         <p>
-            We organize meetups and events in The Netherlands to bring the Rust community together.
+            We organize meetups and events in The Netherlands to bring the Rust
+            community together.
+        </p>
+    </div>
+    <div class="markdown" slot="cfp">
+        <h2 class="text-lg" id="cfp">Call for Proposals</h2>
+        <p>
+            Want to speak at RustNL 2024? Our CfP now is open!
+            <br />
+            The CfP closes Mon Feb 19 23:59 CET.
+
+            <div class="button-group">
+                <a
+                    class="button button-primary"
+                    style="text-decoration: none;color:var(--color-neutral-400);"
+                    href="https://cryptpad.fr/form/#/2/form/view/WtBXS48XjwAvYXIjhgEY6yJ0EOpULX+zByvkHds2oUA/"
+                    >Submit your talk proposal</a
+                >
+            </div>
         </p>
     </div>
 </HomeLayout>
