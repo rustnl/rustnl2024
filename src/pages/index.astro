@@ -1,6 +1,8 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import TimetableItem from "../components/timetable-item.astro";
+import Speaker from "../components/speaker.astro";
+import PreviousSpeaker from "../components/previous_speaker.astro";
 ---
 
 <HomeLayout>
@@ -37,8 +39,41 @@ import TimetableItem from "../components/timetable-item.astro";
             community together.
         </p>
     </div>
+    <Fragment slot="speakers">
+        <Speaker
+            name="Mara Bos"
+            image="mara.jpg"
+            description="Library team & Leadership council"
+        />
+    </Fragment>
+    <Fragment slot="previous-speakers">
+        <PreviousSpeaker
+            name="Nicolas Nethercote"
+            image="nicholas.png"
+            talk="The status of parallel rustc"
+            youtube="https://www.youtube.com/watch?v=q2vJ8Faundw&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=9"
+        />
+        <PreviousSpeaker
+            name="Rik Arends"
+            image="rik.png"
+            talk="Makepad: Designing modern UIs with Rust"
+            youtube="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1"
+        />
+        <PreviousSpeaker
+            name="Jonathan Kelley"
+            image="jonathan.jpg"
+            talk="Write once, run everywhere: building apps with Dioxus"
+            youtube="https://www.youtube.com/watch?v=aSxdmXjZutI&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=6"
+        />
+        <PreviousSpeaker
+            name="Ed Page"
+            image="ed.jpg"
+            talk="Testing My Patience: An Exploration of Testing in Rust"
+            youtube="https://www.youtube.com/watch?v=3aLPewRSiK8&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=4"
+        />
+    </Fragment>
     <div class="markdown" slot="cfp">
-        <h2 class="text-lg" id="cfp">Call for Proposals</h2>
+        <h3 class="text-2xl text-center" id="cfp">Call for Proposals</h3>
         <p>
             Want to speak at RustNL 2024? Our CfP now is open!
             <br />

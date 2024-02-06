@@ -1,0 +1,12 @@
+---
+const { name, image, description } = Astro.props;
+---
+<div class="speaker">
+    <div class="space-y-6">
+        <img src={`/images/speakers/${image}`} alt="" />
+        <div>
+            <h3>{description}</h3>
+            <h4 class="font-light text-lg leading-tight">{name}</h4>
+        </div>
+    </div>
+</div>
