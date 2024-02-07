@@ -1,6 +1,7 @@
 ---
 import Head from "../components/head.astro";
 import Footer from "../components/footer.astro";
+
 import "../styles/index.scss";
 ---
 
@@ -43,24 +44,7 @@ import "../styles/index.scss";
       <section class="container space-y-6">
         <h3 class="text-2xl text-center">Our speakers</h3>
         <div class="grid md:cols-2 xl:cols-4">
-          <div class="speaker">
-            <div class="space-y-6">
-              <img src="/images/speakers/mara.jpg" alt="" />
-              <div>
-                <h3>Library team & Leadership council</h3>
-                <h4 class="font-light text-lg leading-tight">Mara Bos</h4>
-              </div>
-            </div>
-          </div>
-          <!--div class="speaker">
-            <div class="space-y-6">
-              <img src="/images/speakers/mara.jpg" alt="">
-              <div>
-                <h3>Library team & Leadership council</h3>
-                <h4 class="font-light text-lg leading-tight">Mara Bos</h4>
-              </div>
-            </div>
-          </div-->
+          <slot name="speakers" />
         </div>
       </section>
       <section class="container md:grid md:cols-12">
@@ -103,67 +87,8 @@ import "../styles/index.scss";
         </section>
         <section class="container space-y-6">
           <h3 class="text-xl text-center">Last year's speakers</h3>
-          <div class="grid md:cols-2 xl:cols-4">
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/nicholas.png" alt="" />
-                <div>
-                  <h3>Nicholas Nethercote</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    The status of parallel rustc
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=q2vJ8Faundw&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=9"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/rik.png" alt="" />
-                <div>
-                  <h3>Rik Arends</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Makepad: Designing modern UIs with Rust
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/jonathan.jpg" alt="" />
-                <div>
-                  <h3>Jonathan Kelley</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Write once, run everywhere: building apps with Dioxus
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=aSxdmXjZutI&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=6"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/ed.jpg" alt="" />
-                <div>
-                  <h3>Ed Page</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Testing My Patience: An Exploration of Testing in Rust
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=3aLPewRSiK8&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=4"
-                >View on youtube</a
-              >
-            </div>
+          <div class="grid md:cols-2 xl:cols-4" slot="previous-speakers">
+            <slot name="previous-speakers" />
           </div>
         </section>
         <div class="section container space-y-6">
