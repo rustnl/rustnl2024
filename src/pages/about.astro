@@ -1,0 +1,37 @@
+---
+import AboutLayout from "../layouts/AboutLayout.astro";
+import Organiser from "../components/organiser.astro";
+---
+
+<AboutLayout>
+    <Fragment slot="organisers">
+        <Organiser
+            name="Erik Jonkers"
+            image="erik.jpg"
+            description="Director of software agency Tweede golf. Working on the adoption of Rust at tech companies in NL."
+        />
+        <Organiser name="Laura Pircalaboiu" image="empty.png" description="" />
+        <Organiser
+            name="Jonathan Dönszelmann"
+            image="jonathan.png"
+            description="Lecturer in Embedded Systems at Delft University of Technology"
+        />
+    </Fragment>
+    <Fragment slot="volunteers">
+        <Organiser name="Dirkjan Ochtman" image="dirkjan.png" description="" />
+        <Organiser name="Terts Diepraam" image="terts.png" description="" />
+    </Fragment>
+
+    <Fragment slot="support">
+        <Organiser
+            name="Anna Kocks"
+            image="empty.png"
+            description="reddresseffect"
+        />
+        <Organiser
+            name="Erwin"
+            image="empty.png"
+            description="grafische-republiek"
+        />
+    </Fragment>
+</AboutLayout>

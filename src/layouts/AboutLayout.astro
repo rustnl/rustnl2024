@@ -1,0 +1,41 @@
+---
+import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+import "../styles/index.scss";
+---
+
+<!doctype html>
+<html lang="en">
+  <Head />
+
+  <body>
+    <section class="container py-24 space-y-12" id="schedule">
+      <div
+        class="space-y-12 md:grid md:cols-2 md:space-y-0"
+        style="justify-content: center;"
+      >
+      </div>
+      <h3 class="text-2xl text-center">Organisers</h3>
+      <div class="grid md:cols-2 xl:cols-3" id="organisers">
+        <slot name="organisers" />
+      </div>
+
+      <h3 class="text-2xl text-center">Volunteers</h3>
+      <div class="grid md:cols-2 xl:cols-4" id="volunteers">
+        <slot name="volunteers" />
+      </div>
+
+      <h3 class="text-2xl text-center">Supporting Us</h3>
+      <div class="grid md:cols-2 xl:cols-4" id="support">
+        <slot name="support" />
+      </div>
+
+      <div class="button-group button-group-center">
+        <a class="button button-primary" href="/#sponsors">Our Sponsors</a>
+        <a class="button button-primary" href="/">Back Home</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
