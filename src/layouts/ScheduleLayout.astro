@@ -1,6 +1,7 @@
 ---
 import Head from "../components/head.astro";
-import '../styles/index.scss';
+import Footer from "../components/footer.astro";
+import "../styles/index.scss";
 ---
 
 <!doctype html>
@@ -20,8 +21,11 @@ import '../styles/index.scss';
         </div>
       </div>
       <div class="button-group button-group-center">
-        <button class="button button-primary">Our speakers</button>
+        <a class="button button-primary" href="/#speakers">Our Speakers</a>
+        <a class="button button-primary" href="/">Back Home</a>
       </div>
     </section>
+
+    <Footer />
   </body>
 </html>
