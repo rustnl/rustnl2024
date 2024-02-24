@@ -9,30 +9,41 @@ import "../styles/index.scss";
   <Head />
 
   <body>
-    <section class="container py-24 space-y-12" id="schedule">
+    <section class="hero page">
+      <div class="nav">
+        <img src="/images/logo.svg" alt="Logo RustNL 2024" />
+        <div class="button-group">
+          <a href="/" class="button button-primary">Home</a>
+        </div>
+      </div>
+      <h1 class="text-3xl">About</h1>
+    </section>
+    <section class="container md:grid md:cols-12 py-12">
+      <div
+        class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+      >
+        <slot name="about-long" />
+      </div>
+    </section>
+    <section class="container py-12 space-y-6">
       <div
         class="space-y-12 md:grid md:cols-2 md:space-y-0"
         style="justify-content: center;"
       >
       </div>
-      <h3 class="text-2xl text-center">Organisers</h3>
+      <h3 class="text-2xl text-center">RustNL 2024 team</h3>
       <div class="grid md:cols-2 xl:cols-3" id="organisers">
         <slot name="organisers" />
       </div>
 
-      <h3 class="text-2xl text-center">Volunteers</h3>
+      <h3 class="text-2xl text-center py-12">Volunteers</h3>
       <div class="grid md:cols-2 xl:cols-4" id="volunteers">
         <slot name="volunteers" />
       </div>
 
-      <h3 class="text-2xl text-center">Supporting Us</h3>
+      <h3 class="text-2xl text-center py-12">Supporting Us</h3>
       <div class="grid md:cols-2 xl:cols-4" id="support">
         <slot name="support" />
-      </div>
-
-      <div class="button-group button-group-center">
-        <a class="button button-primary" href="/#sponsors">Our Sponsors</a>
-        <a class="button button-primary" href="/">Back Home</a>
       </div>
     </section>
 

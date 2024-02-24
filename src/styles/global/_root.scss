@@ -18,6 +18,7 @@
   --font-size-lg: calc(var(--font-size-md) * var(--font-size-scale));
   --font-size-xl: calc(var(--font-size-lg) * var(--font-size-scale));
   --font-size-2xl: calc(var(--font-size-xl) * var(--font-size-scale));
+  --font-size-3xl: calc(var(--font-size-2xl) * var(--font-size-scale));
 
   --line-height-normal: 1.5;
   --line-height-tight: 1.125;
