@@ -1,0 +1,76 @@
+---
+import IndustryLayout from "../layouts/IndustryLayout.astro";
+import Organiser from "../components/organiser.astro";
+import Speaker from "../components/speaker.astro";
+import TimetableItem from "../components/timetable-item.astro";
+
+---
+
+<IndustryLayout>
+    <div class="markdown" slot="about-industry">
+        <h2 class="text-2xl space-y-6" id="about">About this track</h2>
+        <p>
+            A special track as part of the RustNL developer conference on
+            Tuesday May 7 in the afternoon, aimed at decision makers that are
+            currently exploring - or thinking about exploring - adopting Rust in
+            their team / department / organisation.
+        </p>
+        <p>
+            Key words: interacting with industry peers, learning from each
+            other, international, inspiration, practical, limited (max 50)
+            attendants.
+        </p>
+    </div>
+    <div class="markdown" slot="tickets">
+        <h2 class="text-2xl space-y-6" id="about">Tickets</h2>
+        <p>
+            To attend the industry track, you will need a separate industry
+            track ticket. A ticket for the RustNL conference is not required.
+        </p>
+        <div class="button-group">
+            <a
+                class="button button-primary"
+                style="text-decoration: none;color:var(--color-neutral-400);"
+                href="#">But ticket</a
+            >
+        </div>
+    </div>
+    <Fragment slot="speakers">
+        <Speaker name="Tim" image="empty.jpg" description="Tim is ..." />
+        <Speaker name="Frederic" image="empty.jpg" description="" />
+    </Fragment>
+
+    <Fragment slot="support">
+        <Organiser
+            name="Tweede golf"
+            image="empty.png"
+            description="Tweede golf is organizing partner of RustNL 2024."
+        />
+        <Organiser
+            name="The Red Dress Effect"
+            image="empty.png"
+            description="Anna Kocks of the Red Dress Effect is an event planner of tech events, supporting us with the logistics of the conference."
+        />
+        <Organiser
+            name="Grafische Republiek"
+            image="empty.png"
+            description="Erwin is designer and front-end developer at Grafische Republiek."
+        />
+    </Fragment>
+
+    <ul class="timetable" slot="timetable-day">
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
+
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
+        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
+
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
+        <TimetableItem time="10:00" title="Registration" />
+    </ul>
+</IndustryLayout>
