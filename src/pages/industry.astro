@@ -16,7 +16,7 @@ import TimetableItem from "../components/timetable-item.astro";
         <p>
             <ul>
                 <li> interact with and learn from industry peers </li>
-                <li> international, inspiration, practical </li>
+                <li> international, inspirational, practical </li>
                 <li>exclusive: max 50 attendees </li>
             </ul>
         </p>
@@ -36,8 +36,8 @@ import TimetableItem from "../components/timetable-item.astro";
         </div>
     </div>
     <Fragment slot="speakers">
-        <Speaker name="Tim" image="empty.jpg" description="Tim is ..." />
-        <Speaker name="Frederic" image="empty.jpg" description="" />
+        <Speaker name="Tim McNamara" image="tim.jpeg" description="Rust software consultant and coach, author of Rust in Action" />
+        <Speaker name="Frédéric Ameye" image="frederic.png" description="Cybersecurity architect at Ampere" />
     </Fragment>
 
     <Fragment slot="support">
@@ -59,18 +59,9 @@ import TimetableItem from "../components/timetable-item.astro";
     </Fragment>
 
     <ul class="timetable" slot="timetable-day">
-        <TimetableItem time="10:00" title="Registration" />
-        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
-
-        <TimetableItem time="10:00" title="Registration" />
-        <TimetableItem time="10:00" title="Registration" />
-        <TimetableItem time="10:00" title="Registration" />
+        <TimetableItem time="14:00" title="Registration" />
         <TimetableItem time="23:59" title="tbd" speaker="tbd" />
         <TimetableItem time="23:59" title="tbd" speaker="tbd" />
-
-        <TimetableItem time="10:00" title="Registration" />
-        <TimetableItem time="10:00" title="Registration" />
         <TimetableItem time="23:59" title="tbd" speaker="tbd" />
-        <TimetableItem time="10:00" title="Registration" />
     </ul>
 </IndustryLayout>
