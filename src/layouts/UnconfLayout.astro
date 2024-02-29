@@ -25,6 +25,30 @@ import "../styles/index.scss";
         <slot name="unconf" />
       </div>
     </section>
+    <section class="container sponsors unconf-partners" id="organizing-partners">
+      <div class="sponsors-tiers space-y-6">
+        <h3 class="text-lg">Organizing partners</h3>
+        <div class="sponsors-row">
+          <div
+            class="sponsor"
+            style="--image: url(/images/sponsors/unconf/embedded-wg.png);"
+          >
+          </div>
+          <div
+            class="sponsor"
+            style="--image: url(/images/sponsors/unconf/robius-app-dev.png);"
+          >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container md:grid md:cols-12 py-12">
+      <div
+        class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+      >
+        <slot name="participate" />
+      </div>
+    </section>
     <section class="container sponsors" id="sponsors">
       <h3 class="text-2xl text-center">Unconference sponsors</h3>
       
@@ -49,21 +73,6 @@ import "../styles/index.scss";
           <div
             class="sponsor nl-sponsor"
             style="--image: url(/images/sponsors/infineon.png);"
-          >
-          </div>
-        </div>
-      </div>
-      <div class="sponsors-tiers space-y-6">
-        <h3 class="text-lg">Organizing partners</h3>
-        <div class="sponsors-row">
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/unconf/embedded-wg.png);"
-          >
-          </div>
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/unconf/robius.png);"
           >
           </div>
         </div>
