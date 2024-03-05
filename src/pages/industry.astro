@@ -9,16 +9,22 @@ import TimetableItem from "../components/timetable-item.astro";
     <div class="markdown" slot="about-industry">
         <h2 class="text-2xl space-y-6" id="about">About this track</h2>
         <p>
-            A dedicated track during the RustNL developer conference for
-            decision makers who are exploring the adoption of Rust in their team
-            / department / organisation, on Tuesday May 7 in the afternoon.
+            A dedicated track during the RustNL conference, for decision makers
+            exploring the adoption of Rust in their team / department /
+            organisation. On Tuesday May 7 in the afternoon.
         </p>
         <p>
             <ul>
-                <li> interact with and learn from industry peers </li>
-                <li> international, inspirational, practical </li>
-                <li>exclusive: max 50 attendees </li>
+                <li>interact with and learn from industry peers</li>
+                <li>international, inspirational, practical</li>
+                <li>exclusive: max 50 attendees</li>
             </ul>
+        </p>
+        <h3 class="text-lg">City & venue</h3>
+        <p class="text-lg">
+            <a href="https://maps.app.goo.gl/BdnVVNBir6tiJwCK9"
+                >Lijm en Cultuur</a
+            >, <br /> Rotterdamseweg 272, <br /> 2628 AT Delft, The Netherlands
         </p>
     </div>
     <div class="markdown" slot="tickets">
@@ -36,8 +42,21 @@ import TimetableItem from "../components/timetable-item.astro";
         </div>
     </div>
     <Fragment slot="speakers">
-        <Speaker name="Tim McNamara" image="tim.jpeg" description="Rust software consultant and coach, author of Rust in Action" />
-        <Speaker name="Frédéric Ameye" image="frederic.png" description="Cybersecurity architect at Ampere" />
+        <Speaker
+            name="Tim McNamara"
+            image="tim.jpeg"
+            description="Rust software consultant and coach, author of Rust in Action"
+        />
+        <Speaker
+            name="Frédéric Ameye"
+            image="frederic.png"
+            description="Cybersecurity architect at Ampere"
+        />
+        <Speaker
+        name="Tiago Manczak"
+        image="tiago.jpeg"
+        description="Principal firmware engineer at Infineon"
+    />
     </Fragment>
 
     <Fragment slot="support">
@@ -59,9 +78,21 @@ import TimetableItem from "../components/timetable-item.astro";
     </Fragment>
 
     <ul class="timetable" slot="timetable-day">
-        <TimetableItem time="14:00" title="Registration" />
-        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
-        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
-        <TimetableItem time="23:59" title="tbd" speaker="tbd" />
+        <TimetableItem time="13:30" title="Registration" />
+        <TimetableItem time="14.00" title="Opening" speaker="Tim McNamara" />
+        <TimetableItem
+            time="14.05"
+            title="Rust at Renault"
+            speaker="Frédéric Ameye"
+        />
+        <TimetableItem
+            time="14.30"
+            title="Global State of Rust"
+            speaker="tbd"
+        />
+        <TimetableItem time="14.50" title="Short break" />
+        <TimetableItem time="15.00" title="Industry Panel" speaker="Tiago Manczak" />
+        <TimetableItem time="15:30" title="Guided Networking" />
+        <TimetableItem time="16.45" title="Closing Remarks" speaker="Tim McNamara" />
     </ul>
 </IndustryLayout>

@@ -34,15 +34,29 @@ import "../styles/index.scss";
                 <slot name="about-industry" />
             </div>
         </section>
+
+        <section class="container py-24 space-y-12">
+            <div class="location">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image">
+                    <div class="ferris"></div>
+                    <div class="ferris-arms"></div>
+                </div>
+                <div class="ferris">
+                    <img src="/images/ferris.png" alt="" />
+                </div>
+            </div>
+        </section>
+
         <section
             class="container py-24 space-y-12 track-schedule"
             id="schedule"
         >
             <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
-                <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
-                    <h3 class="text-2xl">Industry track schedule</h3>
-                    <slot name="timetable-day" />
-                </div>
+                <!--div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12"-->
+                <h3 class="text-2xl">Industry track schedule</h3>
+                <slot name="timetable-day" />
             </div>
         </section>
 
@@ -51,19 +65,19 @@ import "../styles/index.scss";
             id="tickets"
         >
             <div
-                class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+                class="text-lg text-center md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
             >
                 <slot name="tickets" />
             </div>
         </section>
-        <section class="container py-12 space-y-6">
+        <section class="container py-6 space-y-6">
             <div
                 class="space-y-12 md:grid md:cols-2 md:space-y-0"
                 style="justify-content: center;"
             >
             </div>
         </section>
-        <section class="container space-y-6">
+        <section class="container py-24 space-y-6">
             <h3 class="text-2xl text-center">Speakers and panelists</h3>
             <div class="grid md:cols-2 xl:cols-4" id="speakers">
                 <slot name="speakers" />
@@ -81,26 +95,6 @@ import "../styles/index.scss";
                 </div>
             </div>
         </section>
-        <section class="container py-24 space-y-12">
-            <h3 class="text-2xl text-center">City & venue</h3>
-            <p class=" text-lg text-center">
-                <a href="https://maps.app.goo.gl/BdnVVNBir6tiJwCK9"
-                    >Lijm en Cultuur</a
-                >, Rotterdamseweg 272, 2628 AT Delft, The Netherlands
-            </p>
-            <div class="location">
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="image">
-                    <div class="ferris"></div>
-                    <div class="ferris-arms"></div>
-                </div>
-                <div class="ferris">
-                    <img src="/images/ferris.png" alt="" />
-                </div>
-            </div>
-        </section>
-
         <Footer />
     </body>
 </html>
