@@ -53,10 +53,15 @@ import TimetableItem from "../components/timetable-item.astro";
             description="Cybersecurity architect at Ampere"
         />
         <Speaker
-        name="Tiago Manczak"
-        image="tiago.jpeg"
-        description="Principal firmware engineer at Infineon"
-    />
+            name="Tiago Manczak"
+            image="tiago.jpeg"
+            description="Principal firmware engineer at Infineon"
+        />
+        <Speaker
+            name="Joachim den Hertog"
+            image="joachim.jpeg"
+            description="Senior Principal Engineer at Storio Group (formerly Albelli)"
+        />
     </Fragment>
 
     <Fragment slot="support">
@@ -91,8 +96,16 @@ import TimetableItem from "../components/timetable-item.astro";
             speaker="tbd"
         />
         <TimetableItem time="14.50" title="Short break" />
-        <TimetableItem time="15.00" title="Industry Panel" speaker="Tiago Manczak" />
+        <TimetableItem
+            time="15.00"
+            title="Industry Panel"
+            speaker="Tiago Manczak"
+        />
         <TimetableItem time="15:30" title="Guided Networking" />
-        <TimetableItem time="16.45" title="Closing Remarks" speaker="Tim McNamara" />
+        <TimetableItem
+            time="16.45"
+            title="Closing Remarks"
+            speaker="Tim McNamara"
+        />
     </ul>
 </IndustryLayout>
