@@ -47,11 +47,12 @@ import "../styles/index.scss";
           <slot name="speakers" />
         </div>
       </section>
-      <section class="container md:grid md:cols-12">
-        <div
-          class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
-        >
-          <slot name="cfp" />
+      <section class="container space-y-6">
+        <div class="button-group">
+          <a
+            href="/speakers"
+            class="button button-primary">All our speakers</a
+          >
         </div>
       </section>
       <section class="container sponsors" id="sponsors">
