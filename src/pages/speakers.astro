@@ -1,0 +1,86 @@
+---
+import SpeakersLayout from "../layouts/SpeakersLayout.astro";
+import SpeakerDetail from "../components/speaker-detail.astro";
+---
+
+<SpeakersLayout>
+    <Fragment slot="speakers">
+        <SpeakerDetail
+            name="Mara Bos"
+            image="mara.jpg"
+            title="Library team & Leadership council"
+        />
+        <SpeakerDetail
+            name="Raph Levien"
+            image="raph.jpg"
+            title="Research engineer at Google"
+            talkTitle="Tba"
+            talkAbstract="Xilem is a new UI toolkit designed for high performance and idiomatic expression of UI and app logic, suitable for both desktop and mobile. Xilem is built in a layered architecture. At the top is a reactive layer where views are simple statically typed Rust structs (though type erasure is possible), and no macros are needed. The widget layer is evolved from Druid. At the infrastructure layer is Vello, a 2D rendering engine using GPU compute shaders, specially tuned for dynamic vector graphics content. The text stack is also tuned for performance, including supporting animation of variable font parameters. Accessibility is a primary goal, and integration with AccessKit is baked in from the start. Another goal is interop with other projects in the Rust ecosystem, including wgpu, and providing a clean abstraction layer for widgets. It is work in progress, with a strong open source community driving toward ambitious goals."
+            bio="Raph Levien is a research software engineer on the Google Fonts team, primarily working on GPU font rendering. He’s been actively involved in the Rust community for over seven years, and has worked on pulldown-cmark, the Druid UI toolkit, and other popular crates. He has a PhD from UC Berkeley on the topic of interactive curve editing, and has been involved in font creation and 2D graphics tools most of his career."
+            linkedin="https://www.linkedin.com/in/raph-levien-0484504/"
+            twitter=""
+            mastodon="https://mastodon.online/@raph"
+            github="https://github.com/raphlinus"
+        />
+        <SpeakerDetail
+            name="Dario Nieuwenhuis"
+            image="dario.jpg"
+            title="Akiles CTO & Embassy project lead"
+        />
+        <SpeakerDetail
+            name="Michael Melchiore"
+            image="michaelmelchiore.jpg"
+            title="On-Board Processing Specialist @ Airbus"
+        />
+        <SpeakerDetail
+            name="Niko Matsakis"
+            image="niko.png"
+            title="Language team co-lead & Senior Principal Engineer @ AWS"
+        />
+        <SpeakerDetail
+            name="Joe Birr-Pixton"
+            image="joe.jpg"
+            title="Security and Embedded Engineer & Creator of Rustls"
+        />
+        <SpeakerDetail
+            name="Kevin Boos"
+            image="kevin.jpg"
+            title="Creator and lead developer of Theseus OS & Principal Architect @ Futurewei"
+        />
+        <SpeakerDetail
+            name="Jonas Kruckenberg"
+            image="jonas.jpg"
+            title="Member of the Tauri Team & R&D @ CrabNebula"
+        />
+        <SpeakerDetail
+            name="James Munns"
+            image="james.jpg"
+            title="Embedded, systems and Rust consultant & Managing Director @ OneVariable UG"
+        />
+        <SpeakerDetail
+            name="Rik Arends"
+            image="rik.jpeg"
+            title="Founder @ Makepad"
+        />
+        <SpeakerDetail
+            name="Henk Oordt"
+            image="henk.png"
+            title="Rust trainer & Embedded software engineer"
+        />
+        <SpeakerDetail
+            name="Folkert de Vries"
+            image="folkert.jpg"
+            title="Systems software engineer @ Tweede golf"
+        />
+        <SpeakerDetail
+            name="Leon Schuermann"
+            image="leon.jpeg"
+            title="PhD Candidate in Computer Science @ Princeton University"
+        />
+        <SpeakerDetail
+            name="Ulf Lilleengen"
+            image="ulf.jpeg"
+            title="Software engineer @ Akiles"
+        />
+    </Fragment>
+</SpeakersLayout>

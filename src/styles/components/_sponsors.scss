@@ -1,7 +1,7 @@
 .sponsors {
   text-align: center;
 
-  &::after {
+  &::before {
     background-image: url('/images/stripes.svg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -10,6 +10,7 @@
     display: block;
     height: var(--space-6);
     position: relative;
+    margin: var(--space-12) 0;
   }
 
   .sponsors-tiers {
@@ -37,5 +38,21 @@
     background-size: 80% auto;
     background-repeat: no-repeat;
     background-position: center center;
+
+    &.headline {
+      max-width: 30rem;
+    }
+
+    &.gold {
+      max-width: 25rem;
+    }
+
+    &.nl-sponsor {
+      max-width: 15rem;
+    }
+
+    &.supporter {
+      max-width: 10rem;
+    }
   }
 }

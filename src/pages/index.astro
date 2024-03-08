@@ -1,6 +1,7 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro";
-import TimetableItem from "../components/timetable-item.astro";
+import HomeLayout from "../layouts/HomeLayout.astro"
+import Speaker from "../components/speaker.astro";
+import PreviousSpeaker from "../components/previous_speaker.astro";
 ---
 
 <HomeLayout>
@@ -24,6 +25,13 @@ import TimetableItem from "../components/timetable-item.astro";
             <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested
             in sponsoring the conference or unconference.
         </p>
+        <p>
+            <strong>Venue Address:</strong><br />
+
+            <a href="https://maps.app.goo.gl/BdnVVNBir6tiJwCK9"
+                >Lijm en Cultuur</a
+            >, Rotterdamseweg 272, 2628 AT Delft, The Netherlands
+        </p>
     </div>
     <div class="markdown" slot="about">
         <h2 class="text-2xl" id="about">About RustNL</h2>
@@ -32,16 +40,69 @@ import TimetableItem from "../components/timetable-item.astro";
             strives to promote the implementation of the Rust programming
             language in the Netherlands and Europe.
         </p>
-        <p>
-            We organize meetups and events in The Netherlands to bring the Rust
-            community together.
-        </p>
+        <div class="button-group">
+            <a
+                class="button button-primary"
+                style="text-decoration: none;color:var(--color-neutral-400);"
+                href="/about">More About Us</a
+            >
+        </div>
     </div>
+    <Fragment slot="speakers">
+        <Speaker
+            name="Mara Bos"
+            image="mara.jpg"
+            description="Library team & Leadership council"
+        />
+        <Speaker
+            name="Raph Levien"
+            image="raph.jpg"
+            description="Research engineer at Google"
+        />
+        <Speaker
+            name="Dario Nieuwenhuis"
+            image="dario.jpg"
+            description="Akiles CTO & Embassy project lead"
+        />
+        <Speaker
+            name="Michael Melchiore"
+            image="michaelmelchiore.jpg"
+            description="On-Board Processing Specialist @ Airbus"
+        />
+        <Speaker
+            name="Niko Matsakis"
+            image="niko.png"
+            description="Language team co-lead & Senior Principal Engineer @ AWS"
+        />
+    </Fragment>
+    <Fragment slot="previous-speakers">
+        <PreviousSpeaker
+            name="Nicolas Nethercote"
+            image="nicholas.png"
+            talk="The status of parallel rustc"
+            youtube="https://www.youtube.com/watch?v=q2vJ8Faundw&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=9"
+        />
+        <PreviousSpeaker
+            name="Rik Arends"
+            image="rik.png"
+            talk="Makepad: Designing modern UIs with Rust"
+            youtube="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1"
+        />
+        <PreviousSpeaker
+            name="Jonathan Kelley"
+            image="jonathan.jpg"
+            talk="Write once, run everywhere: building apps with Dioxus"
+            youtube="https://www.youtube.com/watch?v=aSxdmXjZutI&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=6"
+        />
+        <PreviousSpeaker
+            name="Ed Page"
+            image="ed.jpg"
+            talk="Testing My Patience: An Exploration of Testing in Rust"
+            youtube="https://www.youtube.com/watch?v=3aLPewRSiK8&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=4"
+        />
+    </Fragment>
     <div class="markdown" slot="cfp">
-        <h2 class="text-lg" id="cfp">Call for Proposals</h2>
-        <p>
-            Want to speak at RustNL 2024? Our CfP now is open! <a href="https://cryptpad.fr/form/#/2/form/view/WtBXS48XjwAvYXIjhgEY6yJ0EOpULX+zByvkHds2oUA/">Go here</a>.<br />
-            The CfP closes Sun Feb 24 23:59 CET.
-        </p>
+        <h3 class="text-2xl text-center" id="cfp">Call for Proposals</h3>
+        <p>Our call for proposals closed on Feb 26. We'll announce the selected speakers soon!</p>
     </div>
 </HomeLayout>

@@ -1,12 +1,13 @@
 ---
 import Head from "../components/head.astro";
 import Footer from "../components/footer.astro";
+
 import "../styles/index.scss";
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head />
+  <Head title="RustNL 2024" />
   <body>
     <div class="space-y-24">
       <section class="hero">
@@ -42,25 +43,8 @@ import "../styles/index.scss";
       </section>
       <section class="container space-y-6">
         <h3 class="text-2xl text-center">Our speakers</h3>
-        <div class="grid md:cols-2 xl:cols-4">
-          <div class="speaker">
-            <div class="space-y-6">
-              <img src="/images/speakers/mara.jpg" alt="" />
-              <div>
-                <h3>Library team & Leadership council</h3>
-                <h4 class="font-light text-lg leading-tight">Mara Bos</h4>
-              </div>
-            </div>
-          </div>
-          <!--div class="speaker">
-            <div class="space-y-6">
-              <img src="/images/speakers/mara.jpg" alt="">
-              <div>
-                <h3>Library team & Leadership council</h3>
-                <h4 class="font-light text-lg leading-tight">Mara Bos</h4>
-              </div>
-            </div>
-          </div-->
+        <div class="grid md:cols-2 xl:cols-4" id="speakers">
+          <slot name="speakers" />
         </div>
       </section>
       <section class="container md:grid md:cols-12">
@@ -68,6 +52,110 @@ import "../styles/index.scss";
           class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
         >
           <slot name="cfp" />
+        </div>
+      </section>
+      <section class="container sponsors" id="sponsors">
+        <h3 class="text-2xl text-center">Our sponsors</h3>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Headline sponsor</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor headline"
+              style="--image: url(/images/sponsors/futurewei.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <!-- div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Gold sponsors</h3>
+          <div class="sponsors-row">
+            <div class="sponsor gold"></div>
+          </div>
+        </div -->
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Silver sponsors</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor"
+              style="--image: url(/images/sponsors/tandemdrive.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Organizing partner</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor"
+              style="--image: url(/images/sponsors/tweede-golf-v2.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Workshop partner</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor nl-sponsor"
+              style="--image: url(/images/sponsors/onevariable.png);"
+            >
+            </div>
+            <div
+              class="sponsor nl-sponsor"
+              style="--image: url(/images/sponsors/accelerant.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Ecosystem partner</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor"
+              style="--image: url(/images/sponsors/rustfoundation.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">Ecosystem supporters</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor supporter"
+              style="--image: url(/images/sponsors/infineon.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">NL Community sponsors</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor nl-sponsor"
+              style="--image: url(/images/sponsors/technolution.png);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="sponsors-tiers space-y-6">
+          <h3 class="text-lg">NL Community supporters</h3>
+          <div class="sponsors-row">
+            <div
+              class="sponsor supporter"
+              style="--image: url(/images/sponsors/jitter.png);"
+            >
+            </div>
+            <div
+              class="sponsor supporter"
+              style="--image: url(/images/sponsors/rocsys.png);"
+            >
+            </div>
+            <div
+              class="sponsor supporter"
+              style="--image: url(/images/sponsors/nlnetlabs.png);"
+            >
+            </div>
+          </div>
         </div>
       </section>
       <section class="last-year space-y-24">
@@ -103,67 +191,8 @@ import "../styles/index.scss";
         </section>
         <section class="container space-y-6">
           <h3 class="text-xl text-center">Last year's speakers</h3>
-          <div class="grid md:cols-2 xl:cols-4">
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/nicholas.png" alt="" />
-                <div>
-                  <h3>Nicholas Nethercote</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    The status of parallel rustc
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=q2vJ8Faundw&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=9"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/rik.png" alt="" />
-                <div>
-                  <h3>Rik Arends</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Makepad: Designing modern UIs with Rust
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/jonathan.jpg" alt="" />
-                <div>
-                  <h3>Jonathan Kelley</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Write once, run everywhere: building apps with Dioxus
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=aSxdmXjZutI&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=6"
-                >View on youtube</a
-              >
-            </div>
-            <div class="speaker">
-              <div class="space-y-6">
-                <img src="/images/speakers/ed.jpg" alt="" />
-                <div>
-                  <h3>Ed Page</h3>
-                  <h4 class="font-light text-lg leading-tight">
-                    Testing My Patience: An Exploration of Testing in Rust
-                  </h4>
-                </div>
-              </div>
-              <a
-                href="https://www.youtube.com/watch?v=3aLPewRSiK8&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=4"
-                >View on youtube</a
-              >
-            </div>
+          <div class="grid md:cols-2 xl:cols-4" slot="previous-speakers">
+            <slot name="previous-speakers" />
           </div>
         </section>
         <div class="section container space-y-6">
@@ -183,42 +212,6 @@ import "../styles/index.scss";
             </div>
           </div>
         </div>
-      </section>
-      <section class="container sponsors">
-        <!--div class="sponsors-tiers space-y-6">
-          <h3 class="text-xl">Headline sponsors</h3>
-          <div class="sponsors-row">
-            <div class="sponsor"></div>
-          </div>
-        </div-->
-        <div class="sponsors-tiers space-y-6">
-          <h3 class="text-2xl">2023 sponsors</h3>
-          <div class="sponsors-row">
-            <div
-              class="sponsor"
-              style="--image: url(/images/sponsors/futurewei.png);"
-            >
-            </div>
-            <div
-              class="sponsor"
-              style="--image: url(/images/sponsors/tweede-golf-v2.png);"
-            >
-            </div>
-            <div
-              class="sponsor"
-              style="--image: url(/images/sponsors/technolution.png);"
-            >
-            </div>
-          </div>
-        </div>
-        <!--div class="sponsors-tiers space-y-6">
-          <h3 class="text-xl">Silver sponsors</h3>
-          <div class="sponsors-row">
-            <div class="sponsor"></div>
-            <div class="sponsor"></div>
-            <div class="sponsor"></div>
-          </div>
-        </div-->
       </section>
       <section class="container md:grid md:cols-12">
         <div
