@@ -30,7 +30,7 @@ switch (tier) {
 
 <div
     title={name}
-    onclick={`window.location='${link}'`}
+    onclick={`window.open('${link}', '_blank', 'noopener, noreferrer')`}
     class={`sponsor ${className}`}
     style={`--image: url(/images/sponsors/${image}`}
 >
