@@ -1,0 +1,102 @@
+---
+import Head from "../components/head.astro";
+import Footer from "../components/footer.astro";
+import "../styles/index.scss";
+---
+
+<!doctype html>
+<html lang="en">
+    <Head title="Industry track - RustNL 2024">
+        <meta name="robots" content="noindex" />
+    </Head>
+
+    <body>
+        <section class="hero page">
+            <div class="nav">
+                <img src="/images/logo.svg" alt="Logo RustNL 2024" />
+                <div class="button-group">
+                    <a href="/" class="button button-primary">Home</a>
+                </div>
+            </div>
+            <h1 class="text-3xl">Industry track</h1>
+            <p class="text-xl">
+                May 7, 2024
+                <br /> Delft, The Netherlands
+            </p>
+            <a
+                class="button button-primary"
+                style="text-decoration: none;color:var(--color-neutral-400);"
+                href="#tickets">Buy ticket</a
+            >
+        </section>
+        <section class="container md:grid md:cols-12 py-12 about-industry">
+            <div
+                class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+            >
+                <slot name="about-industry" />
+            </div>
+        </section>
+
+        <section class="container py-24 space-y-12">
+            <div class="location">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image">
+                    <div class="ferris"></div>
+                    <div class="ferris-arms"></div>
+                </div>
+                <div class="ferris">
+                    <img src="/images/ferris.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="container py-24 space-y-12 track-schedule"
+            id="schedule"
+        >
+            <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
+                <!--div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12"-->
+                <h3 class="text-2xl">Industry track schedule</h3>
+                <slot name="timetable-day" />
+            </div>
+        </section>
+
+        <section
+            class="container md:grid md:cols-12 py-12 tickets"
+            id="tickets"
+        >
+            <div
+                class="text-lg text-center md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+            >
+                <slot name="tickets" />
+            </div>
+        </section>
+        <section class="container py-6 space-y-6">
+            <div
+                class="space-y-12 md:grid md:cols-2 md:space-y-0"
+                style="justify-content: center;"
+            >
+            </div>
+        </section>
+        <section class="container py-24 space-y-6">
+            <h3 class="text-2xl text-center">Speakers and panelists</h3>
+            <div class="grid md:cols-2 xl:cols-4" id="speakers">
+                <slot name="speakers" />
+            </div>
+        </section>
+        <section class="container sponsors industry" id="sponsors">
+            <h3 class="text-2xl text-center">Track Sponsors</h3>
+            <div class="sponsors-tiers space-y-6">
+                <div class="sponsors-row">
+                    <div
+                        class="sponsor"
+                        style="--image: url(/images/sponsors/tweede-golf.png);"
+                    >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <Footer />
+    </body>
+</html>

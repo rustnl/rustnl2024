@@ -1,7 +1,9 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro"
+import HomeLayout from "../layouts/HomeLayout.astro";
 import Speaker from "../components/speaker.astro";
 import PreviousSpeaker from "../components/previous_speaker.astro";
+import Sponsor from "../components/sponsor.astro";
+import SponsorTier from "../components/sponsor-tier.astro";
 ---
 
 <HomeLayout>
@@ -20,9 +22,9 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
         </ul>
         <p>
             <strong>Support our conference and the Rust ecosystem</strong><br />
-            Following the conference RustNL will facilitate a multi day unconference
-            for Rust maintainers in the mobile and embedded space. Contact us at
-            <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested
+            Following the conference RustNL will facilitate <a href="/unconf">a two-day unconference</a>
+            for Rust maintainers.<br /> 
+            Contact us at <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested
             in sponsoring the conference or unconference.
         </p>
         <p>
@@ -33,6 +35,107 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
             >, Rotterdamseweg 272, 2628 AT Delft, The Netherlands
         </p>
     </div>
+    <Fragment slot="sponsors">
+        <h3 class="text-2xl text-center">Our sponsors</h3>
+        <SponsorTier name="Headline sponsor">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Futurewei Technologies"
+                    tier="headline"
+                    image="futurewei.png"
+                    link="https://www.futurewei.com/"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="Silver sponsors">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Tandemdrive"
+                    tier="silver"
+                    image="tandemdrive.png"
+                    link="https://tandemdrive.com"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="Organizing partner">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Tweede golf"
+                    tier="organizing-partner"
+                    image="tweede-golf-v2.png"
+                    link="https://tweedegolf.nl"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="Workshop partner">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="One Variable"
+                    tier="workshop-partner"
+                    image="onevariable.png"
+                    link="https://onevariable.com"
+                />
+                <Sponsor
+                    name="Accelerant"
+                    tier="workshop-partner"
+                    image="accelerant.png"
+                    link="https://accelerant.dev"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="Ecosystem partners">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Rust Foundation"
+                    tier="ecosystem-partner"
+                    image="rustfoundation.png"
+                    link="https://foundation.rust-lang.org/"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="Ecosystem supporters">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Infineon Technologies"
+                    tier="ecosystem-supporter"
+                    image="infineon.png"
+                    link="https://infineon.com/"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="NL Community sponsors">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Technolution"
+                    tier="nl-sponsor"
+                    image="technolution.png"
+                    link="https://technolution.com/"
+                />
+            </div>
+        </SponsorTier>
+        <SponsorTier name="NL Community supporters">         
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Jitter"
+                    tier="nl-supporter"
+                    image="jitter.png"
+                    link="https://jitter.nl/"
+                />
+                <Sponsor
+                    name="Rocsys"
+                    tier="nl-supporter"
+                    image="rocsys.png"
+                    link="https://rocsys.com/"
+                />
+                <Sponsor
+                    name="NLnet Labs"
+                    tier="nl-supporter"
+                    image="nlnetlabs.png"
+                    link="https://nlnetlabs.nl/"
+                />
+            </div>
+        </SponsorTier>
+    </Fragment>
     <div class="markdown" slot="about">
         <h2 class="text-2xl" id="about">About RustNL</h2>
         <p>
@@ -60,19 +163,14 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
             description="Research engineer at Google"
         />
         <Speaker
-            name="Dario Nieuwenhuis"
-            image="dario.jpg"
-            description="Akiles CTO & Embassy project lead"
+            name="Niko Matsakis"
+            image="niko.png"
+            description="Language team co-lead & Senior Principal Engineer @ AWS"
         />
         <Speaker
             name="Michael Melchiore"
             image="michaelmelchiore.jpg"
             description="On-Board Processing Specialist @ Airbus"
-        />
-        <Speaker
-            name="Niko Matsakis"
-            image="niko.png"
-            description="Language team co-lead & Senior Principal Engineer @ AWS"
         />
     </Fragment>
     <Fragment slot="previous-speakers">
@@ -103,6 +201,9 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
     </Fragment>
     <div class="markdown" slot="cfp">
         <h3 class="text-2xl text-center" id="cfp">Call for Proposals</h3>
-        <p>Our call for proposals closed on Feb 26. We'll announce the selected speakers soon!</p>
+        <p>
+            Our call for proposals closed on Feb 26. We'll announce the selected
+            speakers soon!
+        </p>
     </div>
 </HomeLayout>

@@ -7,7 +7,6 @@ import "../styles/index.scss";
 <!doctype html>
 <html lang="en">
   <Head title="Unconference - RustNL 2024" />
-
   <body>
     <section class="hero page">
       <div class="nav">
@@ -28,21 +27,7 @@ import "../styles/index.scss";
       </div>
     </section>
     <section class="container sponsors unconf-partners" id="organizing-partners">
-      <div class="sponsors-tiers space-y-6">
-        <h3 class="text-lg">Organizing partners</h3>
-        <div class="sponsors-row">
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/unconf/embedded-wg.png);"
-          >
-          </div>
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/unconf/robius-app-dev.png);"
-          >
-          </div>
-        </div>
-      </div>
+      <slot name="support" />
     </section>
     <section class="container md:grid md:cols-12 py-12">
       <div
@@ -52,40 +37,8 @@ import "../styles/index.scss";
       </div>
     </section>
     <section class="container sponsors" id="sponsors">
-      <h3 class="text-2xl text-center">Unconference sponsors</h3>
-      
-      <div class="sponsors-tiers space-y-6">
-        <h3 class="text-lg">Ecosystem partner</h3>
-        <div class="sponsors-row">
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/rustfoundation.png);"
-          >
-          </div>
-          <div
-            class="sponsor"
-            style="--image: url(/images/sponsors/futurewei.png);"
-          >
-          </div>
-        </div>
-      </div>
-      <div class="sponsors-tiers space-y-6">
-        <h3 class="text-lg">Ecosystem supporters</h3>
-        <div class="sponsors-row">
-          <div
-            class="sponsor nl-sponsor"
-            style="--image: url(/images/sponsors/infineon.png);"
-          >
-          </div>
-          <div
-            class="sponsor nl-sponsor"
-            style="--image: url(/images/sponsors/onevariable.png);"
-          >
-          </div>
-        </div>
-      </div>
+      <slot name="sponsors" />
     </section>
-
     <Footer />
   </body>
 </html>
