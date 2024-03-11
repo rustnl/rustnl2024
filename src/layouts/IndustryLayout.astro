@@ -85,17 +85,10 @@ import "../styles/index.scss";
                 <slot name="speakers" />
             </div>
         </section>
-        <section class="container sponsors industry" id="sponsors">
-            <h3 class="text-2xl text-center">Track Sponsors</h3>
-            <div class="sponsors-tiers space-y-6">
-                <div class="sponsors-row">
-                    <div
-                        class="sponsor"
-                        style="--image: url(/images/sponsors/tweede-golf.png);"
-                    >
-                    </div>
-                </div>
-            </div>
+
+        <section class="container sponsors" id="sponsors">
+            <h3 class="text-2xl text-center">Track sponsors</h3>
+            <slot name="sponsors" />
         </section>
         <Footer />
     </body>

@@ -3,6 +3,8 @@ import IndustryLayout from "../layouts/IndustryLayout.astro";
 import Organiser from "../components/organiser.astro";
 import Speaker from "../components/speaker.astro";
 import TimetableItem from "../components/timetable-item.astro";
+import Sponsor from "../components/sponsor.astro";
+import SponsorTier from "../components/sponsor-tier.astro";
 ---
 
 <IndustryLayout>
@@ -72,6 +74,19 @@ import TimetableItem from "../components/timetable-item.astro";
             More speakers and panelists to be announced soon
         </p>
     </Fragment>
+
+    <div slot="sponsors">
+        <SponsorTier name="Organizer">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Tweede golf"
+                    tier="organizing-partner"
+                    image="tweede-golf-v2.png"
+                    link="https://tweedegolf.nl"
+                />
+            </div>
+        </SponsorTier>
+    </div>
 
     <Fragment slot="support">
         <Organiser
