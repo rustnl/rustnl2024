@@ -30,14 +30,20 @@ import TimetableItem from "../components/timetable-item.astro";
     <div class="markdown" slot="tickets">
         <h2 class="text-2xl space-y-6" id="about">Tickets</h2>
         <p>
-            To attend the industry track, you will need a separate industry
-            track ticket. A ticket for the RustNL conference is not required.
+            To attend the industry track, you will need an Industry Track ticket or a Combi ticket that also includes attendance to the developer conference.
         </p>
         <div class="button-group">
             <a
                 class="button button-primary"
                 style="text-decoration: none;color:var(--color-neutral-400);"
-                href="#">Buy ticket</a
+                target="_blank"
+                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-only">Get Industry Track ticket</a
+            >
+            <a
+                class="button button-primary"
+                style="text-decoration: none;color:var(--color-neutral-400);"
+                target="_blank"
+                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-combi">Get Combi ticket</a
             >
         </div>
     </div>
@@ -62,6 +68,9 @@ import TimetableItem from "../components/timetable-item.astro";
             image="joachim.jpeg"
             description="Senior Principal Engineer at Storio Group (formerly Albelli)"
         />
+        <p>
+            More speakers and panelists to be announced soon
+        </p>
     </Fragment>
 
     <Fragment slot="support">
@@ -69,16 +78,6 @@ import TimetableItem from "../components/timetable-item.astro";
             name="Tweede golf"
             image="empty.png"
             description="Tweede golf is organizing partner of RustNL 2024."
-        />
-        <Organiser
-            name="The Red Dress Effect"
-            image="empty.png"
-            description="Anna Kocks of the Red Dress Effect is an event planner of tech events, supporting us with the logistics of the conference."
-        />
-        <Organiser
-            name="Grafische Republiek"
-            image="empty.png"
-            description="Erwin is designer and front-end developer at Grafische Republiek."
         />
     </Fragment>
 
@@ -93,15 +92,19 @@ import TimetableItem from "../components/timetable-item.astro";
         <TimetableItem
             time="14.30"
             title="Global State of Rust"
-            speaker="tbd"
+            speaker="To be announced"
         />
         <TimetableItem time="14.50" title="Short break" />
         <TimetableItem
             time="15.00"
-            title="Industry Panel"
+            title="Industry Panel - learn from Infineon, Albelli, and others"
             speaker="Tiago Manczak"
         />
-        <TimetableItem time="15:30" title="Guided Networking" />
+        <TimetableItem
+            time="15:30"
+            title="Roundtable discussions - on adopting Rust"
+            speaker="Moderated by Kris van Rens, Matthias Endler, Wouter Geraedts"
+        />
         <TimetableItem
             time="16.45"
             title="Closing Remarks"
