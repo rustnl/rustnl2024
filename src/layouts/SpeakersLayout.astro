@@ -6,29 +6,25 @@ import "../styles/index.scss";
 
 <!doctype html>
 <html lang="en">
-  <Head title="Accessibility - RustNL 2024" />
+  <Head title="Speakers - RustNL 2024" />
 
   <body>
     <section class="hero page">
       <div class="nav">
         <img src="/images/logo.svg" alt="Logo RustNL 2024" />
         <div class="button-group">
-          <a
-          href="/"
-          class="button button-primary">Home</a
-          >
+          <a href="/" class="button button-primary">Home</a>
         </div>
       </div>
-      <h1 class="text-3xl">Accessibility</h1>
+      <h1 class="text-3xl">Speakers</h1>
     </section>
-    <section class="container py-24 space-y-12" id="schedule">
-      <slot name="text" />
-
-      <div class="button-group button-group-center">
-        <a class="button button-primary" href="/">Back Home</a>
+    <section class="container py-12 space-y-6">
+      <div class="grid xl:cols-12" id="speakers">
+        <div class="xl:col-start-4 xl:col-end-10 space-y-12">
+          <slot name="speakers" />
+        </div>
       </div>
     </section>
-
     <Footer />
   </body>
 </html>

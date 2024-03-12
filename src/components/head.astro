@@ -1,7 +1,11 @@
+---
+const { title } = Astro.props;
+---
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RustNL 2024</title>
+    <title>{title}</title>
     <meta
         name="description"
         content="RustNL 2024, The Netherlands - May 7 & 8 2024"
@@ -13,10 +17,10 @@
         href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
         rel="stylesheet"
     />
-
+    <slot />
     <meta property="twitter:site" content="@Rust_NL" />
     <meta property="og:url" content="https://2024.rustnl.org/" />
-    <meta property="og:title" content="RustNL 2024" />
+    <meta property="og:title" content={title} />
     <meta
         property="og:description"
         content="RustNL 2024, The Netherlands - May 7 & 8 2024"
