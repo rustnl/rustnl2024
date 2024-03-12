@@ -2,6 +2,7 @@
 import HomeLayout from "../layouts/HomeLayout.astro";
 import TimetableItem from "../components/timetable-item.astro";
 import Speaker from "../components/speaker.astro";
+import Speakers from "../components/speakers.astro";
 import PreviousSpeaker from "../components/previous_speaker.astro";
 ---
 
@@ -76,6 +77,32 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
             description="Language team co-lead & Senior Principal Engineer @ AWS"
         />
     </Fragment>
+    <Fragment slot="workshops">
+        <Speaker name="James Munns" image="james.png" description="" />
+
+        <Speaker
+            name="Rik Arends"
+            image="rik.png"
+            description="Founder at Makepad"
+        />
+        <Speakers>
+            <Speaker
+                name="Tim McNamara"
+                image="tim.png"
+                description="runs Accelerant.dev and a popular youtube channel (TimClicks)"
+            />
+            <Speaker
+                name="Henk Oordt"
+                image="henk.png"
+                description="Writing and teaching Rust for embedded and web"
+            />
+        </Speakers>
+        <Speaker
+            name="Luca Palmieri"
+            image="luca.png"
+            description="Playing around with Rust, at $dayjob and for fun"
+        />
+    </Fragment>
     <Fragment slot="previous-speakers">
         <PreviousSpeaker
             name="Nicolas Nethercote"
@@ -104,6 +131,9 @@ import PreviousSpeaker from "../components/previous_speaker.astro";
     </Fragment>
     <div class="markdown" slot="cfp">
         <h3 class="text-2xl text-center" id="cfp">Call for Proposals</h3>
-        <p>Our call for proposals closed on Feb 26. We'll announce the selected speakers soon!</p>
+        <p>
+            Our call for proposals closed on Feb 26. We'll announce the selected
+            speakers soon!
+        </p>
     </div>
 </HomeLayout>

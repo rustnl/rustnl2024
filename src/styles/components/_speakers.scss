@@ -1,4 +1,11 @@
-.speaker {
+.speakers .speaker {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border: none !important;
+}
+
+.speaker,
+.speakers {
   align-items: center;
   background-color: var(--color-yellow-400);
   border: 1px solid var(--color-yellow-500);
@@ -9,7 +16,7 @@
   text-align: center;
   z-index: 0;
 
-  > * + * {
+  >*+* {
     margin-block-start: var(--space-6);
   }
 
