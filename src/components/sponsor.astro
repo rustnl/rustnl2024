@@ -40,13 +40,13 @@ switch (tier) {
 }
 {
     !image && (
-        <div
+        <span class="markdown"><a
             title={name}
-            onclick={`window.open('${link}', '_blank', 'noopener, noreferrer')`}
-            class={`sponsor ${className}`}
-            style="display: flex; flex-direction: column; justify-content: center; border: none; font-size: large;"
+            href={link}
+            target="_blank"
+            class={`${className}` + " text-lg"}
         >
-            <h1>{name}</h1>
-        </div>
+            {name}
+        </a></span>
     )
 }
