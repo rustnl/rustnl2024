@@ -28,10 +28,25 @@ switch (tier) {
 }
 ---
 
-<div
-    title={name}
-    onclick={`window.open('${link}', '_blank', 'noopener, noreferrer')`}
-    class={`sponsor ${className}`}
-    style={`--image: url(/images/sponsors/${image}`}
->
-</div>
+{
+    image && (
+        <div
+            title={name}
+            onclick={`window.open('${link}', '_blank', 'noopener, noreferrer')`}
+            class={`sponsor ${className}`}
+            style={`--image: url(/images/sponsors/${image}`}
+        />
+    )
+}
+{
+    !image && (
+        <span class="markdown"><a
+            title={name}
+            href={link}
+            target="_blank"
+            class={`${className}` + " text-lg"}
+        >
+            {name}
+        </a></span>
+    )
+}
