@@ -48,6 +48,11 @@ import "../styles/index.scss";
         </div>
       </section>
       <section class="container space-y-6">
+        <div class="button-group">
+          <a href="/speakers" class="button button-primary">All our speakers</a>
+        </div>
+      </section>
+      <section class="container space-y-6">
         <h3 class="text-2xl text-center">Workshops By</h3>
         <div class="grid md:cols-2 xl:cols-4" id="workshops">
           <slot name="workshops" />
@@ -60,86 +65,72 @@ import "../styles/index.scss";
           >
         </div>
       </section>
+      <section class="container sponsors" id="sponsors">
+        <slot name="sponsors" />
+      </section>
+      <section class="last-year space-y-24">
+        <section class="container space-y-6" id="last-year">
+          <h3 class="text-xl text-center">RustNL 2023</h3>
+          <div class="grid md:cols-2 xl:cols-4">
+            <div class="benefit">
+              <div class="icon rocket"></div>
+              <div>
+                <strong>First edition</strong> in Amsterdam in 2023
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon ticket"></div>
+              <div>
+                <strong>Sold out</strong><br /> 300 attendees
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon eye"></div>
+              <div>
+                <strong>100k</strong><br />Youtube views
+              </div>
+            </div>
+            <div class="benefit">
+              <div class="icon message"></div>
+              <div>
+                <strong>10 talks</strong> covering rustc, UIs, Servo, cargo, sudo,
+                and Escher
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container space-y-6">
+          <h3 class="text-xl text-center">Last year's speakers</h3>
+          <div class="grid md:cols-2 xl:cols-4" slot="previous-speakers">
+            <slot name="previous-speakers" />
+          </div>
+        </section>
+        <div class="section container space-y-6">
+          <h3 class="text-center text-xl">2023 playlist</h3>
+          <div class="lg:grid lg:cols-12">
+            <div class="lg:col-start-2 lg:col-end-12">
+              <div class="youtube">
+                <iframe
+                  height="100%"
+                  width="100%"
+                  src="https://www.youtube-nocookie.com/embed/rC4FCS-oMpg?si=4kjeYRPt39fp7YVB"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="container md:grid md:cols-12">
         <div
           class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
         >
-          <slot name="cfp" />
-          <section class="container space-y-6">
-            <div class="button-group">
-              <a href="/speakers" class="button button-primary"
-                >All our speakers</a
-              >
-            </div>
-          </section>
-          <section class="container sponsors" id="sponsors">
-            <slot name="sponsors" />
-          </section>
-          <section class="last-year space-y-24">
-            <section class="container space-y-6" id="last-year">
-              <h3 class="text-xl text-center">RustNL 2023</h3>
-              <div class="grid md:cols-2 xl:cols-4">
-                <div class="benefit">
-                  <div class="icon rocket"></div>
-                  <div>
-                    <strong>First edition</strong> in Amsterdam in 2023
-                  </div>
-                </div>
-                <div class="benefit">
-                  <div class="icon ticket"></div>
-                  <div>
-                    <strong>Sold out</strong><br /> 300 attendees
-                  </div>
-                </div>
-                <div class="benefit">
-                  <div class="icon eye"></div>
-                  <div>
-                    <strong>100k</strong><br />Youtube views
-                  </div>
-                </div>
-                <div class="benefit">
-                  <div class="icon message"></div>
-                  <div>
-                    <strong>10 talks</strong> covering rustc, UIs, Servo, cargo,
-                    sudo, and Escher
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="container space-y-6">
-              <h3 class="text-xl text-center">Last year's speakers</h3>
-              <div class="grid md:cols-2 xl:cols-4" slot="previous-speakers">
-                <slot name="previous-speakers" />
-              </div>
-            </section>
-            <div class="section container space-y-6">
-              <h3 class="text-center text-xl">2023 playlist</h3>
-              <div class="lg:grid lg:cols-12">
-                <div class="lg:col-start-2 lg:col-end-12">
-                  <div class="youtube">
-                    <iframe
-                      height="100%"
-                      width="100%"
-                      src="https://www.youtube-nocookie.com/embed/rC4FCS-oMpg?si=4kjeYRPt39fp7YVB"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="container md:grid md:cols-12">
-            <div
-              class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
-            >
-              <slot name="about" />
-            </div>
-          </section>
+          <slot name="about" />
         </div>
-        <Footer />
       </section>
     </div>
+    <Footer />
   </body>
 </html>

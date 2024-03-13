@@ -6,7 +6,7 @@ import "../styles/index.scss";
 
 <!doctype html>
 <html lang="en">
-  <Head />
+  <Head title="Speakers - RustNL 2024" />
 
   <body>
     <section class="hero page">
@@ -18,15 +18,13 @@ import "../styles/index.scss";
       </div>
       <h1 class="text-3xl">Workshops</h1>
     </section>
-    <section class="container md:grid md:cols-12 py-12">
-      <div
-        class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
-      >
-        <slot name="description" />
+    <section class="container py-12 space-y-6">
+      <div class="grid xl:cols-12" id="speakers">
+        <div class="xl:col-start-4 xl:col-end-10 space-y-12">
+          <slot />
+        </div>
       </div>
     </section>
-    <section class="container py-12 space-y-6"></section>
-
     <Footer />
   </body>
 </html>
