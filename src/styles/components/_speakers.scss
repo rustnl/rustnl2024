@@ -1,10 +1,17 @@
-.speaker {
+.speakers .speaker {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border: none !important;
+}
+
+.speaker,
+.speakers {
   align-items: center;
   background-color: var(--color-yellow-400);
   border: 1px solid var(--color-yellow-500);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: var(--space-6);
   position: relative;
   text-align: center;

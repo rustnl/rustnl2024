@@ -49,9 +49,19 @@ import "../styles/index.scss";
       </section>
       <section class="container space-y-6">
         <div class="button-group">
+          <a href="/speakers" class="button button-primary">All our speakers</a>
+        </div>
+      </section>
+      <section class="container space-y-6">
+        <h3 class="text-2xl text-center">Workshops By</h3>
+        <div class="grid md:cols-2 xl:cols-4" id="workshops">
+          <slot name="workshops" />
+        </div>
+        <div class="button-group">
           <a
-            href="/speakers"
-            class="button button-primary">All our speakers</a
+            class="button button-primary"
+            style="text-decoration: none;color:var(--color-neutral-400);"
+            href="/workshops">Learn More</a
           >
         </div>
       </section>

@@ -1,6 +1,7 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import Speaker from "../components/speaker.astro";
+import Speakers from "../components/speakers.astro";
 import PreviousSpeaker from "../components/previous_speaker.astro";
 import Sponsor from "../components/sponsor.astro";
 import SponsorTier from "../components/sponsor-tier.astro";
@@ -22,10 +23,12 @@ import SponsorTier from "../components/sponsor-tier.astro";
         </ul>
         <p>
             <strong>Support our conference and the Rust ecosystem</strong><br />
-            Following the conference RustNL will facilitate <a href="/unconf">a two-day unconference</a>
-            for Rust maintainers.<br /> 
-            Contact us at <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if you're interested
-            in sponsoring the conference or unconference.
+            Following the conference RustNL will facilitate <a href="/unconf"
+                >a two-day unconference</a
+            >
+            for Rust maintainers.<br />
+            Contact us at <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if
+            you're interested in sponsoring the conference or unconference.
         </p>
         <p>
             <strong>Venue Address:</strong><br />
@@ -113,7 +116,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
                 />
             </div>
         </SponsorTier>
-        <SponsorTier name="NL Community supporters">         
+        <SponsorTier name="NL Community supporters">
             <div class="sponsors-row">
                 <Sponsor
                     name="Jitter"
@@ -171,6 +174,32 @@ import SponsorTier from "../components/sponsor-tier.astro";
             name="Michael Melchiore"
             image="michaelmelchiore.jpg"
             description="On-Board Processing Specialist @ Airbus"
+        />
+    </Fragment>
+    <Fragment slot="workshops">
+        <Speaker name="James Munns" image="james.png" description="" />
+
+        <Speaker
+            name="Rik Arends"
+            image="rik.png"
+            description="Founder at Makepad"
+        />
+        <Speakers>
+            <Speaker
+                name="Tim McNamara"
+                image="tim.png"
+                description="runs Accelerant.dev and a popular youtube channel (TimClicks)"
+            />
+            <Speaker
+                name="Henk Oordt"
+                image="henk.png"
+                description="Writing and teaching Rust for embedded and web"
+            />
+        </Speakers>
+        <Speaker
+            name="Luca Palmieri"
+            image="luca.png"
+            description="Playing around with Rust, at $dayjob and for fun"
         />
     </Fragment>
     <Fragment slot="previous-speakers">
