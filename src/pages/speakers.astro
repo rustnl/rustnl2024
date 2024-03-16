@@ -6,6 +6,18 @@ import SpeakerDetail from "../components/speaker-detail.astro";
 <SpeakersLayout>
     <Fragment slot="speakers">
         <SpeakerDetail
+            name="Alice Ryhl"
+            image="alice.jpg"
+            title="Software engineer at Google"
+            talkTitle="Arc in the Linux Kernel"
+            talkAbstract="The Linux Kernel is a very special codebase with a lot of restrictions on how you can write your code. In this talk, you will hear about how Rust has to adapt to work in the Linux Kernel. We will be looking at the kernel's extensive use of linked lists, and how we need to change our Arc to work in that environment, as well as the various unstable compiler features that we are using to make that happen."
+            bio="Alice is a software engineer at Google, where she works on a driver for the Linux Kernel in Rust, as part of the Android Rust team. She is also a core maintainer of Tokio."
+            linkedin="https://www.linkedin.com/in/aliceryhl/"
+            twitter=""
+            mastodon=""
+            github="https://github.com/Darksonn"
+        />
+        <SpeakerDetail
             name="Mara Bos"
             image="mara.jpg"
             title="Library team & Leadership council"
