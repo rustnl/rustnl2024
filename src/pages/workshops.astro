@@ -1,128 +1,161 @@
 ---
 import WorkshopLayout from "../layouts/WorkshopLayout.astro";
 import WorkshopDetail from "../components/workshop-detail.astro";
-import WorkshopDetailTwoHosts from "../components/workshop-detail-two-hosts.astro";
+import Trainer from "../components/trainer.astro";
 ---
 
 <WorkshopLayout>
-    <WorkshopDetail
-        name="James Munns"
-        image="james.png"
-        title="Managing Director at OneVariable"
-        talkTitle="Using `postcard` to talk to your Microcontroller"
-        bio="Consulting on the topics of System Engineering, Embedded Systems, and the Rust Programming Language"
-        linkedin="https://www.linkedin.com/in/james-munns-8a42b429/"
-        twitter=""
-        mastodon=""
-        github="https://github.com/jamesmunns"
-    >
-        <p>
-            This workshop is focused on setting up communications between a host
-            PC and an embedded system. Having the skills to do this quickly and
-            reliably can help your next project, whether you are starting a
-            project that requires heavy interaction with a host PC, or setting
-            up a testing interface for triggering hardware events, or building
-            tooling to make it easier to see what your system is doing.
-        </p>
-        <br />
-        <p>
-            James will explain the different crates that can be used, how they
-            fit together, and techniques + recipies for solving a number of
-            common challenges. You'll build your own communication link over USB
-            to a microcontroller. This workshop is best suited to developers
-            that are comfortable writing and running Rust on `no_std`
-            microcontrollers already, particularly using the `embassy`
-            framework. You will be provided working projects to start from, and
-            will be expected to customize and extend them to achieve the
-            different goals of the workshop.
-        </p>
-        <br />
-        <p>
-            This workshop is led by James Munns of OneVariable UG. James is the
-            author of the `postcard` crate, and has built dozens of PC-to-MCU
-            links like these for client projects over the past years.
-        </p>
-    </WorkshopDetail>
+    <div class="workshop">
+        <WorkshopDetail
+            talkTitle="Using `postcard` to talk to your Microcontroller"
+        >
+            <p>
+                This workshop is focused on setting up communications between a
+                host PC and an embedded system. Having the skills to do this
+                quickly and reliably can help your next project, whether you are
+                starting a project that requires heavy interaction with a host
+                PC, or setting up a testing interface for triggering hardware
+                events, or building tooling to make it easier to see what your
+                system is doing.
+            </p>
+            <br />
+            <p>
+                James will explain the different crates that can be used, how
+                they fit together, and techniques + recipies for solving a
+                number of common challenges. You'll build your own communication
+                link over USB to a microcontroller. This workshop is best suited
+                to developers that are comfortable writing and running Rust on
+                `no_std` microcontrollers already, particularly using the
+                `embassy` framework. You will be provided working projects to
+                start from, and will be expected to customize and extend them to
+                achieve the different goals of the workshop.
+            </p>
+            <br />
+            <p>
+                This workshop is led by James Munns of OneVariable UG. James is
+                the author of the `postcard` crate, and has built dozens of
+                PC-to-MCU links like these for client projects over the past
+                years.
+            </p>
+        </WorkshopDetail>
+        <div class="space-y-3">
+            <h4>Workshop by</h4>
+            <Trainer
+                name="James Munns"
+                image="james.png"
+                description="Embedded, systems and Rust consultant & Director @ OneVariable"
+                bio="James is a software engineer currently living in Berlin. He primarily works with Rust and Embedded Systems."
+                linkedin="https://www.linkedin.com/in/james-munns-8a42b429/"
+                twitter=""
+                mastodon=""
+                github="github.com/jamesmunns"
+            />
+        </div>
+    </div>
 
-    <WorkshopDetail
-        name="Rik Arends"
-        image="rik.jpeg"
-        title="Founder at Makepad"
-        talkTitle=""
-        linkedin="https://www.linkedin.com/in/arendsrik/"
-        twitter="https://twitter.com/rikarends"
-    >
-        Coming Soon
-    </WorkshopDetail>
+    <div class="workshop">
+        <WorkshopDetail talkTitle="Building UIs with Makepad">
+            <p>To be announced</p>
+        </WorkshopDetail>
 
-    <WorkshopDetailTwoHosts
-        name1="Tim McNamara"
-        image1="tim.png"
-        title1="Founder of Accelerant.dev"
-        bio1="Tim runs the global Rust consultancy Accelerant.dev. He also hosts a popular YouTube channel featuring tutorials on the language https://youtube.com/c/timClicks"
-        linkedin1="https://www.linkedin.com/in/timmcnamaranz"
-        twitter1="https://twitter.com/timClicks"
-        github1="https://github.com/timClicks"
-        name2="Henk Oordt"
-        image2="henk.png"
-        bio2="Henk's an embedded developer at Tweede golf, maintainer of the teach-rs uni course the, and hosts trainings on all things Rust"
-        linkedin2="https://www.linkedin.com/in/hdoordt/"
-        github2="https://github.com/hdoordt"
-        twitter2="https://twitter.com/hdoordt"
-        title2="Rust Trainer and Software Engineer at Tweede Golf"
-        talkTitle="Mix-in-Rust"
-    >
-        <p>
-            Are you a happy Rust developer, who cannot wait but struggles to
-            introduce Rust at their day job? Is the fear of working with foreign
-            code keeping your team from getting to work with your favourite
-            programming language? This workshop is for you!
-        </p>
-        <br />
-        <p>
-            In the Mix-in-Rust, you'll get the tools and know-how to introduce
-            Rust in your current, non-rust projects. We'll go over the hardships
-            of FFI, the way Rust tackles them, and what tooling is out there to
-            make Rust speak other langauges.
-        </p>
-        <br />
-        <p>
-            Note that during this worksop, we'll assume intermediate knowledge
-            of Rust, as well as some basic knowledge of C. Basically, you should
-            know what a pointer is.
-        </p>
-    </WorkshopDetailTwoHosts>
+        <div class="space-y-3">
+            <h4>Workshop by</h4>
+            <Trainer
+                name="Rik Arends"
+                image="rik.jpeg"
+                description="Founder @ Makepad"
+                linkedin="https://www.linkedin.com/in/arendsrik/"
+                twitter="https://twitter.com/rikarends"
+                mastodon=""
+                github="https://github.com/makepad/makepad"
+            />
+        </div>
+    </div>
 
-    <WorkshopDetail
-        name="Luca Palmieri"
-        image="luca.png"
-        title="Principle Engineering Consultant at MainMatter"
-        talkTitle="Building debuggable applications—a tracing crate masterclass"
-        bio="Mathematician turned Machine Learning Engineer turned Software Engineer."
-        linkedin="https://www.linkedin.com/in/luca-palmieri"
-        twitter="https://twitter.com/algo_luca"
-        mastodon=""
-        github="https://github.com/LukeMathWalker"
-    >
-        <p>
-            Your Rust application has finally been deployed to production! Nice!
-            But is it working? This workshop will show you how the tracing crate
-            can be leveraged to instrument your application and make sure you
-            have enough information to diagnose issues when they occur.
-        </p>
-        <br />
-        <p>
-            This workshop is designed for developers operating Rust services in
-            production-like environments or preparing to do so.
-        </p>
-        <br />
-        <p>
-            An introduction to the tracing instrumentation library, covering
-            both how to instrument your code (capturing fields, log levels,
-            macros) and how to process the resulting telemetry data in your
-            application (subscriber configuration, logging levels, log
-            filtering). We'll also touch on how tracing integrates with
-            OpenTelemetry.
-        </p>
-    </WorkshopDetail>
+    <div class="workshop">
+        <WorkshopDetail talkTitle="Mix-in-Rust">
+            <p>
+                Are you a happy Rust developer, who cannot wait but struggles to
+                introduce Rust at their day job? Is the fear of working with
+                foreign code keeping your team from getting to work with your
+                favourite programming language? This workshop is for you!
+            </p>
+            <br />
+            <p>
+                In the Mix-in-Rust, you'll get the tools and know-how to
+                introduce Rust in your current, non-rust projects. We'll go over
+                the hardships of FFI, the way Rust tackles them, and what
+                tooling is out there to make Rust speak other langauges.
+            </p>
+            <br />
+            <p>
+                Note that during this worksop, we'll assume intermediate
+                knowledge of Rust, as well as some basic knowledge of C.
+                Basically, you should know what a pointer is.
+            </p>
+        </WorkshopDetail>
+        <div class="space-y-3">
+            <h4>Workshop by</h4>
+            <Trainer
+                name="Tim McNamara"
+                image="tim.png"
+                description="Rust educator & consultant @ Accelerant"
+                bio="Tim runs the global Rust consultancy Accelerant.dev. He also hosts a popular YouTube channel featuring tutorials on the language https://youtube.com/c/timClicks"
+                linkedin="https://www.linkedin.com/in/timmcnamaranz"
+                twitter="https://twitter.com/timClicks"
+                github="https://github.com/timClicks"
+            />
+            <Trainer
+                name="Henk Oordt"
+                image="henk.png"
+                description="Rust trainer & Embedded software engineer @ Tweede golf"
+                bio="Henk is an embedded software engineer at Tweede golf, and one of the lucky people that mainly use Rust in embedded. He's so passionate about Rust that he can't help spreading the word by hosting Rust training for all kinds of areas, and by developing teach-rs, the modular, reusable Rust university course platform."
+                linkedin="https://www.linkedin.com/in/hdoordt/"
+                twitter="https://twitter.com/hdoordt"
+                mastodon=""
+                github="https://github.com/hdoordt/"
+            />
+        </div>
+    </div>
+
+    <div class="workshop">
+        <WorkshopDetail
+            talkTitle="Building debuggable applications—a tracing crate masterclass"
+        >
+            <p>
+                Your Rust application has finally been deployed to production!
+                Nice! But is it working? This workshop will show you how the
+                tracing crate can be leveraged to instrument your application
+                and make sure you have enough information to diagnose issues
+                when they occur.
+            </p>
+            <br />
+            <p>
+                This workshop is designed for developers operating Rust services
+                in production-like environments or preparing to do so.
+            </p>
+            <br />
+            <p>
+                An introduction to the tracing instrumentation library, covering
+                both how to instrument your code (capturing fields, log levels,
+                macros) and how to process the resulting telemetry data in your
+                application (subscriber configuration, logging levels, log
+                filtering). We'll also touch on how tracing integrates with
+                OpenTelemetry.
+            </p>
+        </WorkshopDetail>
+        <div class="space-y-3">
+            <h4>Workshop by</h4>
+            <Trainer
+                name="Luca Palmieri"
+                image="luca.png"
+                description="Principle Engineering Consultant at MainMatter"
+                bio="Mathematician turned Machine Learning Engineer turned Software Engineer."
+                linkedin="https://www.linkedin.com/in/luca-palmieri"
+                twitter="https://twitter.com/algo_luca"
+                mastodon=""
+                github="https://github.com/LukeMathWalker"
+            />
+        </div>
+    </div>
 </WorkshopLayout>

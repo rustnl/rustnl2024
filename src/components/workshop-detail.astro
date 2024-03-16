@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="workshop">
+
     <div class="markdown">
         <div>
             <h2 style="font-style: italic;" class="text-lg">{talkTitle}</h2>
@@ -22,23 +22,4 @@ const {
             </p>
         </div>
     </div>
-    <div class="space-y-3">
-        <h4>Workshop by</h4>
-        <div class="speaker">
-            <img src={`/images/speakers/${image}`} alt={name} />
-            <div class="space-y-6">
-                <div>
-                    <h4 class="font-light text-lg leading-tight">{name}</h4>
-                    <h3>{title}</h3>
-                </div>
-                {bio && <p>{bio}</p>}
-                <div class="socials">
-                    {linkedin && <a href={linkedin}>LinkedIn</a>}
-                    {twitter && <a href={twitter}>X</a>}
-                    {mastodon && <a href={mastodon}>Mastodon</a>}
-                    {github && <a href={github}>GitHub</a>}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
