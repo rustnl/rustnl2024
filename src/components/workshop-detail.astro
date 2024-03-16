@@ -12,43 +12,45 @@ const {
 } = Astro.props;
 ---
 
-<div class="speaker">
-    <div class="space-y-6">
-        <img src={`/images/speakers/${image}`} alt="" />
+<div class="workshop">
+    <div class="markdown">
         <div>
-            <h4 class="font-light text-lg leading-tight">{name}</h4>
-            <h3>{title}</h3>
-        </div>
-        <div class="speaker-detail markdown">
+            {talkTitle && <h3>The workshop</h3>}<br />
             {
-                bio && (
-                    <div>
-                        <h3>About</h3>
-                        <p>{bio}</p>
-                    </div>
+                talkTitle && (
+                    <h2 style="font-style: italic;">{talkTitle}</h2>
+                )
+            }<br />
+            {
+                (
+                    <p>
+                        <slot />
+                    </p>
                 )
             }
-            <p>
-                {linkedin && <a href={linkedin}>LinkedIn</a>}
-                {twitter && <a href={twitter}>X</a>}
-                {mastodon && <a href={mastodon}>Mastodon</a>}
-                {github && <a href={github}>GitHub</a>}
-            </p>
-            <div>
-                {talkTitle && <h3>The workshop</h3>}<br />
+        </div>
+    </div>
+    <div class="space-y-3">
+        <h4>Workshop by</h4>
+        <div class="speaker">
+            <img src={`/images/speakers/${image}`} alt="" />
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-light text-lg leading-tight">{name}</h4>
+                    <h3>{title}</h3>
+                </div>
                 {
-                    talkTitle && (
-                        <h2 style="font-style: italic;">{talkTitle}</h2>
-                    )
-                }<br />
-                {
-                    (
-                        <p>
-                            <slot />
-                        </p>
+                    bio && (
+                        <p>{bio}</p>
                     )
                 }
-            </div>
+                <div class="socials">
+                    {linkedin && <a href={linkedin}>LinkedIn</a>}
+                    {twitter && <a href={twitter}>X</a>}
+                    {mastodon && <a href={mastodon}>Mastodon</a>}
+                    {github && <a href={github}>GitHub</a>}
+                </div>
+            </div>        
         </div>
     </div>
 </div>

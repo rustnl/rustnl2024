@@ -1,5 +1,6 @@
 @use 'global/reset';
 
+@use 'global/backgrounds';
 @use 'global/global';
 @use 'global/root';
 @use 'global/typograpy';
@@ -19,4 +20,5 @@
 @use 'components/sponsors';
 @use 'components/timetable';
 @use 'components/youtube';
+@use 'components/workshop';
 @use 'components/unconf';

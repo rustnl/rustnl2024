@@ -17,7 +17,7 @@ const {
     <div class="space-y-6">
         <img src={`/images/speakers/${image}`} alt="" />
         <div>
-            <h4 class="font-light text-lg leading-tight">{name}</h4>
+            <h4 class="font-light text-xl leading-tight">{name}</h4>
             <h3>{title}</h3>
         </div>
         <div class="speaker-detail markdown">
@@ -29,16 +29,17 @@ const {
                     </div>
                 )
             }
-            <p>
-                {linkedin && <a href={linkedin}>LinkedIn</a>}
-                {twitter && <a href={twitter}>X</a>}
-                {mastodon && <a href={mastodon}>Mastodon</a>}
-                {github && <a href={github}>GitHub</a>}
-            </p>
             <div>
                 {talkTitle && <h3>The talk</h3>}<br />
                 {talkTitle && <p style="font-style: italic;">{talkTitle}</p>}<br />
                 {talkAbstract && <p>{talkAbstract}</p>}
+            </div>
+
+            <div class="socials">
+                {linkedin && <a href={linkedin}>LinkedIn</a>}
+                {twitter && <a href={twitter}>X</a>}
+                {mastodon && <a href={mastodon}>Mastodon</a>}
+                {github && <a href={github}>GitHub</a>}
             </div>
         </div>
     </div>
