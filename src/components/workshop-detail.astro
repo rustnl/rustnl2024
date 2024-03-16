@@ -15,42 +15,31 @@ const {
 <div class="workshop">
     <div class="markdown">
         <div>
-            {talkTitle && <h3>The workshop</h3>}<br />
-            {
-                talkTitle && (
-                    <h2 style="font-style: italic;">{talkTitle}</h2>
-                )
-            }<br />
-            {
-                (
-                    <p>
-                        <slot />
-                    </p>
-                )
-            }
+            <h3>The workshop</h3><br />
+            <h2 style="font-style: italic;">{talkTitle}</h2>
+            <br />
+            <p>
+                <slot />
+            </p>
         </div>
     </div>
     <div class="space-y-3">
         <h4>Workshop by</h4>
         <div class="speaker">
-            <img src={`/images/speakers/${image}`} alt="" />
+            <img src={`/images/speakers/${image}`} alt={name} />
             <div class="space-y-6">
                 <div>
                     <h4 class="font-light text-lg leading-tight">{name}</h4>
                     <h3>{title}</h3>
                 </div>
-                {
-                    bio && (
-                        <p>{bio}</p>
-                    )
-                }
+                {bio && <p>{bio}</p>}
                 <div class="socials">
                     {linkedin && <a href={linkedin}>LinkedIn</a>}
                     {twitter && <a href={twitter}>X</a>}
                     {mastodon && <a href={mastodon}>Mastodon</a>}
                     {github && <a href={github}>GitHub</a>}
                 </div>
-            </div>        
+            </div>
         </div>
     </div>
 </div>

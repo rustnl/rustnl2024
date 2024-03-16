@@ -25,26 +25,19 @@ const {
 <div class="workshop">
     <div class="markdown">
         <div>
-            {talkTitle && <h3>The workshop</h3>}<br />
-            {
-                talkTitle && (
-                    <h2 style="font-style: italic;">{talkTitle}</h2>
-                )
-            }<br />
-            {
-                (
-                    <p>
-                        <slot />
-                    </p>
-                )
-            }
+            <h3>The workshop</h3>
+            <h2 style="font-style: italic;">{talkTitle}</h2>
+            <br />
+            <p>
+                <slot />
+            </p>
         </div>
     </div>
     <div class="space-y-3">
         <h4>Workshop by</h4>
         <div class="grid cols-2">
             <div class="speaker">
-                <img src={`/images/speakers/${image1}`} alt="" />
+                <img src={`/images/speakers/${image1}`} alt={name1} />
                 <div class="space-y-6">
                     <div>
                         <h4 class="font-light text-lg leading-tight">{name1}</h4>
@@ -64,7 +57,7 @@ const {
                 </div>        
             </div>
             <div class="speaker">
-                <img src={`/images/speakers/${image2}`} alt="" />
+                <img src={`/images/speakers/${image2}`} alt={name2} />
                 <div class="space-y-6">
                     <div>
                         <h4 class="font-light text-lg leading-tight">{name2}</h4>
@@ -86,68 +79,3 @@ const {
         </div>
     </div>
 </div>
-
-<!-- <div class="speaker">
-    <div class="space-y-6">
-        <div style="display: flex; flex-direction: column;">
-            <div>
-                <img src={`/images/speakers/${image1}`} alt="" />
-                <div>
-                    <h4 class="font-light text-lg leading-tight">{name1}</h4>
-                    <h3>{title1}</h3>
-                </div>
-                <div class="speaker-detail markdown">
-                    {
-                        bio1 && (
-                            <div>
-                                <h3>About</h3>
-                                <p>{bio1}</p>
-                            </div>
-                        )
-                    }
-                    <p>
-                        {linkedin1 && <a href={linkedin1}>LinkedIn</a>}
-                        {twitter1 && <a href={twitter1}>X</a>}
-                        {mastodon1 && <a href={mastodon1}>Mastodon</a>}
-                        {github1 && <a href={github1}>GitHub</a>}
-                    </p>
-                </div>
-            </div>
-            <div>
-                <img src={`/images/speakers/${image2}`} alt="" />
-                <div>
-                    <h4 class="font-light text-lg leading-tight">{name2}</h4>
-                    <h3>{title2}</h3>
-                </div>
-                <div class="speaker-detail markdown">
-                    {
-                        bio2 && (
-                            <div>
-                                <h3>About</h3>
-                                <p>{bio2}</p>
-                            </div>
-                        )
-                    }
-                    <p>
-                        {linkedin2 && <a href={linkedin2}>LinkedIn</a>}
-                        {twitter2 && <a href={twitter2}>X</a>}
-                        {mastodon2 && <a href={mastodon2}>Mastodon</a>}
-                        {github2 && <a href={github2}>GitHub</a>}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div>
-            {talkTitle && <h3>The talk</h3>}<br />
-            {talkTitle && <h2 style="font-style: italic;">{talkTitle}</h2>}<br
-            />
-            {
-                (
-                    <p>
-                        <slot />
-                    </p>
-                )
-            }
-        </div>
-    </div>
-</div> -->
