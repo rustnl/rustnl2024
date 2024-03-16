@@ -1,21 +1,13 @@
 ---
 const {
-    name,
-    image,
     title,
-    talkTitle,
-    bio,
-    linkedin,
-    twitter,
-    mastodon,
-    github,
 } = Astro.props;
 ---
 
 
     <div class="markdown">
         <div>
-            <h2 style="font-style: italic;" class="text-lg">{talkTitle}</h2>
+            <h2 style="font-style: italic;" class="text-lg">{title}</h2>
             <br />
             <p>
                 <slot />
