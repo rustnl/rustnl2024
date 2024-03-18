@@ -1,6 +1,7 @@
 ---
 import Head from "../components/head.astro";
 import Footer from "../components/footer.astro";
+import Menu from '../components/menu.astro';
 import "../styles/index.scss";
 ---
 
@@ -9,18 +10,8 @@ import "../styles/index.scss";
   <Head title="Schedule - RustNL 2024" />
 
   <body>
+    <Menu withLogo />
     <section class="hero page">
-      <div class="nav">
-        <a href="/">
-          <img src="/images/logo.svg" alt="Logo RustNL 2024" />
-        </a>
-        <div class="button-group">
-          <a
-          href="/"
-          class="button button-primary">Home</a
-          >
-        </div>
-      </div>
       <h1 class="text-3xl">Schedule</h1>
     </section>
     <section class="container py-24 space-y-12" id="schedule">
