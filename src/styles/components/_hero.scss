@@ -66,15 +66,10 @@
   }
 
   &.page {
-    padding-block-start: var(--space-6);
-    padding-block-end: var(--space-24);
-
-    min-height: auto;
+    min-height: 384px;
 
     img {
       max-height: 3rem;
     }
-
-    .button-group {}
   }
 }
