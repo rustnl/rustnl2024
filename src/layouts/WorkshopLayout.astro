@@ -6,33 +6,31 @@ import "../styles/index.scss";
 
 <!doctype html>
 <html lang="en">
-  <Head title="Speakers - RustNL 2024" />
+  <Head title="Workshops - RustNL 2024" />
 
   <body>
     <section class="hero page">
       <div class="nav">
-        <a href="/">
-          <img src="/images/logo.svg" alt="Logo RustNL 2024" />
-        </a>
+        <img src="/images/logo.svg" alt="Logo RustNL 2024" />
         <div class="button-group">
           <a href="/" class="button button-primary">Home</a>
         </div>
       </div>
-      <h1 class="text-3xl">Speakers</h1>
+      <h1 class="text-3xl">Workshops</h1>
     </section>
     <section class="container py-12 space-y-6">
-      <div class="grid xl:cols-12" id="speakers">
+      <div class="grid xl:cols-12" id="workshops">
         <div class="xl:col-start-4 xl:col-end-10 space-y-12">
-          <slot name="speakers" />
+          <slot />
         </div>
       </div>
     </section>
     <div class="button-group">
+      <a href="/" class="button button-primary">Home</a>
       <a
         href="https://www.eventbrite.nl/e/rustnl-2024-tickets-790061233417?aff=oddtdtcreator"
         class="button button-primary">Tickets</a
       >
-      <a href="/" class="button button-primary">Home</a>
     </div>
     <Footer />
   </body>

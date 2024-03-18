@@ -18,6 +18,14 @@ import "../styles/index.scss";
             href="https://www.eventbrite.nl/e/rustnl-2024-tickets-790061233417?aff=oddtdtcreator"
             class="button button-primary">Tickets</a
           >
+          <a
+            href="/speakers"
+            class="button button-primary">Speakers</a
+          >
+          <a
+          href="/workshops"
+          class="button button-primary">Workshops</a
+        >
         </div>
         <a class="down-arrow" href="#explainer"></a>
       </section>
@@ -49,9 +57,19 @@ import "../styles/index.scss";
       </section>
       <section class="container space-y-6">
         <div class="button-group">
+          <a href="/speakers" class="button button-primary">All our speakers</a>
+        </div>
+      </section>
+      <section class="container space-y-6">
+        <h3 class="text-2xl text-center">Workshops by</h3>
+        <div class="grid md:cols-2 xl:cols-4" id="workshops">
+          <slot name="workshops" />
+        </div>
+        <div class="button-group">
           <a
-            href="/speakers"
-            class="button button-primary">All speakers</a
+            class="button button-primary"
+            style="text-decoration: none;color:var(--color-neutral-400);"
+            href="/workshops">Workshop details</a
           >
         </div>
       </section>

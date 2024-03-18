@@ -1,10 +1,36 @@
+.speakers {
+  background-color: var(--color-yellow-400);
+  border: 1px solid var(--color-yellow-500);
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    background-color: var(--color-yellow-500);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .speaker {
+    background-color: transparent;
+    border: 0;
+  }
+
+  .speaker::after {
+    display: none;
+  }
+}
+
 .speaker {
   align-items: center;
   background-color: var(--color-yellow-400);
   border: 1px solid var(--color-yellow-500);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: var(--space-6);
   position: relative;
   text-align: center;

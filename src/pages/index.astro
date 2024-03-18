@@ -1,6 +1,7 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import Speaker from "../components/speaker.astro";
+import Speakers from "../components/speakers.astro";
 import PreviousSpeaker from "../components/previous_speaker.astro";
 import Sponsor from "../components/sponsor.astro";
 import SponsorTier from "../components/sponsor-tier.astro";
@@ -201,6 +202,35 @@ import SponsorTier from "../components/sponsor-tier.astro";
             description="On-Board Processing Specialist @ Airbus"
         />
     </Fragment>
+    <Fragment slot="workshops">
+        <Speaker
+            name="James Munns"
+            image="james.png"
+            description="Embedded, systems and Rust consultant & Director @ OneVariable"
+        />
+        <Speaker
+            name="Rik Arends"
+            image="rik.jpeg"
+            description="Founder @ Makepad"
+        />
+        <Speakers>
+            <Speaker
+                name="Tim McNamara"
+                image="tim.png"
+                description="Rust educator & consultant @ Accelerant"
+            />
+            <Speaker
+                name="Henk Oordt"
+                image="henk.png"
+                description="Writing & teaching Rust @ Tweede golf"
+            />
+        </Speakers>
+        <Speaker
+            name="Luca Palmieri"
+            image="luca.png"
+            description="Principle Engineering Consultant @ MainMatter"
+        />
+    </Fragment>
     <Fragment slot="previous-speakers">
         <PreviousSpeaker
             name="Nicolas Nethercote"
@@ -210,7 +240,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         />
         <PreviousSpeaker
             name="Rik Arends"
-            image="rik.png"
+            image="rik.jpeg"
             talk="Makepad: Designing modern UIs with Rust"
             youtube="https://www.youtube.com/watch?v=rC4FCS-oMpg&list=PL8Q1w7Ff68DCM_fsMM4v9m473sYLvJwHS&index=1"
         />
