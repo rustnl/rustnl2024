@@ -24,23 +24,3 @@
   }
 }
 
-.footer {
-  background-color: var(--color-red-400);
-  
-  @include mixins.breakpoint(xl) {
-    display: flex;
-    gap: var(--space-6);
-    justify-content: center;
-    margin-block-start: var(--space-24);
-  }
-  padding: var(--space-6);
-
-  a {
-    display: block;
-    padding: var(--space-1);
-    @include mixins.breakpoint(xl) {
-      display: inline;
-    }
-    color: var(--color-neutral-400);
-  }
-}

@@ -9,16 +9,18 @@
 @use 'layout/grid';
 @use 'layout/space';
 
+@use 'components/about';
 @use 'components/benefits';
 @use 'components/buttons';
+@use 'components/header';
 @use 'components/hero';
+@use 'components/industry';
 @use 'components/last-year';
 @use 'components/location';
 @use 'components/speakers';
-@use 'components/about';
-@use 'components/industry';
 @use 'components/sponsors';
 @use 'components/timetable';
-@use 'components/youtube';
-@use 'components/workshop';
 @use 'components/unconf';
+@use 'components/workshop';
+@use 'components/youtube';
+@use 'components/footer';

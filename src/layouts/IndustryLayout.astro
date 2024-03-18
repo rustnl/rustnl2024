@@ -1,6 +1,7 @@
 ---
 import Head from "../components/head.astro";
 import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
 import "../styles/index.scss";
 ---
 
@@ -11,13 +12,8 @@ import "../styles/index.scss";
     </Head>
 
     <body>
+        <Header withLogo />
         <section class="hero page">
-            <div class="nav">
-                <img src="/images/logo.svg" alt="Logo RustNL 2024" />
-                <div class="button-group">
-                    <a href="/" class="button button-primary">Home</a>
-                </div>
-            </div>
             <h1 class="text-3xl">Industry track</h1>
             <p class="text-xl">
                 May 7, 2024
