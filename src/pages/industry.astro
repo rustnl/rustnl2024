@@ -1,6 +1,5 @@
 ---
 import IndustryLayout from "../layouts/IndustryLayout.astro";
-import Organiser from "../components/organiser.astro";
 import Speaker from "../components/speaker.astro";
 import TimetableItem from "../components/timetable-item.astro";
 import Sponsor from "../components/sponsor.astro";
@@ -11,9 +10,9 @@ import SponsorTier from "../components/sponsor-tier.astro";
     <div class="markdown" slot="about-industry">
         <h2 class="text-2xl space-y-6" id="about">About this track</h2>
         <p>
-            A dedicated track during the RustNL conference, for decision makers
-            exploring the adoption of Rust in their team / department /
-            organisation. On Tuesday May 7 in the afternoon.
+            A dedicated track during the RustNL 2024 conference, for decision
+            makers exploring the adoption of Rust in their team / department /
+            organisation. On <strong>Tuesday May 7, 13:30 - 17:00 CET</strong>.
         </p>
         <p>
             <ul>
@@ -32,33 +31,48 @@ import SponsorTier from "../components/sponsor-tier.astro";
     <div class="markdown" slot="tickets">
         <h2 class="text-2xl space-y-6" id="about">Tickets</h2>
         <p>
-            To attend the industry track, you will need an Industry Track ticket or a Combi ticket that also includes attendance to the developer conference.
+            To attend the industry track, you will need an Industry Track
+            ticket.<br />
+            Tickets are EUR 149,- ex vat.
         </p>
         <div class="button-group">
             <a
                 class="button button-primary"
                 style="text-decoration: none;color:var(--color-neutral-400);"
                 target="_blank"
-                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-only">Get Industry Track ticket</a
+                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-only"
+                >Get Industry Track ticket</a
             >
+        </div>
+        <p>
+            Join the RustNL developer conference on Tue+Wed May 7/8?<br />
+            Get a Combi ticket for the conference incl Industry track. <br />Combi tickets are EUR 399,- ex vat.
+        </p>
+        <div class="button-group">
             <a
                 class="button button-primary"
                 style="text-decoration: none;color:var(--color-neutral-400);"
                 target="_blank"
-                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-combi">Get Combi ticket</a
+                href="https://www.eventbrite.nl/e/790061233417/?discount=industry-track-combi"
+                >Get Combi ticket</a
             >
         </div>
     </div>
     <Fragment slot="speakers">
         <Speaker
             name="Tim McNamara"
-            image="tim.jpeg"
+            image="tim.png"
             description="Rust software consultant and coach, author of Rust in Action"
         />
         <Speaker
             name="Frédéric Ameye"
             image="frederic.png"
             description="Cybersecurity architect at Ampere"
+        />
+        <Speaker
+            name="Jakub Beránek"
+            image="jakub.jpg"
+            description="Rust Survey Team Co-lead"
         />
         <Speaker
             name="Tiago Manczak"
@@ -70,22 +84,32 @@ import SponsorTier from "../components/sponsor-tier.astro";
             image="joachim.jpeg"
             description="Senior Principal Engineer at Storio Group (formerly Albelli)"
         />
-    </Fragment>
-
-    <Fragment slot="speakers-tba">
-        <p class="text-center text-lg col-12">
-            More speakers and panelists to be announced soon
-        </p>
+        <Speaker
+            name="Paul Lenz"
+            image="paullenz.jpg"
+            description="Director of Finance and Funding at the Rust Foundation"
+        />
+        <Speaker
+            name="Floris van der Grinten"
+            image="floris.jpg"
+            description="Senior Engineer at 1Password"
+        />
     </Fragment>
 
     <div slot="sponsors">
-        <SponsorTier name="Organizer">
+        <SponsorTier name="Ecosystem partner">
             <div class="sponsors-row">
                 <Sponsor
-                    name="Tweede golf"
-                    tier="organizing-partner"
-                    image="tweede-golf-v2.png"
-                    link="https://tweedegolf.nl"
+                    name="Rust Foundation"
+                    tier="industry-partner"
+                    image="rustfoundation.png"
+                    link="https://foundation.rust-lang.org/"
+                />
+                <Sponsor
+                    name="Futurewei Technologies"
+                    tier="industry-partner"
+                    image="futurewei.png"
+                    link="https://www.futurewei.com/"
                 />
             </div>
         </SponsorTier>
@@ -112,6 +136,21 @@ import SponsorTier from "../components/sponsor-tier.astro";
             </div>
             <div class="sponsors-row">
                 <Sponsor
+                    name="1Password"
+                    tier="industry-partner"
+                    image="1password.png"
+                    link="https://1password.com/"
+                />
+                <Sponsor
+                    name="Albelli"
+                    tier="industry-partner"
+                    image="albelli.png"
+                    link="https://www.albelli.nl/"
+                />
+            </div>
+        <SponsorTier name="Round table moderators">
+            <div class="sponsors-row">
+                <Sponsor
                     name="Mathias Endler"
                     tier="industry-partner"
                     link="https://endler.dev/"
@@ -128,31 +167,23 @@ import SponsorTier from "../components/sponsor-tier.astro";
                 />
             </div>
         </SponsorTier>
-        <SponsorTier name="Ecosystem partner">
+        <SponsorTier name="Powered by">
             <div class="sponsors-row">
                 <Sponsor
-                    name="Rust Foundation"
+                    name="Tweede golf"
                     tier="industry-partner"
-                    image="rustfoundation.png"
-                    link="https://foundation.rust-lang.org/"
+                    image="tweede-golf-v2.png"
+                    link="https://tweedegolf.nl"
                 />
                 <Sponsor
-                    name="Futurewei Technologies"
+                    name="RustNL"
                     tier="industry-partner"
-                    image="futurewei.png"
-                    link="https://www.futurewei.com/"
+                    image="../logo.svg"
+                    link="/about"
                 />
             </div>
         </SponsorTier>
     </div>
-    <Fragment slot="support">
-        <Organiser
-            name="Tweede golf"
-            image="empty.png"
-            description="Tweede golf is organizing partner of RustNL 2024."
-        />
-    </Fragment>
-
     <ul class="timetable" slot="timetable-day">
         <TimetableItem time="13:30" title="Registration" />
         <TimetableItem time="14.00" title="Opening" speaker="Tim McNamara" />
@@ -164,13 +195,13 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <TimetableItem
             time="14.30"
             title="Global State of Rust"
-            speaker="To be announced"
+            speaker="Jakub Beránek"
         />
         <TimetableItem time="14.50" title="Short break" />
         <TimetableItem
             time="15.00"
-            title="Industry Panel - learn from Infineon, Albelli, and others"
-            speaker="Tiago Manczak"
+            title="Industry Panel - learn from Infineon, 1Password, Albelli and Rust Foundation"
+            speaker="Paul Lenz, Tiago Manczak, Joachim den Hertog, Floris van der Grinten"
         />
         <TimetableItem
             time="15:30"
