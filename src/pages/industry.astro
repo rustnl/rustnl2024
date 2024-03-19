@@ -32,7 +32,8 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <h2 class="text-2xl space-y-6" id="about">Tickets</h2>
         <p>
             To attend the industry track, you will need an Industry Track
-            ticket.
+            ticket.<br />
+            Tickets are EUR 149,- ex vat.
         </p>
         <div class="button-group">
             <a
@@ -45,7 +46,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         </div>
         <p>
             Join the RustNL developer conference on Tue+Wed May 7/8?<br />
-            Get a Combi ticket for the conference incl Industry track.
+            Get a Combi ticket for the conference incl Industry track. <br />Combi tickets are EUR 399,- ex vat.
         </p>
         <div class="button-group">
             <a
@@ -147,7 +148,8 @@ import SponsorTier from "../components/sponsor-tier.astro";
                     link="https://www.albelli.nl/"
                 />
             </div>
-            <div class="sponsors-row py-12">
+        <SponsorTier name="Round table moderators">
+            <div class="sponsors-row">
                 <Sponsor
                     name="Mathias Endler"
                     tier="industry-partner"
@@ -165,13 +167,19 @@ import SponsorTier from "../components/sponsor-tier.astro";
                 />
             </div>
         </SponsorTier>
-        <SponsorTier name="Organizer">
+        <SponsorTier name="Powered by">
             <div class="sponsors-row">
                 <Sponsor
                     name="Tweede golf"
-                    tier="organizing-partner"
+                    tier="industry-partner"
                     image="tweede-golf-v2.png"
                     link="https://tweedegolf.nl"
+                />
+                <Sponsor
+                    name="RustNL"
+                    tier="industry-partner"
+                    image="../logo.svg"
+                    link="/about"
                 />
             </div>
         </SponsorTier>
@@ -192,7 +200,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <TimetableItem time="14.50" title="Short break" />
         <TimetableItem
             time="15.00"
-            title="Industry Panel - learn from Infineon, 1Password, Albelli and others"
+            title="Industry Panel - learn from Infineon, 1Password, Albelli and Rust Foundation"
             speaker="Paul Lenz, Tiago Manczak, Joachim den Hertog, Floris van der Grinten"
         />
         <TimetableItem
