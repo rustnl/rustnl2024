@@ -138,7 +138,7 @@ import SpeakerDetail from "../components/speaker-detail.astro";
         />
         <SpeakerDetail
             name="Leon Schuermann"
-            image="leon.jpeg"
+            image="leon.jpg"
             title="PhD Candidate in Computer Science @ Princeton University"
             talkTitle="Fortifying Rust's FFI with Encapsulated Functions"
             talkAbstract="Memory- and type-safe languages like Rust are increasingly popular for systems development. Nonetheless, practical systems must interact with code written in memory-unsafe languages. Examples for this can be found across the spectrum, with many Rust applications linking against popular libraries such as OpenSSL, to security and safety-critical embedded systems, where subsystems such as cryptographic implementations are subject to industrial and governmental certification requirements. Direct interactions with such libraries, however, expose safe languages to significant risks: any single bug in either the foreign code or the cross-language interactions may arbitrarily violate the memory and/or type safety of the wrapping language. This talk presents Encapsulated Functions, an ongoing research project exploring how to secure cross-language interactions along with their differing guarantees and semantics around memory- and type-safety. At its core, Encapsulated Functions is a framework that combines memory protection mechanisms (such as the RISC-V Physical Memory Protection or Intel's Memory Protection Keys) with a set of portable types to both restrict and encapsulate behavior across the language boundary. Through the portability across different memory protection mechanisms we can utilize this infrastructure in both highly-restrictive embedded systems and applications running on conventional operating systems alike."
@@ -175,12 +175,12 @@ import SpeakerDetail from "../components/speaker-detail.astro";
             name="Dario Nieuwenhuis"
             image="dario.jpg"
             title="Akiles CTO & Embassy project lead"
-            talkTitle="Talk title and abstract to be announced"
-            talkAbstract=""
-            bio=""
+            talkTitle="Async Rust in embedded systems with Embassy"
+            talkAbstract="Async/await in Rust has a unique design compared to other languages that offers much lower-level control. This makes it surprisingly well suited for use in microcontroller-based embedded systems with no operating system, little memory (down to kilobytes!) and no heap. Embassy is an async runtime that makes that possible: it includes an executor that works on no-std no-alloc targets, and libraries to do async IO directly against the hardware. In this talk we'll explore how this is done, what challenges arise and how Embassy solves them, what makes async on embedded unique compared to a standard async runtime like Tokio, and what improvements could we make to the Rust language itself to make it even better."
+            bio="Dario Nieuwenhuis is the CTO and a co-founder at Akiles. In 2019, he started the Embassy project to explore using async/await in embedded systems. Since then, the project has matured and is being used in production at multiple companies, including Akiles."
             linkedin="https://www.linkedin.com/in/dario-nieuwenhuis-142331125/"
             twitter="https://twitter.com/dirbaio"
-            mastodon="https://mastodon.social/@dirbaio@hachyderm.io"
+            mastodon="https://hachyderm.io/@dirbaio"
             github="https://github.com/Dirbaio"
         />
         <SpeakerDetail

@@ -19,9 +19,16 @@
       margin-block-end: var(--space-3);
       padding-block-end: var(--space-3);
     }
-
-    a {
+    
+    .button.button-secondary {
+      all: unset;
+      text-decoration: underline;
+      cursor: pointer;    
+    }
+    
+    a, a.button.button-secondary {
       color: var(--color-neutral-400);
-    }  
+    }
+
   }
 }
