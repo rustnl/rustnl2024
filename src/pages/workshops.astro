@@ -57,7 +57,34 @@ import Trainer from "../components/trainer.astro";
             title="Building UIs with Makepad"
             time="Tuesday (day 1) 13:30 in the 'Experiment' building"
         >
-            <p>To be announced</p>
+            <p>
+                In this workshop we will use a small RiscV microcontroller
+                (ESP32C3, provided by the workshop) to build a connectionless
+                chat application running on your PC written with the Makepad UI
+                library. We will be using the ESP NOW protocol, an IOT protocol
+                that allows you to send and receive messages without being
+                connected to a wifi hotspot. The Rust toolchain and libraries
+                needed to program this MCU are available directly from cargo and
+                crates io, as well as makepad studio and framework. We will use
+                Makepad Studio to write both the MCU program and the chat UI
+                that connects to the ESP32 over USB serial and thus allows
+                sending and receiving these messages from the local space. At
+                end we will hopefully have a working local (lossy) chatroom.
+            </p>
+
+            <p>
+                In this workshop you will be introduced to:
+                <ul>
+                    <li>
+                        Embedded Rust programming (no_std) on the esp32c3 RiscV
+                        toolchain
+                    </li>
+                    <li>
+                        Writing simple Rust UI applications with Makepad Studio
+                        for Makepad UI framework.
+                    </li>
+                </ul>
+            </p>
         </WorkshopDetail>
 
         <div class="space-y-3">
