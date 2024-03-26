@@ -31,8 +31,10 @@ const {
             }
             <div>
                 {talkTitle && <h3>The talk</h3>}<br />
-                {talkTitle && <p style="font-style: italic;">{talkTitle}</p>}<br />
+                {talkTitle && <p style="font-style: italic;">{talkTitle}</p>}<br
+                />
                 {talkAbstract && <p>{talkAbstract}</p>}
+                <slot />
             </div>
 
             <div class="socials">
