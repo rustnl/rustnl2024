@@ -3,15 +3,33 @@ interface Props {
     title: string;
     time: string;
     speaker?: string;
+    link?: string;
 }
 
-const { title, time, speaker } = Astro.props;
+const { title, time, speaker, link } = Astro.props;
 ---
 
 <li>
     <div class="time">{time}</div>
-    <div>
-        {speaker&&<div class="name">{speaker}</div>}
-        {title}
-    </div>
+
+    {
+        (link && (
+            <a href={`/speakers#${link}`}>
+                {speaker && <div class="name">{speaker}</div>}
+                {title}
+            </a>
+        )) || (
+            <div>
+                {speaker && <div class="name">{speaker}</div>}
+                {title}
+            </div>
+        )
+    }
 </li>
+
+<style>
+    a {
+        all: unset;
+        cursor: pointer;
+    }
+</style>
