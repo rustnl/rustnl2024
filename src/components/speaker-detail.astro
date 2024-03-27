@@ -44,6 +44,23 @@ const {
                 {mastodon && <a href={mastodon}>Mastodon</a>}
                 {github && <a href={github}>GitHub</a>}
             </div>
+
+            {
+                link && (
+                    <a href={`/schedule#${link}`} class="time">
+                        <strong>show in schedule</strong>
+                    </a>
+                )
+            }
         </div>
     </div>
 </div>
+
+<style>
+    .time {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        text-decoration: unset;
+    }
+</style>
