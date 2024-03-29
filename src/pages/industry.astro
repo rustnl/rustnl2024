@@ -103,6 +103,16 @@ import SponsorTier from "../components/sponsor-tier.astro";
     </Fragment>
 
     <div slot="sponsors">
+        <SponsorTier name="Gold sponsor">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="Mainmatter"
+                    tier="industry-partner"
+                    image="mainmatter.png"
+                    link="https://mainmatter.com"
+                />
+            </div>
+        </SponsorTier>
         <SponsorTier name="Ecosystem partner">
             <div class="sponsors-row">
                 <Sponsor
@@ -186,12 +196,6 @@ import SponsorTier from "../components/sponsor-tier.astro";
                     tier="industry-partner"
                     image="../logo.svg"
                     link="/about"
-                />
-                <Sponsor
-                    name="Mainmatter"
-                    tier="industry-partner"
-                    image="mainmatter.png"
-                    link="https://mainmatter.com"
                 />
             </div>
         </SponsorTier>
