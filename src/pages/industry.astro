@@ -95,9 +95,24 @@ import SponsorTier from "../components/sponsor-tier.astro";
             image="floris.jpg"
             description="Senior Engineer at 1Password"
         />
+        <Speaker
+            name="Ed Page"
+            image="ed.jpg"
+            description="Member of the Rust Cargo Team"
+        />
     </Fragment>
 
     <div slot="sponsors">
+        <SponsorTier name="Gold sponsor">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="ISRG"
+                    tier="industry-partner"
+                    image="isrg.png"
+                    link="https://www.abetterinternet.org/"
+                />
+            </div>
+        </SponsorTier>
         <SponsorTier name="Ecosystem partner">
             <div class="sponsors-row">
                 <Sponsor
@@ -202,7 +217,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <TimetableItem
             time="15.00"
             title="Industry Panel - learn from Infineon, 1Password, Albelli and Rust Foundation"
-            speaker="Paul Lenz, Tiago Manczak, Joachim den Hertog, Floris van der Grinten"
+            speaker="Paul Lenz, Ed Page, Tiago Manczak, Joachim den Hertog, Floris van der Grinten"
         />
         <TimetableItem
             time="15:30"
@@ -212,7 +227,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <TimetableItem
             time="16.45"
             title="Closing Remarks"
-            speaker="Tim McNamara"
+            speaker="Sid Askary, Tim McNamara"
         />
     </ul>
 </IndustryLayout>

@@ -10,10 +10,11 @@ const {
     twitter,
     mastodon,
     github,
+    link,
 } = Astro.props;
 ---
 
-<div class="speaker">
+<div class="speaker" id={link}>
     <div class="space-y-6">
         <img src={`/images/speakers/${image}`} alt="" />
         <div>
@@ -31,8 +32,10 @@ const {
             }
             <div>
                 {talkTitle && <h3>The talk</h3>}<br />
-                {talkTitle && <p style="font-style: italic;">{talkTitle}</p>}<br />
+                {talkTitle && <p style="font-style: italic;">{talkTitle}</p>}<br
+                />
                 {talkAbstract && <p>{talkAbstract}</p>}
+                <slot />
             </div>
 
             <div class="socials">
@@ -41,6 +44,23 @@ const {
                 {mastodon && <a href={mastodon}>Mastodon</a>}
                 {github && <a href={github}>GitHub</a>}
             </div>
+
+            {
+                link && (
+                    <a href={`/schedule#${link}`} class="time">
+                        <strong>show in schedule</strong>
+                    </a>
+                )
+            }
         </div>
     </div>
 </div>
+
+<style>
+    .time {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        text-decoration: unset;
+    }
+</style>
