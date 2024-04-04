@@ -103,6 +103,22 @@ import SponsorTier from "../components/sponsor-tier.astro";
     </Fragment>
 
     <div slot="sponsors">
+        <SponsorTier name="Gold sponsor">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="ISRG"
+                    tier="industry-partner"
+                    image="isrg.png"
+                    link="https://www.abetterinternet.org/"
+                />
+                <Sponsor
+                    name="Baseflow"
+                    tier="nl-sponsor"
+                    image="baseflow.png"
+                    link="https://baseflow.com/"
+                />
+            </div>
+        </SponsorTier>
         <SponsorTier name="Ecosystem partner">
             <div class="sponsors-row">
                 <Sponsor
