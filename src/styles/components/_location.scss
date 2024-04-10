@@ -101,6 +101,11 @@
     background-position: top;
     background-repeat: no-repeat;
 
+    &.unconf {
+      background-size: 100%;
+      background-image: url('/images/vakwerkhuis.jpg');
+    }
+
     @include mixins.breakpoint(sm) {
       grid-area: b;
     }
