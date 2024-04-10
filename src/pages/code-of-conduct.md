@@ -7,7 +7,7 @@ This code of conduct has been adapted from the [Berlin code of Conduct](https://
 
 # Expected Behavior
 
-- Participate in an authentic and active way. In doing so, you contribute to the health and longevity of this community.
+- Participate in an authentic and active way. In doing so, you create a positive environment for the conference.
 - Exercise consideration and respect in your speech and actions.
 - Attempt collaboration before conflict.
 - Refrain from demeaning, discriminatory, or harassing behavior and speech.
