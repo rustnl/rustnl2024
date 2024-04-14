@@ -23,12 +23,10 @@ import SponsorTier from "../components/sponsor-tier.astro";
         </ul>
         <p>
             <strong>Support our conference and the Rust ecosystem</strong><br />
-            Following the conference RustNL will facilitate <a href="/unconf"
-                >a two-day unconference</a
-            >
-            for Rust maintainers.<br />
             Contact us at <a href="mailto:2024@rustnl.org">2024@rustnl.org</a> if
-            you're interested in sponsoring the conference or unconference.
+            you're interested in sponsoring the conference or <a href="/unconf"
+            >unconference</a
+        >.
         </p>
         <p>
             <strong>Venue Address:</strong><br />
@@ -58,6 +56,12 @@ import SponsorTier from "../components/sponsor-tier.astro";
                     image="tandemdrive.png"
                     link="https://tandemdrive.com"
                 />
+                <Sponsor
+                    name="hyperswitch"
+                    tier="silver"
+                    image="hyperswitch.png"
+                    link="https://hyperswitch.io"
+                />
             </div>
         </SponsorTier>
         <SponsorTier name="Organizing partner">
@@ -70,6 +74,16 @@ import SponsorTier from "../components/sponsor-tier.astro";
                 />
             </div>
         </SponsorTier>
+        <!-- SponsorTier name="Livestream partners">
+            <div class="sponsors-row">
+                <Sponsor
+                    name="hyperswitch"
+                    tier="livestream"
+                    image="hyperswitch.png"
+                    link="https://hyperswitch.io"
+                />
+            </div>
+        </SponsorTier -->
         <SponsorTier name="Workshop partner">
             <div class="sponsors-row">
                 <Sponsor
