@@ -1,6 +1,6 @@
 ---
 layout: "../layouts/PageLayout.astro"
-title: "Accessibility"
+title: "Code of Conduct"
 ---
 
 This code of conduct has been adapted from the [Berlin code of Conduct](https://berlincodeofconduct.org/)
