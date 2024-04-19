@@ -1,12 +1,10 @@
 ---
 layout: "../layouts/PageLayout.astro"
-title: "Accessibility"
+title: "Health and Safety Policy"
 ---
 
-If you need any accomodations, please contact us at 2024@RustNL.org. We're happy to try to work something out for you! RustNL strives to be as accessible as possible to all its participants, whether these disabilities are visible or invisible. 
+We're excited to welcome everyone at RustNL 2024! However, to ensure everyone's safety, we're following the guidelines of the Dutch government regarding COVID-19. Additionally, we'd like participants to adhere to the following, such that the event is safe and comfortable for everyone:
 
-Some notes on the accessibility of our conference:
-- Most of the spaces in the venue are wheelchair accessible. Most conference areas will be on the ground floor, without requiring stairs or ramps for access. There are some accessible toilets on the venue, but these might not be suitable for all types of wheelchairs. If you'd like to know more about the wheelchair accessibility of our venue, don't hesitate to contact us at 2024@RustNL.org.
-- We will provide a quiet space for neurodivergent people, people prone to overstimulation, people that need to observe religious practices, or other people in need of a break. There will be clear signage indicating this room.
-- Vegan and vegetarian options will be provided for all meals at the venue. If you have any special dietary wishes, please let us know at 2024@RustNL.org.
-- We're providing specially priced student tickets.
+- If you've tested positive, or feel sick, we would like to ask you to stay home. You can still follow all the awesome talks on our livestream! There will be self-tests and masks available at the venue.
+- Please be respectful of people that would like to socialize at a distance.
+- We will provide outdoors, well-ventilated spaces for socializing safely.
