@@ -3,7 +3,7 @@ layout: "../layouts/PageLayout.astro"
 title: "Accessibility"
 ---
 
-If you need any accomodations, please contact us at 2024@RustNL.org. We're happy to try to work something out for you! RustNL strives to be as accessible as possible to all its participants, whether these disabilities are visible or invisible. 
+If you need any accommodations, please contact us at 2024@RustNL.org. We're happy to try to work something out for you! RustNL strives to be as accessible as possible to all its participants, whether these disabilities are visible or invisible. 
 
 Some notes on the accessibility of our conference:
 - Most of the spaces in the venue are wheelchair accessible. Most conference areas will be on the ground floor, without requiring stairs or ramps for access. There are some accessible toilets on the venue, but these might not be suitable for all types of wheelchairs. If you'd like to know more about the wheelchair accessibility of our venue, don't hesitate to contact us at 2024@RustNL.org.
