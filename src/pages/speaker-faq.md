@@ -29,6 +29,6 @@ Yes. The talk will be live streamed to Vimeo and uploaded to YouTube after you'v
 
 ## Who can I contact if I have more questions?
 
-You can find more general information about the conference on the pages about [accessibility](insert_link), [getting there](insert_link) and the [code of conduct](insert_link) 
+You can find more general information about the conference on the pages about [accessibility](/accessibility), the [code of conduct](/code-of-conduct) and the rest of this website.
 
 You can send Terts an email at terts.diepraam@gmail.com.
