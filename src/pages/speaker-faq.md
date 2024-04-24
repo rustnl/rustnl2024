@@ -15,7 +15,7 @@ Depending on the time slot allocated for your talk, it should be 15 or 30 minute
 
 ## Who should my talk be aimed at?
 
-The goal is to intermediate/advanced Rustaceans, but if your talk targets beginners that's fine too. You can assume that the audience is familiar with Rust.
+The goal is to target intermediate/advanced Rustaceans, but if your talk targets beginners that's fine too. You can assume that the audience is familiar with Rust.
 
 ## What can I use for slides?
 
