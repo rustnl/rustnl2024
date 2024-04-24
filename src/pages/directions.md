@@ -9,12 +9,12 @@ Lijm en Cultuur
 Rotterdamseweg 272
 2628 AT, Delft
 
-Phone: +31 15 262 94 00
+Venue phone number: +31 15 262 94 00
 info@lijmencultuur.nl
 
 <hr>
 
-# By public transport (recomended)
+# By public transport (recommended)
 
 ## Arriving from Rotterdam
 
@@ -35,7 +35,7 @@ Note that you can also walk this distance, along the "Schie" canal, which is qui
 * At the bottom of the stairs, turn right along Rotterdamseweg
 * After 500 meters you will see the entrance gate of Lijm & Cultuur on your left side.
 
-## Arriving from Amsterdam/ The Hague
+## Arriving from Amsterdam / The Hague
 
 Delft Campus Station:
 See walking directions ‘arriving from Rotterdam’.
@@ -43,7 +43,7 @@ See walking directions ‘arriving from Rotterdam’.
 Delft Station:
 
 Take bus 69, 174 or 50. Get off at the TU-Mekelpark stop.
-See walking directions ‘arriving from Rotterdam.
+See walking directions ‘arriving from Rotterdam’.
 
 <hr>
 
