@@ -5,12 +5,21 @@ title: "Getting to the Venue"
 
 # Address
 
-Lijm en Cultuur 
-Rotterdamseweg 272
+Rotterdamseweg 272<br />
 2628 AT, Delft
 
-Venue phone number: +31 15 262 94 00
+The venue name is "Lijm & Cultuur"<br />
+phone: +31 15 262 94 00<br />
 info@lijmencultuur.nl
+
+<hr>
+
+# Arriving from Schiphol Airport
+
+Direct trains run from the airport to Delft central station.
+See <a href="https://www.ns.nl/en">the NS website</a> to plan your trip.
+
+Once at Delft Station, see below.
 
 <hr>
 
@@ -38,12 +47,19 @@ Note that you can also walk this distance, along the "Schie" canal, which is qui
 ## Arriving from Amsterdam / The Hague
 
 Delft Campus Station:
+
 See walking directions ‘arriving from Rotterdam’.
 
 Delft Station:
 
 Take bus 69, 174 or 50. Get off at the TU-Mekelpark stop.
 See walking directions ‘arriving from Rotterdam’.
+
+<hr>
+
+#  Walking or cycling
+
+From the Delft city centre or Delft station it is a ~ 20-25 min walk or ~ 8 min bike ride to Lijm & cultuur.
 
 <hr>
 
@@ -66,3 +82,7 @@ Take exit 10 from the A13 (N470, Delft Zuid).
 
 * At the traffic lights take a right turn for "TU Delft – Delft tech park".
 * From here continue as per the directions "arriving from Rotterdam".
+
+## Parking
+
+The venue, Lijm & Cultuur, has free parking.
