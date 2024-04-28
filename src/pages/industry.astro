@@ -48,11 +48,6 @@ import SponsorTier from "../components/sponsor-tier.astro";
     </div>
     <Fragment slot="speakers">
         <Speaker
-            name="Tim McNamara"
-            image="tim.png"
-            description="Rust software consultant and coach, author of Rust in Action"
-        />
-        <Speaker
             name="Frédéric Ameye"
             image="frederic.png"
             description="Cybersecurity architect at Ampere"
@@ -137,12 +132,6 @@ import SponsorTier from "../components/sponsor-tier.astro";
                     link="https://infineon.com/"
                 />
                 <Sponsor
-                    name="Accelerant"
-                    tier="industry-partner"
-                    image="accelerant.png"
-                    link="https://accelerant.dev"
-                />
-                <Sponsor
                     name="Ampere"
                     tier="industry-partner"
                     image="ampere-transparent.png"
@@ -221,7 +210,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
     </div>
     <ul class="timetable" slot="timetable-day">
         <TimetableItem time="13:30" title="Registration" />
-        <TimetableItem time="14.00" title="Opening" speaker="Tim McNamara" />
+        <TimetableItem time="14.00" title="Opening" speaker="" />
         <TimetableItem
             time="14.05"
             title="Rust at Renault"
@@ -246,7 +235,7 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <TimetableItem
             time="16.35"
             title="Closing Remarks"
-            speaker="Sid Askary, Tim McNamara"
+            speaker="Sid Askary"
         />
         <TimetableItem
             time="16.45"
