@@ -5,6 +5,7 @@
   
   @include mixins.breakpoint(sm) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "a b"
     "a c";
