@@ -14,23 +14,41 @@ import "../styles/index.scss";
         <section class="hero page">
             <h1 class="text-3xl">Boat schedule</h1>
         </section>
+        <section class="container md:grid md:cols-12 py-24">
+            <div
+                class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+            >
+                <slot name="boat-explainer" />
+            </div>
+        </section>
         <section class="container py-24 space-y-12" id="schedule">
             <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
                 <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
                     <h3 class="text-xl">
-                        Boat schedule <strong>day 1 (May 7th)</strong>
+                        Boat schedule <strong>Day 1 / May 7</strong>
                     </h3>
                     <slot name="timetable-day1" />
                 </div>
                 <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
                     <h3 class="text-xl">
-                        Boat schedule <strong>day 2 (May 8th)</strong>
+                        Boat schedule <strong>Day 2 / May 8</strong>
                     </h3>
                     <slot name="timetable-day2" />
                 </div>
             </div>
-            <div class="button-group button-group-center">
-                <a class="button button-primary" href="/">Back Home</a>
+        </section>
+
+        <section class="container py-24 space-y-12">
+            <div class="location">
+                <div class="image boat"></div>
+                <div class="image boat"></div>
+                <div class="image">
+                    <div class="ferris"></div>
+                    <div class="ferris-arms"></div>
+                </div>
+                <div class="ferris">
+                    <img src="/images/ferris.png" alt="" />
+                </div>
             </div>
         </section>
 

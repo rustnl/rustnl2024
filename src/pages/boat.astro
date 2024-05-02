@@ -4,16 +4,34 @@ import TimetableItem from "../components/timetable-item.astro";
 ---
 
 <BoatLayout>
+    <div class="markdown" slot="boat-explainer">
+        <p>
+            Travel from the city center (Delft Station) to the venue by tour
+            boat on the Delft canals!
+        </p>
+        <p>
+            <strong>Boarding location:</strong>
+             The boats depart <a
+                href="https://maps.app.goo.gl/PreLoJkHd1Hp4XSw6"
+                >next to the Delft Station</a
+            >.<br /><br />
+            <img src="images/map.jpg" width="80%" />
+        </p>
+        <p>
+            Please note: the boats can accommodate for 100 people in total. See
+            the <a href="directions">getting there</a> page for more options.
+        </p>
+    </div>
     <ul class="timetable" slot="timetable-day1">
         <TimetableItem
             time="08:20"
             title="Boat 1"
-            speaker="From Delft Station to Venue"
+            speaker="From Delft Station to Venue (30 min)"
         />
         <TimetableItem
             time="08:35"
             title="Boat 2"
-            speaker="From Delft Station to Venue"
+            speaker="From Delft Station to Venue (30 min)"
         />
 
         <TimetableItem time="09:45 - 18:00" title="Conference Day 1" />
@@ -21,24 +39,24 @@ import TimetableItem from "../components/timetable-item.astro";
         <TimetableItem
             time="18:00"
             title="Boat 1"
-            speaker="From Venue to Delft Station"
+            speaker="From Venue to Delft Station (30 min)"
         />
         <TimetableItem
             time="18:10"
             title="Boat 2"
-            speaker="From Venue to Delft Station & City incl boat tour (30 min + 45 min tour)"
+            speaker="From Venue to Delft + city tour (1h 15 min)"
         />
     </ul>
     <ul class="timetable" slot="timetable-day2">
         <TimetableItem
             time="08:20"
             title="Boat 1"
-            speaker="From Delft Station to Venue"
+            speaker="From Delft Station to Venue (30 min)"
         />
         <TimetableItem
             time="08:35"
             title="Boat 2"
-            speaker="From Delft Station to Venue"
+            speaker="From Delft Station to Venue (30 min)"
         />
 
         <TimetableItem time="09:45 - 19:00" title="Conference Day 2" />
@@ -46,12 +64,12 @@ import TimetableItem from "../components/timetable-item.astro";
         <TimetableItem
             time="19:00"
             title="Boat 1"
-            speaker="From Venue to Delft Station"
+            speaker="From Venue to Delft Station (30 min)"
         />
         <TimetableItem
             time="19:10"
             title="Boat 2"
-            speaker="From Venue to Delft Station"
+            speaker="From Venue to Delft Station (30 min)"
         />
     </ul>
 </BoatLayout>
