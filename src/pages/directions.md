@@ -57,7 +57,7 @@ See walking directions ‘arriving from Rotterdam’.
 
 <hr>
 
-#  Walking or cycling
+##  Walking or cycling
 
 From the Delft city centre or Delft station it is a ~ 20-25 min walk or ~ 8 min bike ride to Lijm & cultuur.
 
