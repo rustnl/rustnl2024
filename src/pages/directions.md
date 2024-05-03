@@ -3,7 +3,7 @@ layout: "../layouts/PageLayout.astro"
 title: "Getting to the Venue"
 ---
 
-# Address
+# Venue address
 
 Rotterdamseweg 272<br />
 2628 AT, Delft

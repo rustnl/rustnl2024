@@ -14,14 +14,17 @@ import "../styles/index.scss";
         <section class="hero page">
             <h1 class="text-3xl">Boat schedule</h1>
         </section>
-        <section class="container md:grid md:cols-12 py-24">
+        <section class="container markdown md:grid md:cols-12 py-24">
             <div
                 class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
             >
-                <slot name="boat-explainer" />
-                <br />- <a href="#schedule">Schedule</a><br />- <a
-                    href="#boarding">Departure location</a
-                ><br /><br />
+                <slot name="boat-explainer" /><br />
+                <ul>
+                    <li>
+                        <a href="#schedule">Schedule</a>
+                    </li>
+                    <li><a href="#boarding">Departure location</a></li>
+                </ul>
             </div>
         </section>
         <section class="container py-24 space-y-12">
@@ -56,28 +59,28 @@ import "../styles/index.scss";
         <section class="container md:grid md:cols-12 py-24">
             <div
                 id="boarding"
-                class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+                class="text-lg markdown md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
             >
                 <p>
                     <strong>Boarding location</strong><br />
-                     The boats depart <a
+                    The boats depart <a
                         href="https://maps.app.goo.gl/PreLoJkHd1Hp4XSw6"
                         >next to the Delft train station</a
                     >.<br />Look for a RustNL flag to find the exact spot. <br
                     /><br />
 
-                    <img src="images/boat-map.jpg" width="80%" /><br />
+                    <img src="/images/boat-map.jpg" width="80%" /><br />
                 </p>
             </div>
             <div
-                class="text-md md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+                class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
             >
                 <p>
-                    <br /><strong>Please note</strong><br /> The boats can
-                    accommodate 100 people in total.<br />Not to worry, if the
-                    boats are full the bus station is directly adjacent, see the
+                    <br /><strong>Please note</strong><br /> The boats can accommodate
+                    100 people in total.<br />Not to worry, if the boats are
+                    full the bus station is directly adjacent, see the
                     <a href="directions">getting there</a>
-                     page for bus details and more options.
+                    page for bus details and more options.
                 </p>
             </div>
         </section>
