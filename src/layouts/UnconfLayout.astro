@@ -27,6 +27,23 @@ import "../styles/index.scss";
       <slot name="support" />
     </section>
 
+    <section class="container py-24" id="schedule">
+      <div class="space-y-12 md:grid md:cols-2 md:space-y-0">
+          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
+              <h3 class="text-xl">
+                  Unconf schedule <strong>Day 1 / May 9</strong>
+              </h3>
+              <slot name="timetable-day1" />
+          </div>
+          <div class="space-y-6 px-3 sm:px-6 md:space-y-12 xl:px-12">
+              <h3 class="text-xl">
+                Unconf schedule <strong>Day 2 / May 10</strong>
+              </h3>
+              <slot name="timetable-day2" />
+          </div>
+      </div>
+  </section>
+
     <section class="container md:grid md:cols-12 py-12">
       <div
         class="text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
