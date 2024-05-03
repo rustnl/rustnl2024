@@ -14,20 +14,20 @@ info@lijmencultuur.nl
 
 <hr>
 
-# Arriving from Schiphol Airport
+# From Delft to the venue
 
-Direct trains run from the airport to Delft central station.
-See <a href="https://www.ns.nl/en">the NS website</a> to plan your trip.
+## By boat
 
-Once at Delft Station, see below.
+Travel from the city center (Delft Station) to the venue through the Delft canals in the RustNL tour
+boat!
 
-<hr>
+See boat schedule and details <a href="/boat">here</a>.
 
-# By public transport (recommended)
+## By public transport
 
-## Arriving from Rotterdam
+### Arriving from Rotterdam
 
-*From Delft Station:* (recommended)
+*Bus from Delft Station:* (recommended)
 
 Take bus 69, 174 or 50. Get off at the TU-Mekelpark stop. 
 
@@ -37,14 +37,14 @@ Take bus 69, 174 or 50. Get off at the TU-Mekelpark stop.
 
 Note that you can also walk this distance, along the "Schie" canal, which is quite pretty. This takes about 15 minutes.
 
-*From Delft Campus Station:*
+*Walk from Delft Campus Station:*
 
 * Take the stairs that lead onto the viaduct (Kruithuisweg) and walk left.
 * After 600 meters, take the stairs on the left down to Rotterdamseweg
 * At the bottom of the stairs, turn right along Rotterdamseweg
 * After 500 meters you will see the entrance gate of Lijm & Cultuur on your left side.
 
-## Arriving from Amsterdam / The Hague
+### Arriving from Amsterdam / The Hague
 
 Delft Campus Station:
 
@@ -61,11 +61,20 @@ See walking directions ‘arriving from Rotterdam’.
 
 From the Delft city centre or Delft station it is a ~ 20-25 min walk or ~ 8 min bike ride to Lijm & cultuur.
 
+# Travelling to Delft
+
+## Arriving from Schiphol Airport
+
+Direct trains run from the airport to Delft central station.
+See <a href="https://www.ns.nl/en">the NS website</a> to plan your trip.
+
+Once at Delft Station, see below.
+
 <hr>
 
-#  By car
+## By car
 
-## Arriving from Rotterdam:
+### Arriving from Rotterdam:
 
 Take exit 10 from the A13 (N470, Delft-Zuid) and continue in the direction TU Delft:
 
@@ -76,7 +85,7 @@ Take exit 10 from the A13 (N470, Delft-Zuid) and continue in the direction TU De
 * After 600 meters turn right (Rotterdamseweg)
 * After 1000 meter you can enter the Lijm & Cultuur terrain on the left side.
 
-## Arriving from Amsterdam / The Hague 
+### Arriving from Amsterdam / The Hague 
 
 Take exit 10 from the A13 (N470, Delft Zuid).
 
