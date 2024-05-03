@@ -2,13 +2,13 @@
 
 .location {
   position: relative;
-  
+
   @include mixins.breakpoint(sm) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "a b"
-    "a c";
+    grid-template-areas:
+      "a b"
+      "a c";
   }
 
   &::before {
@@ -24,9 +24,9 @@
     z-index: -1;
   }
 
-  > .ferris {
+  >.ferris {
     display: none;
-    
+
     @include mixins.breakpoint(sm) {
       align-items: flex-start;
       aspect-ratio: 16 / 9;
@@ -43,7 +43,7 @@
     @include mixins.breakpoint(xl) {
       top: -24px;
     }
-    
+
     img {
       @include mixins.breakpoint(sm) {
         rotate: -30deg;
@@ -51,7 +51,7 @@
       }
 
       @include mixins.breakpoint(xl) {
-        width: 288px;       
+        width: 288px;
       }
     }
   }
@@ -60,18 +60,22 @@
     background-color: var(--color-neutral-500);
     position: relative;
   }
-  
+
   .image:nth-of-type(1) {
     aspect-ratio: 16 / 18;
     background-image: url('/images/delft.jpg');
     background-position: 16.66% center;
     background-size: auto 100%;
 
+    &.boat {
+      background-image: url('/images/boat2.jpg');
+    }
+
     @include mixins.breakpoint(sm) {
       aspect-ratio: auto;
       grid-area: a;
     }
-    
+
     &::after {
       aspect-ratio: 16 / 9;
       background-color: var(--color-red-400);
@@ -80,7 +84,7 @@
       left: 0;
       position: absolute;
       top: 0;
-      width: 100%;  
+      width: 100%;
     }
 
     &::before {
@@ -93,14 +97,23 @@
       position: absolute;
       z-index: 1;
     }
+
+    &.boat::before {
+      background-image: none;
+    }
   }
-  
+
   .image:nth-of-type(2) {
     aspect-ratio: 16 / 9;
     background-image: url('/images/lijm.jpg');
     background-size: 120%;
     background-position: top;
     background-repeat: no-repeat;
+
+    &.boat {
+      background-size: 100%;
+      background-image: url('/images/boat1.jpg');
+    }
 
     &.unconf {
       background-size: 100%;
@@ -121,7 +134,7 @@
       grid-area: c;
       display: flex;
       align-items: center;
-      justify-content: center;  
+      justify-content: center;
     }
 
     &::after {
@@ -137,6 +150,7 @@
       @include mixins.breakpoint(sm) {
         translate: 0;
       }
+
       /* This timing is for the entering animation */
       transition: translate 300ms 200ms ease-out;
     }
@@ -146,12 +160,14 @@
         opacity: 1;
         translate: 0px;
       }
+
       /* This timing is for the entering animation */
-      transition: opacity 200ms ease-in, translate 200ms ease-out;
+      transition: opacity 200ms ease-in,
+      translate 200ms ease-out;
     }
 
-    > .ferris,
-    > .ferris-arms {
+    >.ferris,
+    >.ferris-arms {
       @include mixins.breakpoint(sm) {
         background-repeat: no-repeat;
         background-size: contain;
@@ -165,9 +181,9 @@
         height: 240px;
         width: 288px;
       }
-    } 
+    }
 
-    > .ferris {
+    >.ferris {
       @include mixins.breakpoint(sm) {
         background-image: url('/images/ferris.png');
         /* This timing is for the leaving animation */
@@ -176,7 +192,7 @@
       }
     }
 
-    > .ferris-arms {
+    >.ferris-arms {
       @include mixins.breakpoint(sm) {
         background-image: url('/images/ferris-arms.png');
         background-position: center -12px;

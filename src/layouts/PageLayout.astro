@@ -15,8 +15,12 @@ const { title } = frontmatter;
     <section class="hero page">
       <h1 class="text-3xl">{title}</h1>
     </section>
-    <section class="container py-12 space-y-6 text-lg">
-      <slot />
+    <section class="container md:grid md:cols-12 py-12">
+      <div
+        class="markdown text-lg md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
+      >
+        <slot />
+      </div>
     </section>
     <Footer />
   </body>
