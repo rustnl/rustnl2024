@@ -4,6 +4,9 @@ import TimetableItem from "../components/timetable-item.astro";
 ---
 
 <ScheduleLayout>
+    <div slot="above" style="text-align: center;">
+        Check out our <a href="/directions">directions to the venue</a>, as well as the <a href="/boat">getting there with a boat</a> page.
+    </div>
     <ul class="timetable" slot="timetable-day1">
         <TimetableItem time="08:45" title="Registration Opens" />
 
