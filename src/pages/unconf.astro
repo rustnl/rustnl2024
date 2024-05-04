@@ -2,6 +2,7 @@
 import UnconfLayout from "../layouts/UnconfLayout.astro";
 import Sponsor from "../components/sponsor.astro";
 import SponsorTier from "../components/sponsor-tier.astro";
+import TimetableItem from "../components/timetable-item.astro";
 ---
 
 <UnconfLayout>
@@ -12,7 +13,9 @@ import SponsorTier from "../components/sponsor-tier.astro";
             Project team members on <strong>May 9 & 10</strong>.
         </p>
         <p>
-            Two areas of focus are <strong>multi-platform application development</strong> and
+            Two areas of focus are <strong
+                >multi-platform application development</strong
+            > and
             <strong>embedded systems</strong>.
         </p>
         <p>
@@ -49,8 +52,8 @@ import SponsorTier from "../components/sponsor-tier.astro";
         <h2 class="text-xl space-y-6">Participating in the unconf</h2>
         <p>
             The unconf is not open to the general public and requires an
-            invitation to attend. Are you a Rust maintainer or Rust project team member and want to
-            participate in the unconf? Send us an <a
+            invitation to attend. Are you a Rust maintainer or Rust project team
+            member and want to participate in the unconf? Send us an <a
                 href="mailto: erik@rustnl.org">email</a
             >.<br />
             Update: the unconf is at full capacity; we can no longer accept new participants.
@@ -105,4 +108,82 @@ import SponsorTier from "../components/sponsor-tier.astro";
             </div>
         </SponsorTier>
     </div>
+    <ul class="timetable" slot="timetable-day1">
+        <TimetableItem time="09:00" title="Venue opens + registration" speaker="Machinehal" />
+        
+        <TimetableItem time="09:30" title="Welcome & Start of Day 1" speaker="Plenary opening @ Machinehal"/>
+
+        <TimetableItem
+            time="09:45"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="10:30" title="Coffee break" />
+
+        <TimetableItem
+            time="11:00"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="12:30" title="Lunch" speaker="Machinehal" />
+        
+        <TimetableItem
+            time="13:30"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="15:00" title="Coffee break" />
+
+        <TimetableItem
+            time="15:30"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="17:00" title="Drinks" />
+
+        <TimetableItem time="18:00" title="End of day 1" />
+    </ul>
+    <ul class="timetable" slot="timetable-day2">
+        <TimetableItem time="09:00" title="Venue opens" speaker="Machinehal" />
+
+        <TimetableItem time="09:30" title="Start of day 2" speaker="Machinehal" />
+
+        <TimetableItem
+            time="09:30"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="10:30" title="Coffee break" />
+
+        <TimetableItem
+            time="11:00"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="12:30" title="Lunch" speaker="Machinehal" />
+        
+        <TimetableItem
+            time="13:30"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="15:00" title="Coffee break" />
+
+        <TimetableItem
+            time="15:30"
+            title="Unconf break-out sessions"
+            speaker="Tracks: UI & App Dev | Project | Embedded"
+        />
+
+        <TimetableItem time="17:00" title="Drinks" />
+
+        <TimetableItem time="18:00" title="End of day 2" />
+    </ul>
 </UnconfLayout>
