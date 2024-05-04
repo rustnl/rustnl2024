@@ -25,6 +25,16 @@ See boat schedule and details <a href="/boat">here</a>.
 
 ## By public transport
 
+> **Note**: Paying for public transport in the Netherlands work with the OV chipkaart, however, you
+> can also pay at each of the OV chipkaart terminals with your bank card or phone. The only thing to
+> keep in mind is that you also have to check out with the same card when you exit the vehicle.
+>
+> You can find more information about paying by bank card or phone
+> [on the OV pay website](https://www.ovpay.nl/en/how-it-works).
+> 
+> For the train, it might be cheaper to get a mobile ticket, which you can read about
+> [on the NS website](https://www.ns.nl/en/travel-information/ns-on-your-mobile/mobile-tickets.html).
+
 ### Arriving from Rotterdam
 
 *Bus from Delft Station:* (recommended)
