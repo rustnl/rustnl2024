@@ -24,14 +24,14 @@ Harassment includes: harmful or prejudicial verbal or written comments related t
 Unacceptable behavior from any community member, including sponsors and those with decision-making authority, will not be tolerated. Anyone asked to stop unacceptable behavior is expected to comply immediately.
 
 If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning (and without refund in the case of a paid event).
-If You Witness or Are Subject to Unacceptable Behavior
 
 If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible. You can find a list of organizers to contact for each of the supporters of this code of conduct at the bottom of this page. Additionally, community organizers are available to help community members engage with local law enforcement or to otherwise help those experiencing unacceptable behavior feel safe. In the context of in-person events, organizers will also provide escorts as desired by the person experiencing distress.
 
 # Addressing Grievances
 
 If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify one of the event organizers with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
-Scope
+
+# Scope
 
 We expect all community participants (contributors, paid or otherwise; sponsors; and other guests) to abide by this Code of Conduct in all community venues—online and in-person—as well as in all one-on-one communications pertaining to community business.
 
